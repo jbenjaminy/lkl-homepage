@@ -23,7 +23,7 @@ class Nav extends React.Component {
                                         <tr>
                                             <td className="inner-col">
                                                 <div className="nav-left">
-                                                    <img src='http://i.imgur.com/tyipyMy.png'/>
+                                                    <img src='http://i.imgur.com/tyipyMy.png' onClick={this.changePage.bind(this, '/')}/>
                                                 </div>
                                             </td>
                                         </tr>

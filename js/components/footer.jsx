@@ -18,12 +18,13 @@ class Footer extends React.Component {
                     <table className="outer" width="100%">
                         <tr>
                             <td className="content">
-                                <div className="nav-column left-column">
+                                <div className="column left-column">
                                     <table className="inner" width="100%">
-                                        <tr>
-                                            <td className="inner-col">
-                                                <div className='footer-left'>
-                                                    <ul>
+                                        <tr width="100%">
+                                            <td className="inner-col" width="100%">
+                                                <div className='footer-left' width="100%">
+                                                    <ul width="100%">
+                                                        <li><a onClick={this.changePage.bind(this, '/')}>HOME</a></li>
                                                         <li><a onClick={this.changePage.bind(this, '/about-us')}>ABOUT</a></li>
                                                         <li><a onClick={this.changePage.bind(this, '/current-projects')}>CURRENT PROJECTS</a></li>
                                                         <li><a onClick={this.changePage.bind(this, '/prior-projects')}>PRIOR PROJECTS</a></li>
@@ -34,12 +35,12 @@ class Footer extends React.Component {
                                         </tr>
                                     </table>
                                     </div>
-                                    <div className="nav-column right-column">
+                                    <div className="column right-column">
                                     <table className="inner" width="100%">
-                                        <tr>
-                                            <td className="inner-col">
-                                                <div className='footer-right'>
-                                                    <ul>
+                                        <tr width="100%">
+                                            <td className="inner-col" width="100%">
+                                                <div className='footer-right' width="100%">
+                                                    <ul width="100%">
                                                         <li>LINGARD FITCH</li>
                                                         <li><a href='tel:1-713-540-1577'>713-540-1577</a></li>
                                                         <li><a href='mailto:info@lkldevelopmentgroup.com'>INFO@LKLDEVELOPMENTGROUP.COM</a></li>
