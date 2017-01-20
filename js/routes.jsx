@@ -22,10 +22,10 @@ const routes = (
     <Router history={browserHistory}>
         <Route path='/' component={App}>
           <IndexRoute component={Landing}/>
-          <Route path='about-lkl' component={About}/>
+          <Route path='about-us' component={About}/>
           <Route path='current-projects' component={Current}/>
           <Route path='prior-projects' component={Prior}/>
-          <Route path='contact-lkl' component={Contact}/>
+          <Route path='contact-us' component={Contact}/>
         </Route>
     </Router>
 );
