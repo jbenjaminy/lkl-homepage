@@ -11,9 +11,18 @@
 // landing images w/o border http://i.imgur.com/HaZMfjZ.png
 @import url(https://fonts.googleapis.com/css?family=Varela);
 
+html {
+  	background-color: @ltBlue;
+}
+body {
+	width: 100%;
+	margin-top: 0;
+	margin-left: 0;
+}
+
 .app {
   	font-family: 'Varela', sans-serif;
-  	background-color: @ltBlue;
+  	width: 100%;
 
   	a {
 		color: inherit;
@@ -25,12 +34,6 @@
 		cursor: pointer;
 	}
 
-	.content {
-		width: 80%;
-		margin: 0 auto;
-		padding: 0px 15px;
-	}
-
 	.links {
 		text-decoration: none;
 	}
@@ -39,29 +42,100 @@
 /*--------- FIXED CONTENT ---------*/
 
 // NAV
-nav {
-	background-color: #F5F5F5;
-	position: fixed;
-	width: 100%;
-	height: 50px;
-	margin-top: -11px;
-	z-index: 100;
+.wrapper {
+    width: 90%;
+    table-layout: fixed;
+	height: 160px;
+    background-color: @offWhite;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
 
-	ul {
-		height: 40px;
-		margin: 0 auto;
+    .outer {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
 
-		li {
-			margin-left: 30px;
-			text-decoration: none;
-			list-style-type: none;
-			display: inline-block;
-			float: right;
-			margin-top: 16px;		
-		}
+        .content {
+            font-size: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            height: 100%;
 
-		li:hover {
-			cursor: pointer;
+            .left-column {
+            	width: 30%;
+            }
+            .right-column {
+            	width: 65%;
+            }
+
+            .nav-column {
+                display: inline-block;
+                vertical-align: middle;
+                .inner-col {
+                    margin: 0 auto;
+					.nav-img {
+						width: 250px;
+						height: auto;
+					}
+
+					.nav-left {
+						margin: 0 auto;
+						text-align: right;
+					}
+
+					.nav-right {
+					}
+
+					ul {
+						height: 40px;
+						margin: 0 auto;
+
+						li {
+							padding-left: 15px;
+							padding-right: 15px;
+							text-decoration: none;
+							list-style-type: none;
+							display: inline-block;
+							font-size: 16px;	
+							margin-top: 10px;
+							letter-spacing: 3px;
+							color: darken(@dkGrey, 30%);
+							float: right;
+							border-right: 1px solid lightgrey;
+						}
+						.right-li {
+							border-right: 1px solid @offWhite;
+						}
+						li:hover {
+							cursor: pointer;
+							color: @dkGrey;
+						}
+					}
+				}
+			}
 		}
 	}
+}
+
+.landing {
+	background-color: @dkGrey;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+
+	header {
+		margin: 0 auto;
+		text-align: center;
+		width: 99%;
+
+		img {
+			width: 100%;
+			max-width:1200px;
+			height: auto;
+		}
+	}
+
+
 }
