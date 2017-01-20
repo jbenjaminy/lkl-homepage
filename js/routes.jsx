@@ -6,6 +6,7 @@ import About from './components/about';
 import Current from './components/current';
 import Prior from './components/prior';
 import Contact from './components/contact';
+import Footer from './components/footer';
 
 let App = (props) => {
     return (
@@ -14,6 +15,7 @@ let App = (props) => {
             <div className='main'>
                 {props.children}
             </div>
+            <Footer />
         </div>
     )
 }

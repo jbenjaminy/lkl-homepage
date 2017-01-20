@@ -1,7 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import {browserHistory} from 'react-router';
-import actions from '../redux/actions'
 
 class Nav extends React.Component {
     constructor() {
@@ -32,4 +30,4 @@ class Nav extends React.Component {
     }
 }
 
-module.exports = connect()(Nav);
+module.exports = Nav;
