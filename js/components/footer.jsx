@@ -14,22 +14,46 @@ class Footer extends React.Component {
 	render() {
 		return (
             <footer>
-                <div className='footer-left'>
-                    <ul>
-                        <li><a onClick={this.changePage.bind(this, '/prior-projects')}>Prior Projects</a></li>
-                        <li><a onClick={this.changePage.bind(this, '/about-us')}>About Us</a></li>
-                        <li><a onClick={this.changePage.bind(this, '/current-projects')}>Current Projects</a></li>
-                        <li><a onClick={this.changePage.bind(this, '/contact-us')}>Contact Us</a></li>
-                    </ul>
-                </div>
-                <div className='footer-right'>
-                    <ul>
-                        <li>Lingard Fitch</li>
-                        <li><a href='tel:1-713-540-1577'>713-540-1577</a></li>
-                        <li><a href='mailto:info@lkldevelopmentgroup.com'>info@lkldevelopmentgroup.com</a></li>
-                        <li><a href='https://goo.gl/maps/H5Y7KN5JKMQ2'>4545 Bissonnet Street, Suite 285<br/>Houston, Texas 77401</a></li>
-                    </ul>
-                </div>
+                <center className="wrapper footer-wrapper">
+                    <table className="outer" width="100%">
+                        <tr>
+                            <td className="content">
+                                <div className="nav-column left-column">
+                                    <table className="inner" width="100%">
+                                        <tr>
+                                            <td className="inner-col">
+                                                <div className='footer-left'>
+                                                    <ul>
+                                                        <li><a onClick={this.changePage.bind(this, '/about-us')}>ABOUT</a></li>
+                                                        <li><a onClick={this.changePage.bind(this, '/current-projects')}>CURRENT PROJECTS</a></li>
+                                                        <li><a onClick={this.changePage.bind(this, '/prior-projects')}>PRIOR PROJECTS</a></li>
+                                                        <li><a onClick={this.changePage.bind(this, '/contact-us')}>CONTACT</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                    <div className="nav-column right-column">
+                                    <table className="inner" width="100%">
+                                        <tr>
+                                            <td className="inner-col">
+                                                <div className='footer-right'>
+                                                    <ul>
+                                                        <li>LINGARD FITCH</li>
+                                                        <li><a href='tel:1-713-540-1577'>713-540-1577</a></li>
+                                                        <li><a href='mailto:info@lkldevelopmentgroup.com'>INFO@LKLDEVELOPMENTGROUP.COM</a></li>
+                                                        <li><a href='https://goo.gl/maps/H5Y7KN5JKMQ2'>4545 BISSONNET STREET, SUITE 285<br/>HOUSTON, TEXAS 77401</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
             </footer>
         );
     }

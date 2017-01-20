@@ -14,30 +14,30 @@ class Nav extends React.Component {
 	render() {
 		return (
             <div className="nav-bar">
-                <center className="wrapper">
+                <center className="wrapper nav-wrapper">
                     <table className="outer" width="100%">
                         <tr>
                             <td className="content">
-                                <div className="nav-column left-column">
+                                <div className="column left-column">
                                     <table className="inner" width="100%">
                                         <tr>
                                             <td className="inner-col">
                                                 <div className="nav-left">
-                                                    <img src='http://i.imgur.com/tyipyMy.png' className='nav-img' />
+                                                    <img src='http://i.imgur.com/tyipyMy.png'/>
                                                 </div>
                                             </td>
                                         </tr>
                                     </table>
                                     </div>
-                                    <div className="nav-column right-column">
+                                    <div className="column right-column">
                                     <table className="inner" width="100%">
                                         <tr>
                                             <td className="inner-col">
                                                 <ul className='nav-right'>                                                       
-                                                    <li className='right-li'><a onClick={this.changePage.bind(this, '/contact-us')}>Contact Us</a></li>
-                                                    <li><a onClick={this.changePage.bind(this, '/prior-projects')}>Prior Projects</a></li>
-                                                    <li><a onClick={this.changePage.bind(this, '/current-projects')}>Current Projects</a></li>
-                                                    <li><a onClick={this.changePage.bind(this, '/about-us')}>About Us</a></li>
+                                                    <li className='right-li'><a onClick={this.changePage.bind(this, '/contact-us')}>CONTACT</a></li>
+                                                    <li><a onClick={this.changePage.bind(this, '/prior-projects')}>PRIOR PROJECTS</a></li>
+                                                    <li><a onClick={this.changePage.bind(this, '/current-projects')}>CURRENT PROJECTS</a></li>
+                                                    <li><a onClick={this.changePage.bind(this, '/about-us')}>ABOUT</a></li>
                                                 </ul>
                                             </td>
                                         </tr>
