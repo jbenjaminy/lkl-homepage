@@ -9,7 +9,7 @@ class Landing extends React.Component {
 		return (
             <div className='landing'>
                 <header>
-                    <img src='http://i.imgur.com/ngYcXXm.png?1' />
+                    <img src='http://i.imgur.com/IG0a3EZ.jpg' />
                 </header>
 
                 <section className='featured-projects'>
