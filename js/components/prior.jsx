@@ -8,7 +8,11 @@ class Prior extends React.Component {
 
     render() {
     	return (
-            <div className='prior'>
+            <div className='prior sub-page'>
+				<br/>
+				<h1 className='page-title'>PRIOR PROJECTS</h1>
+				<h2 className='coming-soon'>Coming soon</h2>
+				<br/>
             </div>
         );
     }

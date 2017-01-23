@@ -16,7 +16,7 @@ let App = (props) => {
                 {props.children}
             </div>
             <Footer />
-            <h3 className='attribution'>&copy; 2017 LKL DEVELOPMENT GROUP&nbsp;&nbsp;|&nbsp;&nbsp;ALL RIGHTS RESERVED&nbsp;&nbsp;|&nbsp;&nbsp;WEB DESIGN BY <a href='http://www.jbenjaminy.com'>JBENJAMINY</a></h3>
+            <h3 className='attribution'>&copy; 2017 <span className='lkl'>L</span><span className='k'>K</span><span className='lkl'>L DEVELOPMENT GROUP</span>&nbsp;&nbsp;|&nbsp;&nbsp;ALL RIGHTS RESERVED&nbsp;&nbsp;|&nbsp;&nbsp;WEB DESIGN BY <a href='http://www.jbenjaminy.com'>JBENJAMINY</a></h3>
         </div>
     )
 }

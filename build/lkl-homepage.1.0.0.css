@@ -1,5 +1,5 @@
 /* ----- PRESETS ----- */
-@import url(https://fonts.googleapis.com/css?family=Varela|Josefin+Sans:100,300);
+@import url(https://fonts.googleapis.com/css?family=Varela|Quicksand:300|Libre+Franklin:100);
 html {
   background-color: #b7bec3;
 }
@@ -70,7 +70,6 @@ footer .wrapper .outer .content .column .footer-left ul li,
 .nav-bar .wrapper .outer .content .column .footer-right ul li,
 footer .wrapper .outer .content .column .footer-right ul li {
   list-style-type: none;
-  color: #F5F5F5;
 }
 .nav-bar .wrapper .outer .content .column .footer-left,
 footer .wrapper .outer .content .column .footer-left {
@@ -81,9 +80,18 @@ footer .wrapper .outer .content .column .footer-left ul {
   border-right: 1px solid #b7bec3;
   padding-right: 15px;
 }
+.nav-bar .wrapper .outer .content .footer-left-column,
+footer .wrapper .outer .content .footer-left-column {
+  width: 40%;
+  font-size: 25px;
+}
+.nav-bar .wrapper .outer .content .footer-left-column .inner-col,
+footer .wrapper .outer .content .footer-left-column .inner-col {
+  margin: 0 auto;
+}
 .nav-bar .wrapper .outer .content .left-column,
 footer .wrapper .outer .content .left-column {
-  width: 30%;
+  width: 35%;
   font-size: 25px;
 }
 .nav-bar .wrapper .outer .content .left-column .inner-col,
@@ -93,7 +101,7 @@ footer .wrapper .outer .content .left-column .inner-col {
 .nav-bar .wrapper .outer .content .left-column .inner-col .nav-left,
 footer .wrapper .outer .content .left-column .inner-col .nav-left {
   margin: 0 auto;
-  text-align: right;
+  text-align: center;
 }
 .nav-bar .wrapper .outer .content .left-column .inner-col .nav-left img,
 footer .wrapper .outer .content .left-column .inner-col .nav-left img {
@@ -115,22 +123,19 @@ footer .wrapper .outer .content .right-column {
 }
 .nav-bar .wrapper .outer .content .mid-column,
 footer .wrapper .outer .content .mid-column {
-  width: 40%;
+  width: 60%;
   font-size: 25px;
 }
 .nav-bar .wrapper .outer .content .mid-column .footer-right ul,
 footer .wrapper .outer .content .mid-column .footer-right ul {
   padding-left: 8.7385px;
 }
-.nav-bar .wrapper .outer .content .camelot,
-footer .wrapper .outer .content .camelot {
-  width: 25%;
-  text-align: center;
-}
 .nav-bar .wrapper .outer .content .nav-right,
 footer .wrapper .outer .content .nav-right {
   height: 40px;
   margin: 0 auto;
+  padding-left: 0px;
+  padding-right: 15px;
 }
 .nav-bar .wrapper .outer .content .nav-right li,
 footer .wrapper .outer .content .nav-right li {
@@ -172,8 +177,53 @@ footer .wrapper .outer .content .nav-right li:hover {
   width: 100%;
   height: auto;
 }
+.landing .company-name {
+  padding-top: 30px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+.landing .sub-header {
+  padding-top: 10px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Libre Franklin';
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 30px;
+  color: #2E2E2E;
+}
+.sub-page {
+  width: 90%;
+  margin: 0 auto;
+  height: 400px;
+}
+.sub-page .page-title {
+  color: #F5F5F5;
+  font-size: 40px;
+  letter-spacing: 1px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.sub-page .coming-soon {
+  font-family: 'Libre Franklin';
+  font-weight: 200;
+  color: #67727A;
+  font-size: 25px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-style: italic;
+}
 footer {
   margin-bottom: 20px;
+}
+footer li {
+  color: #F5F5F5;
 }
 footer a:hover {
   color: #b7bec3;
@@ -188,42 +238,48 @@ footer .a a:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
-footer .address,
-footer .camelot-img {
+footer .address {
   padding-left: 15px;
   padding-right: 15px;
 }
-footer .camelot-img {
-  width: 150px;
-  height: auto;
-}
-footer .address:hover,
-footer .camelot-img:hover {
+footer .address:hover {
   border-left: 5px solid red;
   border-right: 5px solid red;
   padding-left: 10px;
   padding-right: 10px;
 }
-footer .camelot-img:hover {
-  opacity: 0.7;
-}
 footer .footer-name {
+  color: #2E2E2E;
   padding-left: 15px;
 }
 .attribution {
   color: #F5F5F5;
-  font-family: 'Josefin Sans';
+  font-family: 'Libre Franklin';
+  font-weight: 100;
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-weight: 100;
-  font-size: 15px;
+  font-size: 14px;
 }
 .attribution a:hover {
   color: #67727A;
   opacity: 0.7;
 }
+.lkl {
+  color: #2E2E2E;
+}
+.k {
+  color: #DA291C;
+}
+@media only screen and (max-width: 1450px) {
+  .landing {
+    height: 500px;
+  }
+}
 @media only screen and (max-width: 1313px) {
+  .nav-bar .wrapper {
+    padding-bottom: 20px;
+  }
   .nav-bar .wrapper .outer .content .nav-right {
     width: 250px;
     float: right;
@@ -236,38 +292,50 @@ footer .footer-name {
   .nav-bar .wrapper .outer .content .nav-right .right-li {
     border-right: 0px solid #F5F5F5;
   }
-  .nav-bar .wrapper .outer .content .left-column,
-  footer .wrapper .outer .content .left-column,
-  .nav-bar .wrapper .outer .content .mid-column,
+  footer .wrapper {
+    height: 200px;
+  }
+  footer .wrapper .outer .content .footer-left-column,
   footer .wrapper .outer .content .mid-column {
     font-size: 20px;
   }
-  .nav-bar .wrapper .outer .content .camelot,
-  footer .wrapper .outer .content .camelot {
-    font-size: 12px;
-  }
 }
 @media only screen and (max-width: 1121px) {
-  .nav-bar .wrapper .outer .content .left-column,
-  footer .wrapper .outer .content .left-column,
+  .nav-bar .wrapper .outer .content .footer-left-column,
+  footer .wrapper .outer .content .footer-left-column,
+  .nav-bar .wrapper .outer .content .mid-column,
+  footer .wrapper .outer .content .mid-column {
+    font-size: 15px;
+  }
+  .landing {
+    height: 400px;
+  }
+  .sub-page {
+    height: 300px;
+  }
+  .landing .company-name,
+  .sub-page .company-name,
+  .landing .page-title,
+  .sub-page .page-title {
+    font-size: 35px;
+  }
+  .landing .sub-header,
+  .sub-page .sub-header,
+  .landing .coming-soon,
+  .sub-page .coming-soon {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 927px) {
+  .nav-bar .wrapper .outer .content .footer-left-column,
+  footer .wrapper .outer .content .footer-left-column,
   .nav-bar .wrapper .outer .content .mid-column,
   footer .wrapper .outer .content .mid-column {
     font-size: 15px;
   }
 }
-@media only screen and (max-width: 927px) {
-  .nav-bar .wrapper .outer .content .left-column,
-  footer .wrapper .outer .content .left-column,
-  .nav-bar .wrapper .outer .content .mid-column,
-  footer .wrapper .outer .content .mid-column {
-    font-size: 12px;
-  }
-}
 @media only screen and (max-width: 812px) {
-  footer .wrapper {
-    height: 450px;
-  }
-  footer .wrapper .outer .content .left-column {
+  footer .wrapper .outer .content .footer-left-column {
     width: 40%;
     font-size: 15px;
   }
@@ -275,33 +343,46 @@ footer .footer-name {
     width: 60%;
     font-size: 15px;
   }
-  footer .wrapper .outer .content .camelot {
-    display: block;
-    width: 100%;
+  .landing {
+    height: 300px;
   }
-  footer .wrapper .outer .content .camelot ul {
-    padding-left: 0px;
+  .sub-page {
+    height: 200px;
+  }
+  .landing .company-name,
+  .sub-page .company-name,
+  .landing .page-title,
+  .sub-page .page-title {
+    font-size: 25px;
+  }
+  .landing .sub-header,
+  .sub-page .sub-header,
+  .landing .coming-soon,
+  .sub-page .coming-soon {
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 700px) {
-  footer .wrapper {
-    height: 350px;
-  }
-  footer .wrapper .outer .content .left-column {
+  footer .wrapper .outer .content .footer-left-column {
     font-size: 12px;
   }
   footer .wrapper .outer .content .mid-column {
     font-size: 12px;
   }
-  footer .wrapper .outer .content .camelot {
-    font-size: 10px;
-    padding-top: 40px;
+  .landing .company-name,
+  .sub-page .company-name,
+  .landing .page-title,
+  .sub-page .page-title {
+    font-size: 20px;
   }
-  footer .wrapper .outer .content .camelot .camelot-img {
-    width: 100px;
+  .landing .sub-header,
+  .sub-page .sub-header,
+  .landing .coming-soon,
+  .sub-page .coming-soon {
+    font-size: 16px;
   }
   .attribution {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 @media only screen and (max-width: 610px) {
@@ -309,7 +390,8 @@ footer .footer-name {
     width: 100%;
   }
   .nav-bar .wrapper {
-    padding-bottom: 0;
+    padding-bottom: 0px;
+    height: 140px;
   }
   .nav-bar .wrapper .outer .content .left-column .inner-col .nav-left img {
     width: 150px;
@@ -321,14 +403,15 @@ footer .footer-name {
     font-size: 12px;
   }
   footer .wrapper {
-    height: 460px;
+    height: 300px;
   }
-  footer .wrapper .outer .content .left-column {
+  footer .wrapper .outer .content .footer-left-column {
     width: 100%;
     display: block;
     font-size: 15px;
   }
   footer .wrapper .outer .content .column .footer-left ul {
+    padding-top: 25px;
     border-right-width: 0px;
     padding-right: 0px;
     padding-left: 0px;
@@ -349,25 +432,11 @@ footer .footer-name {
     padding-left: 0px;
     width: 310px;
     margin: 0 auto;
-    padding-bottom: 20px;
     padding-top: 20px;
-    border-bottom: 1px solid #b7bec3;
     border-top: 1px solid #b7bec3;
   }
-  footer .wrapper .outer .content .camelot {
-    display: block;
-    width: 100%;
-    font-size: 10px;
-    padding-top: 0px;
-  }
-  footer .wrapper .outer .content .camelot .camelot-img {
-    width: 100px;
-  }
-  footer .wrapper .outer .content .camelot ul {
-    padding-left: 0px;
-  }
   .attribution {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 @media only screen and (max-width: 467px) {
@@ -380,14 +449,24 @@ footer .footer-name {
   .nav-bar .wrapper .outer .content .nav-right li {
     font-size: 10px;
   }
-  .nav-bar .wrapper .outer .content .camelot .camelot-img {
-    width: 80px;
+  .landing {
+    height: 250px;
   }
-  footer .wrapper .outer .content .camelot .camelot-img {
-    width: 80px;
+  .landing .company-name,
+  .sub-page .company-name,
+  .landing .page-title,
+  .sub-page .page-title {
+    font-size: 16px;
+  }
+  .landing .sub-header,
+  .sub-page .sub-header,
+  .landing .coming-soon,
+  .sub-page .coming-soon {
+    font-size: 14px;
+    letter-spacing: normal;
   }
   .attribution {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 /*# sourceMappingURL=lkl-homepage.1.0.0.css.map */

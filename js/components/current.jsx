@@ -8,7 +8,11 @@ class Current extends React.Component {
 
     render() {
     	return (
-            <div className='current'>
+            <div className='current sub-page'>
+				<br/>
+				<h1 className='page-title'>CURRENT PROJECTS</h1>
+				<h2 className='coming-soon'>Coming soon</h2>
+				<br/>
             </div>
         );
     }

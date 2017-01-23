@@ -21558,7 +21558,23 @@
 	        _react2.default.createElement(
 	            'h3',
 	            { className: 'attribution' },
-	            '\xA9 2017 LKL DEVELOPMENT GROUP\xA0\xA0|\xA0\xA0ALL RIGHTS RESERVED\xA0\xA0|\xA0\xA0WEB DESIGN BY ',
+	            '\xA9 2017 ',
+	            _react2.default.createElement(
+	                'span',
+	                { className: 'lkl' },
+	                'L'
+	            ),
+	            _react2.default.createElement(
+	                'span',
+	                { className: 'k' },
+	                'K'
+	            ),
+	            _react2.default.createElement(
+	                'span',
+	                { className: 'lkl' },
+	                'L DEVELOPMENT GROUP'
+	            ),
+	            '\xA0\xA0|\xA0\xA0ALL RIGHTS RESERVED\xA0\xA0|\xA0\xA0WEB DESIGN BY ',
 	            _react2.default.createElement(
 	                'a',
 	                { href: 'http://www.jbenjaminy.com' },
@@ -27423,6 +27439,26 @@
 	                    null,
 	                    _react2.default.createElement('img', { src: 'http://i.imgur.com/IG0a3EZ.jpg' })
 	                ),
+	                _react2.default.createElement(
+	                    'section',
+	                    { className: 'lkl-description' },
+	                    _react2.default.createElement(
+	                        'h1',
+	                        { className: 'company-name lkl' },
+	                        'L',
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'k' },
+	                            'K'
+	                        ),
+	                        'L DEVELOPMENT GROUP'
+	                    ),
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: 'sub-header' },
+	                        'A premier, residential real estate investment company based in Houston, Texas.'
+	                    )
+	                ),
 	                _react2.default.createElement('section', { className: 'featured-projects' })
 	            );
 	        }
@@ -27465,7 +27501,22 @@
 	        _createClass(About, [{
 	                key: 'render',
 	                value: function render() {
-	                        return _react2.default.createElement('div', { className: 'about' });
+	                        return _react2.default.createElement(
+	                                'div',
+	                                { className: 'about sub-page' },
+	                                _react2.default.createElement('br', null),
+	                                _react2.default.createElement(
+	                                        'h1',
+	                                        { className: 'page-title' },
+	                                        'ABOUT US'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'coming-soon' },
+	                                        'Coming soon'
+	                                ),
+	                                _react2.default.createElement('br', null)
+	                        );
 	                }
 	        }]);
 	
@@ -27506,7 +27557,22 @@
 	        _createClass(Current, [{
 	                key: 'render',
 	                value: function render() {
-	                        return _react2.default.createElement('div', { className: 'current' });
+	                        return _react2.default.createElement(
+	                                'div',
+	                                { className: 'current sub-page' },
+	                                _react2.default.createElement('br', null),
+	                                _react2.default.createElement(
+	                                        'h1',
+	                                        { className: 'page-title' },
+	                                        'CURRENT PROJECTS'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'coming-soon' },
+	                                        'Coming soon'
+	                                ),
+	                                _react2.default.createElement('br', null)
+	                        );
 	                }
 	        }]);
 	
@@ -27547,7 +27613,22 @@
 	        _createClass(Prior, [{
 	                key: 'render',
 	                value: function render() {
-	                        return _react2.default.createElement('div', { className: 'prior' });
+	                        return _react2.default.createElement(
+	                                'div',
+	                                { className: 'prior sub-page' },
+	                                _react2.default.createElement('br', null),
+	                                _react2.default.createElement(
+	                                        'h1',
+	                                        { className: 'page-title' },
+	                                        'PRIOR PROJECTS'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'coming-soon' },
+	                                        'Coming soon'
+	                                ),
+	                                _react2.default.createElement('br', null)
+	                        );
 	                }
 	        }]);
 	
@@ -27588,7 +27669,22 @@
 	        _createClass(Contact, [{
 	                key: 'render',
 	                value: function render() {
-	                        return _react2.default.createElement('div', { className: 'contact' });
+	                        return _react2.default.createElement(
+	                                'div',
+	                                { className: 'contact sub-page' },
+	                                _react2.default.createElement('br', null),
+	                                _react2.default.createElement(
+	                                        'h1',
+	                                        { className: 'page-title' },
+	                                        'CONTACT US'
+	                                ),
+	                                _react2.default.createElement(
+	                                        'h2',
+	                                        { className: 'coming-soon' },
+	                                        'Coming soon'
+	                                ),
+	                                _react2.default.createElement('br', null)
+	                        );
 	                }
 	        }]);
 	
@@ -27617,7 +27713,24 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // <div className="column camelot">
+	//     <table className="inner" width="100%">
+	//         <tr width="100%">
+	//             <td className="inner-col" width="100%">
+	//                 <div className='footer-right' width="100%">
+	//                     <ul width="100%">
+	//                         <li>EXCLUSIVELY MARKETED BY:</li>
+	//                         <li><a href='http://camelothouston.com'><img src='http://i.imgur.com/eI7Eh85.png' className='camelot-img'/></a></li>
+	//                         <li>FOR INQUIRIES CONTACT:</li>
+	//                         <span className='a'><li className='ek-name'><a href='mailto:erika@camelothouston.com'>ERIKA KHOURY</a></li>
+	//                         <li className='ek-phone'><a href='tel:1-713-707-4993'>713-707-4993</a></li></span>
+	//                     </ul>
+	//                 </div>
+	//             </td>
+	//         </tr>
+	//     </table>
+	// </div>
+	
 	
 	var Footer = function (_React$Component) {
 	    _inherits(Footer, _React$Component);
@@ -27656,7 +27769,7 @@
 	                                { className: 'content' },
 	                                _react2.default.createElement(
 	                                    'div',
-	                                    { className: 'column left-column' },
+	                                    { className: 'column footer-left-column' },
 	                                    _react2.default.createElement(
 	                                        'table',
 	                                        { className: 'inner', width: '100%' },
@@ -27748,7 +27861,21 @@
 	                                                        _react2.default.createElement(
 	                                                            'li',
 	                                                            { className: 'footer-name' },
-	                                                            'LKL DEVELOPMENT GROUP'
+	                                                            _react2.default.createElement(
+	                                                                'span',
+	                                                                { className: 'lkl' },
+	                                                                'L'
+	                                                            ),
+	                                                            _react2.default.createElement(
+	                                                                'span',
+	                                                                { className: 'k' },
+	                                                                'K'
+	                                                            ),
+	                                                            _react2.default.createElement(
+	                                                                'span',
+	                                                                { className: 'lkl' },
+	                                                                'L DEVELOPMENT GROUP'
+	                                                            )
 	                                                        ),
 	                                                        _react2.default.createElement(
 	                                                            'span',
@@ -27781,71 +27908,6 @@
 	                                                                '4545 BISSONNET STREET, SUITE 285',
 	                                                                _react2.default.createElement('br', null),
 	                                                                'HOUSTON, TEXAS 77401'
-	                                                            )
-	                                                        )
-	                                                    )
-	                                                )
-	                                            )
-	                                        )
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'column camelot' },
-	                                    _react2.default.createElement(
-	                                        'table',
-	                                        { className: 'inner', width: '100%' },
-	                                        _react2.default.createElement(
-	                                            'tr',
-	                                            { width: '100%' },
-	                                            _react2.default.createElement(
-	                                                'td',
-	                                                { className: 'inner-col', width: '100%' },
-	                                                _react2.default.createElement(
-	                                                    'div',
-	                                                    { className: 'footer-right', width: '100%' },
-	                                                    _react2.default.createElement(
-	                                                        'ul',
-	                                                        { width: '100%' },
-	                                                        _react2.default.createElement(
-	                                                            'li',
-	                                                            null,
-	                                                            'EXCLUSIVELY MARKETED BY:'
-	                                                        ),
-	                                                        _react2.default.createElement(
-	                                                            'li',
-	                                                            null,
-	                                                            _react2.default.createElement(
-	                                                                'a',
-	                                                                { href: 'http://camelothouston.com' },
-	                                                                _react2.default.createElement('img', { src: 'http://i.imgur.com/eI7Eh85.png', className: 'camelot-img' })
-	                                                            )
-	                                                        ),
-	                                                        _react2.default.createElement(
-	                                                            'li',
-	                                                            null,
-	                                                            'FOR INQUIRIES CONTACT:'
-	                                                        ),
-	                                                        _react2.default.createElement(
-	                                                            'span',
-	                                                            { className: 'a' },
-	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                { className: 'ek-name' },
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { href: 'mailto:erika@camelothouston.com' },
-	                                                                    'ERIKA KHOURY'
-	                                                                )
-	                                                            ),
-	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                { className: 'ek-phone' },
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { href: 'tel:1-713-707-4993' },
-	                                                                    '713-707-4993'
-	                                                                )
 	                                                            )
 	                                                        )
 	                                                    )
