@@ -490,6 +490,7 @@ footer {
 		}
 	}
 	footer {
+        margin-bottom: 10px;
 		.wrapper {
 			height: 300px;
 			.outer {
@@ -567,7 +568,8 @@ footer {
 						}
 					}
 					.nav-right {
-						width: 220px;
+						width: 200px;
+                        padding-right: 0px;
 						li {
 							font-size: 10px;
 						}
@@ -583,8 +585,29 @@ footer {
 	}
 	footer {
 		.wrapper {
+            height: 230px;
 			.outer {
 				.content {
+                    .column {
+                        .footer-left {
+                            ul {
+                                padding-top: 8px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+					.footer-left-column {
+						font-size: 13px;
+					}
+                    .mid-column {
+                        font-size: 13px;
+                        .footer-right {
+                            ul {
+                                width: 290px;
+                                padding-top: 10px;
+                            }
+                        }
+                    }
 					// .camelot {
 					// 	.camelot-img {
 					// 		width: 80px;
@@ -602,11 +625,11 @@ footer {
             font-size: 16px;
         }
         .sub-header, .coming-soon {
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: normal;
         }
     }
 	.attribution {
-		font-size: 7px;
+		font-size: 6px;
 	}
 }

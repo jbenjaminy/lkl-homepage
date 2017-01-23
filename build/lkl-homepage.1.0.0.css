@@ -402,6 +402,9 @@ footer .footer-name {
   .nav-bar .wrapper .outer .content .nav-right li {
     font-size: 12px;
   }
+  footer {
+    margin-bottom: 10px;
+  }
   footer .wrapper {
     height: 300px;
   }
@@ -444,10 +447,28 @@ footer .footer-name {
     width: 120px;
   }
   .nav-bar .wrapper .outer .content .nav-right {
-    width: 220px;
+    width: 200px;
+    padding-right: 0px;
   }
   .nav-bar .wrapper .outer .content .nav-right li {
     font-size: 10px;
+  }
+  footer .wrapper {
+    height: 230px;
+  }
+  footer .wrapper .outer .content .column .footer-left ul {
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+  footer .wrapper .outer .content .footer-left-column {
+    font-size: 13px;
+  }
+  footer .wrapper .outer .content .mid-column {
+    font-size: 13px;
+  }
+  footer .wrapper .outer .content .mid-column .footer-right ul {
+    width: 290px;
+    padding-top: 10px;
   }
   .landing {
     height: 250px;
@@ -462,11 +483,11 @@ footer .footer-name {
   .sub-page .sub-header,
   .landing .coming-soon,
   .sub-page .coming-soon {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: normal;
   }
   .attribution {
-    font-size: 7px;
+    font-size: 6px;
   }
 }
 /*# sourceMappingURL=lkl-homepage.1.0.0.css.map */
