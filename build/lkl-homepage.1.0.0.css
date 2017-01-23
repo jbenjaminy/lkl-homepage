@@ -259,7 +259,7 @@ footer .footer-name {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 .attribution a:hover {
   color: #67727A;
@@ -382,7 +382,7 @@ footer .footer-name {
     font-size: 16px;
   }
   .attribution {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 @media only screen and (max-width: 610px) {
@@ -439,7 +439,7 @@ footer .footer-name {
     border-top: 1px solid #b7bec3;
   }
   .attribution {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 @media only screen and (max-width: 467px) {
