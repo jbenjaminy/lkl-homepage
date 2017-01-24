@@ -33,11 +33,11 @@ class Nav extends React.Component {
                                     <table className="inner" width="100%">
                                         <tr>
                                             <td className="inner-col">
-                                                <ul className='nav-right'>                                                       
-                                                    <li className='right-li'><a onClick={this.changePage.bind(this, '/contact-us')}>CONTACT</a></li>
-                                                    <li><a onClick={this.changePage.bind(this, '/prior-projects')}>PRIOR PROJECTS</a></li>
+                                                <ul className='nav-right'>
+                                                    <li className='right-li'><a onClick={this.changePage.bind(this, '/about-us')}>ABOUT</a></li>
                                                     <li><a onClick={this.changePage.bind(this, '/current-projects')}>CURRENT PROJECTS</a></li>
-                                                    <li><a onClick={this.changePage.bind(this, '/about-us')}>ABOUT</a></li>
+                                                    <li><a onClick={this.changePage.bind(this, '/prior-projects')}>PRIOR PROJECTS</a></li>
+                                                    <li><a onClick={this.changePage.bind(this, '/contact-us')}>CONTACT</a></li>
                                                 </ul>
                                             </td>
                                         </tr>

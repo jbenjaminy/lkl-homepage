@@ -11,6 +11,7 @@ class Contact extends React.Component {
             <div className='contact sub-page'>
 				<br/>
 				<h1 className='page-title'>CONTACT US</h1>
+				<div className='outer-contact'></div>
 				<h2 className='coming-soon'>Coming soon</h2>
 				<br/>
             </div>
