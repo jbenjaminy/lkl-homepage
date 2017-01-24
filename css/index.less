@@ -6,7 +6,7 @@
 @burnt: #D75C37;
 @dkGrey: #67727A;
 @ltGrey: lighten(@dkGrey, 30%);
-@import url(https://fonts.googleapis.com/css?family=Varela|Quicksand:300|Libre+Franklin:100);
+@import url(https://fonts.googleapis.com/css?family=Varela|Libre+Franklin:100);
 
 html {
   	background-color: @ltGrey;
@@ -252,11 +252,21 @@ body {
         width: 50%;
         padding-left: 45%;
         position: absolute;
-        top: 175px;
+        top: 125px;
         text-align: right;
         margin-left: 10px;
         margin-right: 10px;
         color: @offWhite;
+        font-family: 'Libre Franklin';
+        font-weight: 100;
+    }
+    .lfitch {
+        color: @red;
+        font-size: 30px;
+        font-family: 'Varela';
+    }
+    a:hover {
+        color: @ltGrey;
     }
 }
 .image {
@@ -291,6 +301,7 @@ footer {
 	.address {
 		padding-left: 15px;
 		padding-right: 15px;
+        width: 460px;
 	}
 	// .camelot-img {
 	// 	width: 150px;
@@ -373,6 +384,9 @@ footer {
 				}
 			}
 		}
+        .address {
+            width: 370px;
+    	}
 	}
 }
 @media only screen and (max-width:1121px) {
@@ -386,6 +400,9 @@ footer {
 				}
 			}
 		}
+        .address {
+            width: 276px;
+        }
 	}
     .landing {
         height: 400px;
@@ -475,6 +492,9 @@ footer {
 				}
 			}
 		}
+        .address {
+            width: 221px;
+        }
 	}
     .landing {
     }
@@ -579,6 +599,9 @@ footer {
 				}
 			}
 		}
+        .address {
+            width: 280px;
+        }
 	}
 	.attribution {
 		font-size: 8px;
@@ -647,6 +670,9 @@ footer {
 				}
 			}
 		}
+        .address {
+            width: 240px;
+        }
 	}
     .landing {
         height: 250px;

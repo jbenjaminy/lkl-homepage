@@ -27649,6 +27649,8 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouter = __webpack_require__(179);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27663,10 +27665,18 @@
 		function Contact() {
 			_classCallCheck(this, Contact);
 	
-			return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
+			var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
+	
+			_this.changePage = _this.changePage.bind(_this);
+			return _this;
 		}
 	
 		_createClass(Contact, [{
+			key: 'changePage',
+			value: function changePage(path) {
+				_reactRouter.browserHistory.push(path);
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
@@ -27684,15 +27694,38 @@
 						_react2.default.createElement('img', { className: 'contact-image', src: 'http://i.imgur.com/PvEfMHr.png', width: '700' }),
 						_react2.default.createElement(
 							'h4',
-							{ 'class': 'contact-info' },
-							'Lingard Fitch',
+							null,
+							_react2.default.createElement(
+								'span',
+								{ className: 'lfitch' },
+								'Lingard Fitch'
+							),
 							_react2.default.createElement('br', null),
 							_react2.default.createElement('br', null),
-							'713-540-1577',
 							_react2.default.createElement('br', null),
-							'info@lkldevelopmentgroup.com',
 							_react2.default.createElement('br', null),
-							'www.lkldevelopmentgroup.com'
+							_react2.default.createElement(
+								'a',
+								{ href: 'tel:1-713-540-1577' },
+								'713-540-1577  \xA0',
+								_react2.default.createElement('span', { className: 'fa fa-phone fa-1x' })
+							),
+							_react2.default.createElement('br', null),
+							_react2.default.createElement('br', null),
+							_react2.default.createElement(
+								'a',
+								{ href: 'mailto:info@lkldevelopmentgroup.com' },
+								'info@lkldevelopmentgroup.com  \xA0',
+								_react2.default.createElement('span', { className: 'fa fa-envelope fa-1x' })
+							),
+							_react2.default.createElement('br', null),
+							_react2.default.createElement('br', null),
+							_react2.default.createElement(
+								'a',
+								{ onClick: this.changePage.bind(this, '/') },
+								'www.lkldevelopmentgroup.com  \xA0',
+								_react2.default.createElement('span', { className: 'fa fa-globe fa-1x' })
+							)
 						)
 					),
 					_react2.default.createElement('br', null)
