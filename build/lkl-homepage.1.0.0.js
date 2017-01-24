@@ -27350,17 +27350,8 @@
 	                                                        { className: 'right-li' },
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: this.changePage.bind(this, '/contact-us') },
-	                                                            'CONTACT'
-	                                                        )
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'li',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'a',
-	                                                            { onClick: this.changePage.bind(this, '/prior-projects') },
-	                                                            'PRIOR PROJECTS'
+	                                                            { onClick: this.changePage.bind(this, '/about-us') },
+	                                                            'ABOUT'
 	                                                        )
 	                                                    ),
 	                                                    _react2.default.createElement(
@@ -27377,8 +27368,17 @@
 	                                                        null,
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: this.changePage.bind(this, '/about-us') },
-	                                                            'ABOUT'
+	                                                            { onClick: this.changePage.bind(this, '/prior-projects') },
+	                                                            'PRIOR PROJECTS'
+	                                                        )
+	                                                    ),
+	                                                    _react2.default.createElement(
+	                                                        'li',
+	                                                        null,
+	                                                        _react2.default.createElement(
+	                                                            'a',
+	                                                            { onClick: this.changePage.bind(this, '/contact-us') },
+	                                                            'CONTACT'
 	                                                        )
 	                                                    )
 	                                                )
@@ -27658,37 +27658,49 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var Contact = function (_React$Component) {
-	        _inherits(Contact, _React$Component);
+		_inherits(Contact, _React$Component);
 	
-	        function Contact() {
-	                _classCallCheck(this, Contact);
+		function Contact() {
+			_classCallCheck(this, Contact);
 	
-	                return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
-	        }
+			return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
+		}
 	
-	        _createClass(Contact, [{
-	                key: 'render',
-	                value: function render() {
-	                        return _react2.default.createElement(
-	                                'div',
-	                                { className: 'contact sub-page' },
-	                                _react2.default.createElement('br', null),
-	                                _react2.default.createElement(
-	                                        'h1',
-	                                        { className: 'page-title' },
-	                                        'CONTACT US'
-	                                ),
-	                                _react2.default.createElement(
-	                                        'h2',
-	                                        { className: 'coming-soon' },
-	                                        'Coming soon'
-	                                ),
-	                                _react2.default.createElement('br', null)
-	                        );
-	                }
-	        }]);
+		_createClass(Contact, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'contact sub-page' },
+					_react2.default.createElement('br', null),
+					_react2.default.createElement(
+						'h1',
+						{ className: 'page-title' },
+						'CONTACT US'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'outer-contact' },
+						_react2.default.createElement('img', { className: 'contact-image', src: 'http://i.imgur.com/PvEfMHr.png', width: '700' }),
+						_react2.default.createElement(
+							'h4',
+							{ 'class': 'contact-info' },
+							'Lingard Fitch',
+							_react2.default.createElement('br', null),
+							_react2.default.createElement('br', null),
+							'713-540-1577',
+							_react2.default.createElement('br', null),
+							'info@lkldevelopmentgroup.com',
+							_react2.default.createElement('br', null),
+							'www.lkldevelopmentgroup.com'
+						)
+					),
+					_react2.default.createElement('br', null)
+				);
+			}
+		}]);
 	
-	        return Contact;
+		return Contact;
 	}(_react2.default.Component);
 	
 	module.exports = Contact;
