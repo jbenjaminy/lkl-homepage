@@ -2,9 +2,10 @@ import React from 'react';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import Nav from './components/nav';
 import Landing from './components/landing';
-import About from './components/about';
 import Current from './components/current';
-import Prior from './components/prior';
+import Project from './components/project';
+import Gallery from './components/prior';
+import About from './components/about';
 import Contact from './components/contact';
 import Footer from './components/footer';
 
@@ -25,9 +26,12 @@ const routes = (
     <Router history={browserHistory}>
         <Route path='/' component={App}>
           <IndexRoute component={Landing}/>
+          <Route path='/current-projects' component={Current}>
+              <Route path='/current-projects/:project-name'>
+              <IndexRoute component={Project}/>
+          </Route>
+          <Route path='/project-gallery' component={Gallery}/>
           <Route path='/about-us' component={About}/>
-          <Route path='/current-projects' component={Current}/>
-          <Route path='/prior-projects' component={Prior}/>
           <Route path='/contact-us' component={Contact}/>
         </Route>
     </Router>
