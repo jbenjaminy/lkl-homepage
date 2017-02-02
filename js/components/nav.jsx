@@ -6,11 +6,13 @@ import * as actions from '../redux/actions';
 class Nav extends Component {
     constructor() {
         super();
+        this.toggleNav = this.toggleNav.bind(this);
         this.changePage = this.changePage.bind(this);
     }
 
-    changePage(path) {
-        browserHistory.push(path);
+    changePage(name) {
+        this.props.toggleNav(name);
+        browserHistory.push(`/${name}`);
     }
 
 	render() {
@@ -19,8 +21,18 @@ class Nav extends Component {
             categories = () => (
                 <ul className='categories'>
                     <li>
-                        <a onClick={this.changePage.bind(this, '/projects/current_projects')}>
+                        <a onClick={this.changePage.bind(this, 'current_projects')}>
                             CURRENT PROJECTS
+                        </a>
+                    </li>
+                    <li>
+                        <a onClick={this.changePage.bind(this, 'closed_projects')}>
+                            CLOSED PROJECTS
+                        </a>
+                    </li>
+                    <li>
+                        <a onClick={this.changePage.bind(this, 'investment_opportunities')}>
+                            INVESTMENT OPPORTUNITIES
                         </a>
                     </li>
                 </ul>
@@ -74,7 +86,10 @@ class Nav extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({ meds: state.meds, grid: state.grid });
+const mapStateToProps = (state) => {
+	return {
+		toggled: state.toggled
+	};
+};
 
-
-export default connect(mapStateToProps)(MainPage);
+export default connect(mapStateToProps, actions)(Nav);
