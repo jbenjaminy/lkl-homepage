@@ -20,9 +20,10 @@ class Projects extends Component {
 		if (projects.length >= 1) {
 			projs = projects.map((project) => (
 				<li>
+					<img src={project.uri} />
+					<h2>{project.header}</h2>
 					<a onClick={this.changePage.bind(this, project.name)}>
-						<img src={project.img} />
-						<h2>{project.header}</h2>
+						More Details
 					</a>
 				</li>
 			));
