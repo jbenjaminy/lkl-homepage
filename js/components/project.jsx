@@ -1,7 +1,6 @@
 import React from 'react';
-import { Router, Link } from 'react-router';
 
-const Projects = (props) => {
+const Project = (props) => {
 	let projects = 'Coming Soon';
 	if (props.projects.length >= 1) {
 		projects = props.projects.map((project) => {
@@ -26,4 +25,4 @@ const Projects = (props) => {
     );
 }
 
-export default Projects;
+export default Project;
