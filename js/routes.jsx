@@ -36,8 +36,8 @@ const routes = (
                   <IndexRoute component={Project} />
               </Route>
           </Route>
-          <Route path='/about-us' component={About}/>
-          <Route path='/contact-us' component={Contact}/>
+          <Route path='/about_us' component={About}/>
+          <Route path='/contact_us' component={Contact}/>
         </Route>
     </Router>
 );
