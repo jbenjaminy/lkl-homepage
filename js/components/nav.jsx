@@ -10,8 +10,12 @@ class Nav extends Component {
         this.changePage = this.changePage.bind(this);
     }
 
+    toggleNav() {
+        this.props.toggleNav();
+    }
+
     changePage(name) {
-        this.props.toggleNav(name);
+        this.props.selectPage(name);
         browserHistory.push(`/${name}`);
     }
 
