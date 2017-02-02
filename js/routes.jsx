@@ -1,5 +1,10 @@
 import React from 'react';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {
+    Router,
+    Route,
+    IndexRoute,
+    browserHistory
+} from 'react-router';
 import Nav from './components/nav';
 import Landing from './components/landing';
 import Projects from './components/projects';
