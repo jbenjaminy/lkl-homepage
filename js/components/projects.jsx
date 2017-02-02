@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../redux/actions';
 
 class Projects extends Component {
 	constructor() {
@@ -9,31 +9,37 @@ class Projects extends Component {
         this.changePage = this.changePage.bind(this);
     }
 
+	componentWillMount() {
+		this.projs = this.props.projects.map((project) => {
+			return(
+				<li>
+					<img src={project.uri} />
+					<h2>
+						{project.header}
+					</h2>
+					<a onClick={this.changePage.bind(this, project.name)}>
+						More Details
+					</a>
+				</li>
+			)
+		});
+	}
+
     changePage(name) {
 		this.props.selectProject(name)
         browserHistory.push(`/name`);
     }
 
 	render() {
-		const { page, projects } = this.props;
-		let projs = 'Coming Soon';
-		if (projects.length >= 1) {
-			projs = projects.map((project) => (
-				<li>
-					<img src={project.uri} />
-					<h2>{project.header}</h2>
-					<a onClick={this.changePage.bind(this, project.name)}>
-						More Details
-					</a>
-				</li>
-			));
-		}
-
 		return (
 	        <div className='projects sub-page'>
 				<br/>
-				<h1 className='page-title'>{page}</h1>
-				<ul>{projs}</ul>
+					<h1 className='page-title'>
+						{this.props.page}
+					</h1>
+					<ul>
+						{this.projs}
+					</ul>
 				<br/>
 	        </div>
 	    );
@@ -43,7 +49,7 @@ class Projects extends Component {
 const mapStateToProps = (state) => {
 	return {
 		page: state.page,
-		projects: state.projects[state.page],
+		projects: state.projects[state.page]
 	};
 };
 

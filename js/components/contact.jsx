@@ -1,7 +1,7 @@
-import React from 'react'
-import {browserHistory} from 'react-router';
+import React, { Component } from 'react'
+import { browserHistory } from 'react-router';
 
-class Contact extends React.Component {
+class Contact extends React {
 
 	constructor() {
         super();
@@ -32,4 +32,4 @@ class Contact extends React.Component {
     }
 }
 
-module.exports = Contact;
+export default Contact;

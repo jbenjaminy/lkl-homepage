@@ -24,10 +24,18 @@ class Project extends Component {
 		return (
 	        <div className='projects sub-page'>
 				<br/>
-				<h1 className='page-title'>{this.project.header}</h1>
-				<h2 className='specs'>{this.project.specs}</h2>
-				<p className='description'>{this.project.description}</p>
-				<ul>{images}</ul>
+					<h1 className='page-title'>
+						{this.project.header}
+					</h1>
+					<h2 className='specs'>
+						{this.project.specs}
+					</h2>
+					<p className='description'>
+						{this.project.description}
+					</p>
+					<ul>
+						{images}
+					</ul>
 				<br/>
 	        </div>
 	    );
