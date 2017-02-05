@@ -26,9 +26,13 @@ body {
   text-decoration: none;
 }
 /*--------- FIXED CONTENT ---------*/
+.nav-right {
+  width: 250px;
+  float: right;
+  height: 130px;
+}
 .nav-right li {
-  display: inline-block;
-  border-right: 1px solid #b7bec3;
+  display: block;
 }
 .nav-bar .nav-wrapper,
 footer .nav-wrapper {

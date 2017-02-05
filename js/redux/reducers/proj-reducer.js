@@ -1,3 +1,3 @@
-import data from './med-list.json';
+import data from './proj-list.json';
 
 export default () => data;
