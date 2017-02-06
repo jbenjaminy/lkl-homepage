@@ -31,7 +31,7 @@ const routes = (
         <Route path='/' component={App}>
           <IndexRoute component={Landing}/>
           <Route path='/projects/:category'>
-              <IndexRoute component={Projects}} />
+              <IndexRoute component={Projects} />
               <Route path='/projects/:category/:project'>
                   <IndexRoute component={Project} />
               </Route>
