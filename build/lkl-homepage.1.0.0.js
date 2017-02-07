@@ -24005,7 +24005,7 @@
 	
 	var _projects2 = _interopRequireDefault(_projects);
 	
-	var _project = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/project\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _project = __webpack_require__(288);
 	
 	var _project2 = _interopRequireDefault(_project);
 	
@@ -30029,7 +30029,104 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, actions)(Projects);
 
 /***/ },
-/* 288 */,
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRedux = __webpack_require__(178);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Project = function (_Component) {
+		_inherits(Project, _Component);
+	
+		function Project() {
+			_classCallCheck(this, Project);
+	
+			return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this));
+		}
+	
+		_createClass(Project, [{
+			key: 'componentWillMount',
+			value: function componentWillMount() {
+				var _this2 = this;
+	
+				this.project = this.props.projects[this.props.page].forEach(function (project) {
+					if (project.name === _this2.props.project) {
+						return project;
+					}
+				});
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var images = this.project.images.map(function (uri) {
+					return _react2.default.createElement(
+						'li',
+						null,
+						_react2.default.createElement('image', { src: uri })
+					);
+				});
+				return _react2.default.createElement(
+					'div',
+					{ className: 'projects sub-page' },
+					_react2.default.createElement('br', null),
+					_react2.default.createElement(
+						'h1',
+						{ className: 'page-title' },
+						this.project.header
+					),
+					_react2.default.createElement(
+						'h2',
+						{ className: 'specs' },
+						this.project.specs
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'description' },
+						this.project.description
+					),
+					_react2.default.createElement(
+						'ul',
+						null,
+						images
+					),
+					_react2.default.createElement('br', null)
+				);
+			}
+		}]);
+	
+		return Project;
+	}(_react.Component);
+	
+	var mapStateToProps = function mapStateToProps(state) {
+		return {
+			page: state.page,
+			projects: state.projects[state.page],
+			project: state.project
+		};
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Project);
+
+/***/ },
 /* 289 */
 /***/ function(module, exports, __webpack_require__) {
 

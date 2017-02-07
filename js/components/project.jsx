@@ -14,7 +14,7 @@ class Project extends Component {
 	}
 
 	render() {
-		let images = this.project.images.map((uri) {
+		let images = this.project.images.map((uri) => {
 			return (
 				<li>
 					<image src={uri} />
