@@ -1,13 +1,7 @@
 import React, { Component } from 'react'
 import { browserHistory } from 'react-router';
 
-class Contact extends React {
-
-	constructor() {
-        super();
-		this.changePage = this.changePage.bind(this);
-    }
-
+class Contact extends Component {
 	changePage(path) {
 		browserHistory.push(path);
 	}

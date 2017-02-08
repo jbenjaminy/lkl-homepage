@@ -23791,7 +23791,10 @@
 	
 	    switch (action.type) {
 	        case 'toggle_nav':
-	            return !state;
+	            if (state = false) {
+	                return true;
+	            }
+	            return false;
 	        default:
 	            return state;
 	    }
@@ -29665,11 +29668,7 @@
 	    function Nav() {
 	        _classCallCheck(this, Nav);
 	
-	        var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this));
-	
-	        _this.toggleNav = _this.toggleNav.bind(_this);
-	        _this.changePage = _this.changePage.bind(_this);
-	        return _this;
+	        return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
 	    }
 	
 	    _createClass(Nav, [{
@@ -29688,6 +29687,9 @@
 	        value: function render() {
 	            var _this2 = this;
 	
+	            var toggled = this.props.toggled;
+	
+	            console.log(toggled);
 	            var categories = null;
 	            if (toggled) {
 	                categories = function categories() {
@@ -29959,10 +29961,7 @@
 		function Projects() {
 			_classCallCheck(this, Projects);
 	
-			var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
-	
-			_this.changePage = _this.changePage.bind(_this);
-			return _this;
+			return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).apply(this, arguments));
 		}
 	
 		_createClass(Projects, [{
@@ -29992,7 +29991,7 @@
 			key: 'changePage',
 			value: function changePage(name) {
 				this.props.selectProject(name);
-				_reactRouter.browserHistory.push('/name');
+				_reactRouter.browserHistory.push('/' + name);
 			}
 		}, {
 			key: 'render',
@@ -30060,7 +30059,7 @@
 		function Project() {
 			_classCallCheck(this, Project);
 	
-			return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this));
+			return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).apply(this, arguments));
 		}
 	
 		_createClass(Project, [{
@@ -30189,16 +30188,13 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Contact = function (_React) {
-		_inherits(Contact, _React);
+	var Contact = function (_Component) {
+		_inherits(Contact, _Component);
 	
 		function Contact() {
 			_classCallCheck(this, Contact);
 	
-			var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
-	
-			_this.changePage = _this.changePage.bind(_this);
-			return _this;
+			return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
 		}
 	
 		_createClass(Contact, [{
@@ -30264,7 +30260,7 @@
 		}]);
 	
 		return Contact;
-	}(_react2.default);
+	}(_react.Component);
 	
 	exports.default = Contact;
 
@@ -30292,35 +30288,15 @@
 	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // <div className="column camelot">
-	//     <table className="inner" width="100%">
-	//         <tr width="100%">
-	//             <td className="inner-col" width="100%">
-	//                 <div className='footer-right' width="100%">
-	//                     <ul width="100%">
-	//                         <li>EXCLUSIVELY MARKETED BY:</li>
-	//                         <li><a href='http://camelothouston.com'><img src='http://i.imgur.com/eI7Eh85.png' className='camelot-img'/></a></li>
-	//                         <li>FOR INQUIRIES CONTACT:</li>
-	//                         <span className='a'><li className='ek-name'><a href='mailto:erika@camelothouston.com'>ERIKA KHOURY</a></li>
-	//                         <li className='ek-phone'><a href='tel:1-713-707-4993'>713-707-4993</a></li></span>
-	//                     </ul>
-	//                 </div>
-	//             </td>
-	//         </tr>
-	//     </table>
-	// </div>
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	
-	var Footer = function (_React) {
-	    _inherits(Footer, _React);
+	var Footer = function (_Component) {
+	    _inherits(Footer, _Component);
 	
 	    function Footer() {
 	        _classCallCheck(this, Footer);
 	
-	        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
-	
-	        _this.changePage = _this.changePage.bind(_this);
-	        return _this;
+	        return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
 	    }
 	
 	    _createClass(Footer, [{
@@ -30513,9 +30489,27 @@
 	    }]);
 	
 	    return Footer;
-	}(_react2.default);
+	}(_react.Component);
 	
 	exports.default = Footer;
+	
+	// <div className="column camelot">
+	//     <table className="inner" width="100%">
+	//         <tr width="100%">
+	//             <td className="inner-col" width="100%">
+	//                 <div className='footer-right' width="100%">
+	//                     <ul width="100%">
+	//                         <li>EXCLUSIVELY MARKETED BY:</li>
+	//                         <li><a href='http://camelothouston.com'><img src='http://i.imgur.com/eI7Eh85.png' className='camelot-img'/></a></li>
+	//                         <li>FOR INQUIRIES CONTACT:</li>
+	//                         <span className='a'><li className='ek-name'><a href='mailto:erika@camelothouston.com'>ERIKA KHOURY</a></li>
+	//                         <li className='ek-phone'><a href='tel:1-713-707-4993'>713-707-4993</a></li></span>
+	//                     </ul>
+	//                 </div>
+	//             </td>
+	//         </tr>
+	//     </table>
+	// </div>
 
 /***/ }
 /******/ ]);

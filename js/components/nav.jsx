@@ -4,12 +4,6 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 
 class Nav extends Component {
-    constructor() {
-        super();
-        this.toggleNav = this.toggleNav.bind(this);
-        this.changePage = this.changePage.bind(this);
-    }
-
     toggleNav() {
         this.props.toggleNav();
     }
@@ -20,6 +14,10 @@ class Nav extends Component {
     }
 
 	render() {
+        const {
+            toggled
+        } = this.props;
+        console.log(toggled);
         let categories = null;
         if (toggled) {
             categories = () => (

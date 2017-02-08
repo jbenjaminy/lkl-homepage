@@ -4,11 +4,6 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 
 class Projects extends Component {
-	constructor() {
-        super();
-        this.changePage = this.changePage.bind(this);
-    }
-
 	componentWillMount() {
 		this.projs = this.props.projects.map((project) => {
 			return(
@@ -27,7 +22,7 @@ class Projects extends Component {
 
     changePage(name) {
 		this.props.selectProject(name)
-        browserHistory.push(`/name`);
+        browserHistory.push(`/${name}`);
     }
 
 	render() {

@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Project extends Component {
-	constructor() {
-        super();
-    }
 	componentWillMount() {
 		this.project = this.props.projects[this.props.page].forEach((project) => {
 			if (project.name === this.props.project) {

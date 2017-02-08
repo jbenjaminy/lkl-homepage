@@ -1,7 +1,10 @@
 export default (state = false, action) => {
     switch (action.type) {
         case 'toggle_nav':
-            return !state;
+            if (state = false) {
+                return true;
+            }
+            return false;
         default:
             return state;
     }

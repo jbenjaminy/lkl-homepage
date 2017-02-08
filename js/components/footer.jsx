@@ -1,29 +1,7 @@
-// <div className="column camelot">
-//     <table className="inner" width="100%">
-//         <tr width="100%">
-//             <td className="inner-col" width="100%">
-//                 <div className='footer-right' width="100%">
-//                     <ul width="100%">
-//                         <li>EXCLUSIVELY MARKETED BY:</li>
-//                         <li><a href='http://camelothouston.com'><img src='http://i.imgur.com/eI7Eh85.png' className='camelot-img'/></a></li>
-//                         <li>FOR INQUIRIES CONTACT:</li>
-//                         <span className='a'><li className='ek-name'><a href='mailto:erika@camelothouston.com'>ERIKA KHOURY</a></li>
-//                         <li className='ek-phone'><a href='tel:1-713-707-4993'>713-707-4993</a></li></span>
-//                     </ul>
-//                 </div>
-//             </td>
-//         </tr>
-//     </table>
-// </div>
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 
-class Footer extends React {
-    constructor() {
-        super();
-        this.changePage = this.changePage.bind(this);
-    }
-
+class Footer extends Component {
     changePage(path) {
         browserHistory.push(path);
     }
@@ -118,3 +96,21 @@ class Footer extends React {
 }
 
 export default Footer;
+
+// <div className="column camelot">
+//     <table className="inner" width="100%">
+//         <tr width="100%">
+//             <td className="inner-col" width="100%">
+//                 <div className='footer-right' width="100%">
+//                     <ul width="100%">
+//                         <li>EXCLUSIVELY MARKETED BY:</li>
+//                         <li><a href='http://camelothouston.com'><img src='http://i.imgur.com/eI7Eh85.png' className='camelot-img'/></a></li>
+//                         <li>FOR INQUIRIES CONTACT:</li>
+//                         <span className='a'><li className='ek-name'><a href='mailto:erika@camelothouston.com'>ERIKA KHOURY</a></li>
+//                         <li className='ek-phone'><a href='tel:1-713-707-4993'>713-707-4993</a></li></span>
+//                     </ul>
+//                 </div>
+//             </td>
+//         </tr>
+//     </table>
+// </div>
