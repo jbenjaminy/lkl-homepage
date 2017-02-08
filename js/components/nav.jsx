@@ -42,10 +42,10 @@ class Nav extends Component {
         }
 		return (
             <div className="nav-bar"><center className="wrapper nav-wrapper">
-                <table className="outer" width="100%">
+                <table className="outer">
                     <tr><td className="content">
                         <div className="column left-column">
-                            <table className="inner" width="100%">
+                            <table className="inner">
                                 <tr><td className="inner-col"><div className="nav-left">
                                     <img
                                         src='http://i.imgur.com/tyipyMy.png'
@@ -55,7 +55,7 @@ class Nav extends Component {
                             </table>
                         </div>
                         <div className="column right-column">
-                            <table className="inner" width="100%">
+                            <table className="inner">
                                 <tr><td className="inner-col"><ul className='nav-right'>
                                     <li>
                                         <a onClick={this.changePage.bind(this, '/')}>

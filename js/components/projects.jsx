@@ -5,10 +5,9 @@ import * as actions from '../redux/actions';
 
 class Projects extends Component {
 	componentWillMount() {
-		this.projs = this.props.projects.map((project) => {
-			return(
+		this.projs = this.props.projects.map((project) => (
 				<li>
-					<img src={project.uri} />
+					<img src={project.uri} alt={project.uri} />
 					<h2>
 						{project.header}
 					</h2>
@@ -17,35 +16,33 @@ class Projects extends Component {
 					</a>
 				</li>
 			)
-		});
+		);
 	}
 
     changePage(name) {
-		this.props.selectProject(name)
+		this.props.selectProject(name);
         browserHistory.push(`/${name}`);
     }
 
 	render() {
 		return (
-	        <div className='projects sub-page'>
-				<br/>
-					<h1 className='page-title'>
-						{this.props.page}
-					</h1>
-					<ul>
-						{this.projs}
-					</ul>
-				<br/>
-	        </div>
-	    );
+			<div className='projects sub-page'>
+				<br />
+				<h1 className='page-title'>
+					{this.props.page}
+				</h1>
+				<ul>
+					{this.projs}
+				</ul>
+				<br />
+			</div>
+		);
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		page: state.page,
-		projects: state.projects[state.page]
-	};
-};
+const mapStateToProps = (state) => ({
+	page: state.page,
+	projects: state.projects[state.page]
+});
 
 export default connect(mapStateToProps, actions)(Projects);

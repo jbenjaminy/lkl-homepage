@@ -24040,7 +24040,7 @@
 	        _react2.default.createElement(
 	            'h3',
 	            { className: 'attribution' },
-	            '\xA9 2017 ',
+	            '\xA9 2017',
 	            _react2.default.createElement(
 	                'span',
 	                { className: 'lkl' },
@@ -24056,7 +24056,7 @@
 	                { className: 'lkl' },
 	                'L DEVELOPMENT GROUP'
 	            ),
-	            '\xA0\xA0|\xA0\xA0ALL RIGHTS RESERVED\xA0\xA0|\xA0\xA0WEB DESIGN BY ',
+	            '\xA0\xA0|\xA0\xA0ALL RIGHTS RESERVED\xA0\xA0|\xA0\xA0WEB DESIGN BY',
 	            _react2.default.createElement(
 	                'a',
 	                { href: 'http://www.jbenjaminy.com' },
@@ -29734,7 +29734,7 @@
 	                    { className: 'wrapper nav-wrapper' },
 	                    _react2.default.createElement(
 	                        'table',
-	                        { className: 'outer', width: '100%' },
+	                        { className: 'outer' },
 	                        _react2.default.createElement(
 	                            'tr',
 	                            null,
@@ -29746,7 +29746,7 @@
 	                                    { className: 'column left-column' },
 	                                    _react2.default.createElement(
 	                                        'table',
-	                                        { className: 'inner', width: '100%' },
+	                                        { className: 'inner' },
 	                                        _react2.default.createElement(
 	                                            'tr',
 	                                            null,
@@ -29770,7 +29770,7 @@
 	                                    { className: 'column right-column' },
 	                                    _react2.default.createElement(
 	                                        'table',
-	                                        { className: 'inner', width: '100%' },
+	                                        { className: 'inner' },
 	                                        _react2.default.createElement(
 	                                            'tr',
 	                                            null,
@@ -29973,7 +29973,7 @@
 					return _react2.default.createElement(
 						'li',
 						null,
-						_react2.default.createElement('img', { src: project.uri }),
+						_react2.default.createElement('img', { src: project.uri, alt: project.uri }),
 						_react2.default.createElement(
 							'h2',
 							null,
