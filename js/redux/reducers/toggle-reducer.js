@@ -1,10 +1,9 @@
-export default (state = false, action) => {
+const INITIAL_STATE = { toggled: false };
+
+export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'toggle_nav':
-            if (state = false) {
-                return true;
-            }
-            return false;
+            return !state.toggled;
         default:
             return state;
     }

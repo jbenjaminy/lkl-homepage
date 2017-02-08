@@ -23784,17 +23784,15 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	var INITIAL_STATE = { toggled: false };
 	
 	exports.default = function () {
-	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : INITIAL_STATE;
 	    var action = arguments[1];
 	
 	    switch (action.type) {
 	        case 'toggle_nav':
-	            if (state = false) {
-	                return true;
-	            }
-	            return false;
+	            return !state.toggled;
 	        default:
 	            return state;
 	    }
