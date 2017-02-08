@@ -11,40 +11,34 @@ class Project extends Component {
 	}
 
 	render() {
-		let images = this.project.images.map((uri) => {
-			return (
-				<li>
-					<image src={uri} />
-				</li>
-			)
-		});
+		const images = this.project.images.map((uri) => (
+			<li>
+				<image src={uri} />
+			</li>
+		));
 		return (
-	        <div className='projects sub-page'>
-				<br/>
-					<h1 className='page-title'>
-						{this.project.header}
-					</h1>
-					<h2 className='specs'>
-						{this.project.specs}
-					</h2>
-					<p className='description'>
-						{this.project.description}
-					</p>
-					<ul>
-						{images}
-					</ul>
-				<br/>
-	        </div>
-	    );
+			<div className='projects sub-page'><br />
+				<h1 className='page-title'>
+					{this.project.header}
+				</h1>
+				<h2 className='specs'>
+					{this.project.specs}
+				</h2>
+				<p className='description'>
+					{this.project.description}
+				</p>
+				<ul>
+					{images}
+				</ul>
+			<br /></div>
+		);
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
+const mapStateToProps = (state) => ({
 		page: state.page,
 		projects: state.projects[state.page],
 		project: state.project
-	};
-};
+	});
 
 export default connect(mapStateToProps)(Project);
