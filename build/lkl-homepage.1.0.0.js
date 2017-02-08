@@ -29691,6 +29691,7 @@
 	
 	            console.log(toggled);
 	            var categories = null;
+	
 	            if (toggled) {
 	                categories = function categories() {
 	                    return _react2.default.createElement(
@@ -29701,7 +29702,9 @@
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { onClick: _this2.changePage.bind(_this2, 'current_projects') },
+	                                {
+	                                    onClick: _this2.changePage.bind(_this2, 'current_projects')
+	                                },
 	                                'CURRENT PROJECTS'
 	                            )
 	                        ),
@@ -29710,7 +29713,9 @@
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { onClick: _this2.changePage.bind(_this2, 'closed_projects') },
+	                                {
+	                                    onClick: _this2.changePage.bind(_this2, 'closed_projects')
+	                                },
 	                                'CLOSED PROJECTS'
 	                            )
 	                        ),
@@ -29719,7 +29724,9 @@
 	                            null,
 	                            _react2.default.createElement(
 	                                'a',
-	                                { onClick: _this2.changePage.bind(_this2, 'investment_opportunities') },
+	                                {
+	                                    onClick: _this2.changePage.bind(_this2, 'investment_opportunities')
+	                                },
 	                                'INVESTMENT OPPORTUNITIES'
 	                            )
 	                        )
@@ -29734,7 +29741,9 @@
 	                    { className: 'wrapper nav-wrapper' },
 	                    _react2.default.createElement(
 	                        'table',
-	                        { className: 'outer' },
+	                        {
+	                            className: 'outer'
+	                        },
 	                        _react2.default.createElement(
 	                            'tr',
 	                            null,
@@ -29746,7 +29755,9 @@
 	                                    { className: 'column left-column' },
 	                                    _react2.default.createElement(
 	                                        'table',
-	                                        { className: 'inner' },
+	                                        {
+	                                            className: 'inner'
+	                                        },
 	                                        _react2.default.createElement(
 	                                            'tr',
 	                                            null,
@@ -29777,7 +29788,9 @@
 	                                            null,
 	                                            _react2.default.createElement(
 	                                                'td',
-	                                                { className: 'inner-col' },
+	                                                {
+	                                                    className: 'inner-col'
+	                                                },
 	                                                _react2.default.createElement(
 	                                                    'ul',
 	                                                    { className: 'nav-right' },
@@ -29894,7 +29907,10 @@
 	        _react2.default.createElement(
 	            'header',
 	            null,
-	            _react2.default.createElement('img', { src: 'http://i.imgur.com/IG0a3EZ.jpg' })
+	            _react2.default.createElement('img', {
+	                src: 'http://i.imgur.com/IG0a3EZ.jpg',
+	                alt: 'LKL DEVELOPMENT GROUP'
+	            })
 	        ),
 	        _react2.default.createElement(
 	            'section',
@@ -29915,8 +29931,7 @@
 	                { className: 'sub-header' },
 	                'A premier, residential real estate investment company based in Houston, Texas.'
 	            )
-	        ),
-	        _react2.default.createElement('section', { className: 'featured-projects' })
+	        )
 	    );
 	};
 	
@@ -30218,7 +30233,12 @@
 					_react2.default.createElement(
 						'div',
 						{ className: 'outer-contact' },
-						_react2.default.createElement('img', { className: 'contact-image', src: 'http://i.imgur.com/PvEfMHr.png', width: '700' }),
+						_react2.default.createElement('img', {
+							className: 'contact-image',
+							src: 'http://i.imgur.com/PvEfMHr.png',
+							width: '700',
+							alt: 'LKL DEVELOPMENT GROUP'
+						}),
 						_react2.default.createElement(
 							'h4',
 							null,
