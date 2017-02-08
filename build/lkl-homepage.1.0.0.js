@@ -24040,7 +24040,7 @@
 	        _react2.default.createElement(
 	            'h3',
 	            { className: 'attribution' },
-	            '\xA9 2017',
+	            '\xA9 2017\xA0\xA0',
 	            _react2.default.createElement(
 	                'span',
 	                { className: 'lkl' },
@@ -24056,7 +24056,7 @@
 	                { className: 'lkl' },
 	                'L DEVELOPMENT GROUP'
 	            ),
-	            '\xA0\xA0|\xA0\xA0ALL RIGHTS RESERVED\xA0\xA0|\xA0\xA0WEB DESIGN BY',
+	            '\xA0\xA0 |\xA0\xA0ALL RIGHTS RESERVED\xA0\xA0 |\xA0\xA0WEB DESIGN BY\xA0\xA0',
 	            _react2.default.createElement(
 	                'a',
 	                { href: 'http://www.jbenjaminy.com' },
@@ -29776,7 +29776,9 @@
 	                                            null,
 	                                            _react2.default.createElement(
 	                                                'td',
-	                                                { className: 'inner-col' },
+	                                                {
+	                                                    className: 'inner-col'
+	                                                },
 	                                                _react2.default.createElement(
 	                                                    'ul',
 	                                                    { className: 'nav-right' },
@@ -30315,7 +30317,7 @@
 	                    { className: 'wrapper footer-wrapper' },
 	                    _react2.default.createElement(
 	                        'table',
-	                        { className: 'outer', width: '100%' },
+	                        { className: 'outer' },
 	                        _react2.default.createElement(
 	                            'tr',
 	                            null,
@@ -30324,78 +30326,74 @@
 	                                { className: 'content' },
 	                                _react2.default.createElement(
 	                                    'div',
-	                                    { className: 'column footer-left-column' },
+	                                    { className: 'column left-column' },
 	                                    _react2.default.createElement(
 	                                        'table',
-	                                        { className: 'inner', width: '100%' },
+	                                        { className: 'inner' },
 	                                        _react2.default.createElement(
 	                                            'tr',
-	                                            { width: '100%' },
+	                                            null,
 	                                            _react2.default.createElement(
 	                                                'td',
-	                                                { className: 'inner-col', width: '100%' },
+	                                                { className: 'inner-col' },
 	                                                _react2.default.createElement(
-	                                                    'div',
-	                                                    { className: 'footer-left', width: '100%' },
+	                                                    'ul',
+	                                                    { className: 'footer-left' },
 	                                                    _react2.default.createElement(
-	                                                        'ul',
-	                                                        { width: '100%' },
+	                                                        'span',
+	                                                        { className: 'a' },
 	                                                        _react2.default.createElement(
-	                                                            'span',
-	                                                            { className: 'a' },
+	                                                            'li',
+	                                                            null,
 	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                null,
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { onClick: this.changePage.bind(this, '/') },
-	                                                                    'HOME'
-	                                                                )
-	                                                            ),
+	                                                                'a',
+	                                                                { onClick: this.changePage.bind(this, '/') },
+	                                                                'HOME'
+	                                                            )
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'li',
+	                                                            null,
 	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                null,
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { onClick: this.changePage.bind(this, '/projects/current_projects') },
-	                                                                    'CURRENT PROJECTS'
-	                                                                )
-	                                                            ),
+	                                                                'a',
+	                                                                { onClick: this.changePage.bind(this, '/projects/current_projects') },
+	                                                                'CURRENT PROJECTS'
+	                                                            )
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'li',
+	                                                            null,
 	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                null,
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { onClick: this.changePage.bind(this, '/projects/closed_projects') },
-	                                                                    'CLOSED PROJECTS'
-	                                                                )
-	                                                            ),
+	                                                                'a',
+	                                                                { onClick: this.changePage.bind(this, '/projects/closed_projects') },
+	                                                                'CLOSED PROJECTS'
+	                                                            )
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'li',
+	                                                            null,
 	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                null,
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { onClick: this.changePage.bind(this, '/projects/investment_opportunities') },
-	                                                                    'INVESTMENT OPPORTUNITIES'
-	                                                                )
-	                                                            ),
+	                                                                'a',
+	                                                                { onClick: this.changePage.bind(this, '/projects/investment_opportunities') },
+	                                                                'INVESTMENT OPPORTUNITIES'
+	                                                            )
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'li',
+	                                                            null,
 	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                null,
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { onClick: this.changePage.bind(this, '/about_us') },
-	                                                                    'ABOUT'
-	                                                                )
-	                                                            ),
+	                                                                'a',
+	                                                                { onClick: this.changePage.bind(this, '/about_us') },
+	                                                                'ABOUT'
+	                                                            )
+	                                                        ),
+	                                                        _react2.default.createElement(
+	                                                            'li',
+	                                                            null,
 	                                                            _react2.default.createElement(
-	                                                                'li',
-	                                                                null,
-	                                                                _react2.default.createElement(
-	                                                                    'a',
-	                                                                    { onClick: this.changePage.bind(this, '/contact_us') },
-	                                                                    'CONTACT'
-	                                                                )
+	                                                                'a',
+	                                                                { onClick: this.changePage.bind(this, '/contact_us') },
+	                                                                'CONTACT'
 	                                                            )
 	                                                        )
 	                                                    )
@@ -30406,22 +30404,22 @@
 	                                ),
 	                                _react2.default.createElement(
 	                                    'div',
-	                                    { className: 'column mid-column' },
+	                                    { className: 'column right-column' },
 	                                    _react2.default.createElement(
 	                                        'table',
-	                                        { className: 'inner', width: '100%' },
+	                                        { className: 'inner' },
 	                                        _react2.default.createElement(
 	                                            'tr',
-	                                            { width: '100%' },
+	                                            null,
 	                                            _react2.default.createElement(
 	                                                'td',
-	                                                { className: 'inner-col', width: '100%' },
+	                                                { className: 'inner-col' },
 	                                                _react2.default.createElement(
 	                                                    'div',
-	                                                    { className: 'footer-right', width: '100%' },
+	                                                    null,
 	                                                    _react2.default.createElement(
 	                                                        'ul',
-	                                                        { width: '100%' },
+	                                                        { className: 'footer-right' },
 	                                                        _react2.default.createElement(
 	                                                            'li',
 	                                                            { className: 'footer-name' },
@@ -30492,24 +30490,6 @@
 	}(_react.Component);
 	
 	exports.default = Footer;
-	
-	// <div className="column camelot">
-	//     <table className="inner" width="100%">
-	//         <tr width="100%">
-	//             <td className="inner-col" width="100%">
-	//                 <div className='footer-right' width="100%">
-	//                     <ul width="100%">
-	//                         <li>EXCLUSIVELY MARKETED BY:</li>
-	//                         <li><a href='http://camelothouston.com'><img src='http://i.imgur.com/eI7Eh85.png' className='camelot-img'/></a></li>
-	//                         <li>FOR INQUIRIES CONTACT:</li>
-	//                         <span className='a'><li className='ek-name'><a href='mailto:erika@camelothouston.com'>ERIKA KHOURY</a></li>
-	//                         <li className='ek-phone'><a href='tel:1-713-707-4993'>713-707-4993</a></li></span>
-	//                     </ul>
-	//                 </div>
-	//             </td>
-	//         </tr>
-	//     </table>
-	// </div>
 
 /***/ }
 /******/ ]);

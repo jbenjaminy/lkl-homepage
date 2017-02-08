@@ -56,29 +56,29 @@ class Nav extends Component {
                         </div>
                         <div className="column right-column">
                             <table className="inner">
-                                <tr><td className="inner-col"><ul className='nav-right'>
-                                    <li>
-                                        <a onClick={this.changePage.bind(this, '/')}>
-                                            HOME
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a onClick={this.toggleNav}>
-                                            PROJECTS
-                                        </a>
-                                        {categories}
-                                    </li>
-                                    <li>
-                                        <a onClick={this.changePage.bind(this, '/about_us')}>
-                                            ABOUT
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a onClick={this.changePage.bind(this, '/contact_us')}>
-                                            CONTACT
-                                        </a>
-                                    </li>
-                                </ul></td></tr>
+                                <tr><td
+                                    className="inner-col"
+                                ><ul className='nav-right'><li>
+                                    <a onClick={this.changePage.bind(this, '/')}>
+                                        HOME
+                                    </a>
+                                </li>
+                                <li>
+                                    <a onClick={this.toggleNav}>
+                                        PROJECTS
+                                    </a>
+                                    {categories}
+                                </li>
+                                <li>
+                                    <a onClick={this.changePage.bind(this, '/about_us')}>
+                                        ABOUT
+                                    </a>
+                                </li>
+                                <li><a onClick={this.changePage.bind(this, '/contact_us')}>
+                                        CONTACT
+                                    </a>
+
+                                </li></ul></td></tr>
                             </table>
                         </div>
                     </td></tr>

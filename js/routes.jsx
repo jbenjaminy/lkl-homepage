@@ -22,7 +22,7 @@ let App = (props) => {
             </div>
             <Footer />
             <h3 className='attribution'>
-                &copy; 2017
+                &copy; 2017&nbsp;&nbsp;
                 <span className='lkl'>
                     L
                 </span><span className='k'>
@@ -30,7 +30,9 @@ let App = (props) => {
                 <span className='lkl'>
                     L DEVELOPMENT GROUP
                 </span>
-                &nbsp;&nbsp;|&nbsp;&nbsp;ALL RIGHTS RESERVED&nbsp;&nbsp;|&nbsp;&nbsp;WEB DESIGN BY
+                &nbsp;&nbsp;
+                |&nbsp;&nbsp;ALL RIGHTS RESERVED&nbsp;&nbsp;
+                |&nbsp;&nbsp;WEB DESIGN BY&nbsp;&nbsp;
                 <a href='http://www.jbenjaminy.com'>
                     JBENJAMINY
                 </a>
