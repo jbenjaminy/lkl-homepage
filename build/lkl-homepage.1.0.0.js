@@ -29758,7 +29758,8 @@
 	                                                    { className: 'nav-left' },
 	                                                    _react2.default.createElement('img', {
 	                                                        src: 'http://i.imgur.com/tyipyMy.png',
-	                                                        onClick: this.changePage.bind(this, '/')
+	                                                        onClick: this.changePage.bind(this, '/'),
+	                                                        alt: 'LKL DEVELOPMENT GROUP'
 	                                                    })
 	                                                )
 	                                            )
@@ -29776,9 +29777,7 @@
 	                                            null,
 	                                            _react2.default.createElement(
 	                                                'td',
-	                                                {
-	                                                    className: 'inner-col'
-	                                                },
+	                                                { className: 'inner-col' },
 	                                                _react2.default.createElement(
 	                                                    'ul',
 	                                                    { className: 'nav-right' },
@@ -30314,7 +30313,9 @@
 	                null,
 	                _react2.default.createElement(
 	                    'center',
-	                    { className: 'wrapper footer-wrapper' },
+	                    {
+	                        className: 'wrapper footer-wrapper'
+	                    },
 	                    _react2.default.createElement(
 	                        'table',
 	                        { className: 'outer' },
@@ -30323,7 +30324,9 @@
 	                            null,
 	                            _react2.default.createElement(
 	                                'td',
-	                                { className: 'content' },
+	                                {
+	                                    className: 'content'
+	                                },
 	                                _react2.default.createElement(
 	                                    'div',
 	                                    { className: 'column left-column' },
@@ -30335,7 +30338,9 @@
 	                                            null,
 	                                            _react2.default.createElement(
 	                                                'td',
-	                                                { className: 'inner-col' },
+	                                                {
+	                                                    className: 'inner-col'
+	                                                },
 	                                                _react2.default.createElement(
 	                                                    'ul',
 	                                                    { className: 'footer-left' },
@@ -30413,7 +30418,9 @@
 	                                            null,
 	                                            _react2.default.createElement(
 	                                                'td',
-	                                                { className: 'inner-col' },
+	                                                {
+	                                                    className: 'inner-col'
+	                                                },
 	                                                _react2.default.createElement(
 	                                                    'div',
 	                                                    null,

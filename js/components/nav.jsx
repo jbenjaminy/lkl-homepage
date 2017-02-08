@@ -42,56 +42,49 @@ class Nav extends Component {
         }
 		return (
             <div className="nav-bar"><center className="wrapper nav-wrapper">
-                <table className="outer">
-                    <tr><td className="content">
-                        <div className="column left-column">
-                            <table className="inner">
-                                <tr><td className="inner-col"><div className="nav-left">
-                                    <img
-                                        src='http://i.imgur.com/tyipyMy.png'
-                                        onClick={this.changePage.bind(this, '/')}
-                                    />
-                                </div></td></tr>
-                            </table>
-                        </div>
-                        <div className="column right-column">
-                            <table className="inner">
-                                <tr><td
-                                    className="inner-col"
-                                ><ul className='nav-right'><li>
-                                    <a onClick={this.changePage.bind(this, '/')}>
-                                        HOME
-                                    </a>
-                                </li>
-                                <li>
-                                    <a onClick={this.toggleNav}>
-                                        PROJECTS
-                                    </a>
-                                    {categories}
-                                </li>
-                                <li>
-                                    <a onClick={this.changePage.bind(this, '/about_us')}>
-                                        ABOUT
-                                    </a>
-                                </li>
-                                <li><a onClick={this.changePage.bind(this, '/contact_us')}>
-                                        CONTACT
-                                    </a>
-
-                                </li></ul></td></tr>
-                            </table>
-                        </div>
-                    </td></tr>
-                </table>
+                <table className="outer"><tr><td className="content">
+                    <div className="column left-column"><table className="inner">
+                        <tr><td className="inner-col"><div className="nav-left">
+                            <img
+                                src='http://i.imgur.com/tyipyMy.png'
+                                onClick={this.changePage.bind(this, '/')}
+                                alt='LKL DEVELOPMENT GROUP'
+                            />
+                        </div></td></tr>
+                    </table></div>
+                    <div className="column right-column"><table className="inner">
+                        <tr><td className="inner-col"><ul className='nav-right'>
+                            <li>
+                                <a onClick={this.changePage.bind(this, '/')}>
+                                    HOME
+                                </a>
+                            </li>
+                            <li>
+                                <a onClick={this.toggleNav}>
+                                    PROJECTS
+                                </a>
+                                {categories}
+                            </li>
+                            <li>
+                                <a onClick={this.changePage.bind(this, '/about_us')}>
+                                    ABOUT
+                                </a>
+                            </li>
+                            <li>
+                                <a onClick={this.changePage.bind(this, '/contact_us')}>
+                                    CONTACT
+                                </a>
+                            </li>
+                        </ul></td></tr>
+                    </table></div>
+                </td></tr></table>
             </center></div>
         );
     }
 }
 
-const mapStateToProps = (state) => {
-	return {
-		toggled: state.toggled
-	};
-};
+const mapStateToProps = (state) => ({
+	toggled: state.toggled
+});
 
 export default connect(mapStateToProps, actions)(Nav);
