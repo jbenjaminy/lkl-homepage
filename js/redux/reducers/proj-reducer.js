@@ -1,3 +1,8 @@
-import data from './proj-list.json';
-
-export default () => data;
+export default (state = null, action) => {
+    switch (action.type) {
+        case 'select_project':
+            return action.data;
+        default:
+            return state;
+    }
+};

@@ -23762,17 +23762,17 @@
 	
 	var _projReducer2 = _interopRequireDefault(_projReducer);
 	
-	var _selectedReducer = __webpack_require__(221);
+	var _projListReducer = __webpack_require__(292);
 	
-	var _selectedReducer2 = _interopRequireDefault(_selectedReducer);
+	var _projListReducer2 = _interopRequireDefault(_projListReducer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = (0, _redux.combineReducers)({
 	    toggled: _toggleReducer2.default,
 	    page: _pageReducer2.default,
-	    projects: _projReducer2.default,
-	    project: _selectedReducer2.default
+	    projects: _projListReducer2.default,
+	    project: _projReducer2.default
 	});
 
 /***/ },
@@ -23822,142 +23822,6 @@
 
 /***/ },
 /* 219 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _projList = __webpack_require__(220);
-	
-	var _projList2 = _interopRequireDefault(_projList);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = function () {
-	  return _projList2.default;
-	};
-
-/***/ },
-/* 220 */
-/***/ function(module, exports) {
-
-	[
-	    {
-	        "name": "Current Projects",
-	        "projects": [
-	            {
-	                "name": "North Braeswood Boulevard",
-	                "address": "3839 North Braeswood Boulevard",
-	                "neighborhood": "Braeswood Place",
-	                "specs": "Twelve units",
-	                "images": [
-	                    "http://i.imgur.com/JP4PEGl.png",
-	                    "http://i.imgur.com/UOYfKrQ.png",
-	                    "http://i.imgur.com/IRBym0Y.png"
-	                ]
-	            },
-	            {
-	                "name": "Eigel Street",
-	                "address": "4123 Eigel Street",
-	                "neighborhood": "Rice Military",
-	                "specs": "Two Units",
-	                "images": [
-	                    "http://i.imgur.com/OABvzCB.png",
-	                    "http://i.imgur.com/vLLFvDR.png",
-	                    "http://i.imgur.com/KM1Jay5.png",
-	                    "http://i.imgur.com/bhTFofV.png",
-	                    "http://i.imgur.com/Rkch0n6.jpg",
-	                    "http://i.imgur.com/q3NKe27.jpg",
-	                    "http://i.imgur.com/gTsqaNV.png",
-	                    "http://i.imgur.com/tTeaNXx.png",
-	                    "http://i.imgur.com/ryPngia.png",
-	                    "http://i.imgur.com/iI6Pn8s.png",
-	                    "http://i.imgur.com/LSJexMD.png",
-	                    "http://i.imgur.com/6sMLUu6.png",
-	                    "http://i.imgur.com/XzhEyUE.jpg"
-	                ]
-	            },
-	            {
-	                "name": "Leverkuhn Street",
-	                "address": "823+825 Leverkuhn Street",
-	                "neighborhood": "Rice Military",
-	                "specs": "Two units",
-	                "images": [
-	                    "http://i.imgur.com/mVM9YQG.png",
-	                    "http://i.imgur.com/JjWC032.png",
-	                    "http://i.imgur.com/T73kPyS.png",
-	                    "http://i.imgur.com/gbuoWPn.jpg"
-	                ]
-	            },
-	            {
-	                "name": "Sheraton",
-	                "address": "Sheraton",
-	                "neighborhood": "Medical Center",
-	                "specs": "Four, Front-load, Three-story Homes.",
-	                "images": []
-	            }
-	        ]
-	    },
-	    {
-	        "name": "Investment Opportunities",
-	        "projects": [
-	            {
-	                "name": "Center Street",
-	                "address": "46 Sixteen Center Street",
-	                "neighborhood": "Washington Corridor",
-	                "specs": "Thirty-six Units",
-	                "images": [
-	                    "http://i.imgur.com/5F2QvCO.png",
-	                    "http://i.imgur.com/cMZvjTt.png",
-	                    "http://i.imgur.com/cO9lqwR.png",
-	                    "http://i.imgur.com/iuNGDQt.png",
-	                    "http://i.imgur.com/Rbo9f23.png",
-	                    "http://i.imgur.com/22TURQ8.png",
-	                    "http://i.imgur.com/4tCpmSQ.png",
-	                    "http://i.imgur.com/eIMWd8I.png",
-	                    "http://i.imgur.com/ZXkkVit.png",
-	                    "http://i.imgur.com/2zjJRJB.png"
-	                ]
-	            },
-	            {
-	                "name": "West Clay Street",
-	                "address": "1816 West Clay Street",
-	                "neighborhood": "Montrose",
-	                "specs": "Corner Lot; Three, Front-load, Four-story Homes",
-	                "images": []
-	            }
-	        ]
-	    },
-	    {
-	        "name": "Closed Projects",
-	        "projects": [
-	            {
-	                "name": "1721 Colquitt Street",
-	                "address": "1721 Colquitt Street",
-	                "neighborhood": "Montrose",
-	                "specs": "Two-story Home",
-	                "images": [
-	                    "http://i.imgur.com/mBYN0yH.jpg",
-	                    "http://i.imgur.com/Uw6tPyg.jpg",
-	                    "http://i.imgur.com/EVBWixD.jpg",
-	                    "http://i.imgur.com/U3ItsES.jpg",
-	                    "http://i.imgur.com/MdZr5KP.jpg",
-	                    "http://i.imgur.com/KJ1L6lH.jpg",
-	                    "http://i.imgur.com/fUZSs58.jpg",
-	                    "http://i.imgur.com/RQnrSEe.jpg",
-	                    "http://i.imgur.com/zh9zrJ9.jpg"
-	                ]
-	            }
-	        ]
-	    }
-	]
-
-
-/***/ },
-/* 221 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23979,6 +23843,136 @@
 	};
 
 /***/ },
+/* 220 */
+/***/ function(module, exports) {
+
+	[
+	{
+	    "/projects/current_projects": {
+	        "name": "Current Projects",
+	        "projects": [
+	            {
+	                "name": "North Braeswood Boulevard",
+	                "address": "3839 North Braeswood Boulevard",
+	                "neighborhood": "Braeswood Place",
+	                "specs": "Twelve units",
+	                "path": "/projects/current_projects/north_braeswood_blvd",
+	                "images": [
+	                    "http://i.imgur.com/JP4PEGl.png",
+	                    "http://i.imgur.com/UOYfKrQ.png",
+	                    "http://i.imgur.com/IRBym0Y.png"
+	                ]
+	            },
+	            {
+	                "name": "Eigel Street",
+	                "address": "4123 Eigel Street",
+	                "neighborhood": "Rice Military",
+	                "specs": "Two Units",
+	                "path": "/projects/current_projects/eigel_street",
+	                "images": [
+	                    "http://i.imgur.com/OABvzCB.png",
+	                    "http://i.imgur.com/vLLFvDR.png",
+	                    "http://i.imgur.com/KM1Jay5.png",
+	                    "http://i.imgur.com/bhTFofV.png",
+	                    "http://i.imgur.com/Rkch0n6.jpg",
+	                    "http://i.imgur.com/q3NKe27.jpg",
+	                    "http://i.imgur.com/gTsqaNV.png",
+	                    "http://i.imgur.com/tTeaNXx.png",
+	                    "http://i.imgur.com/ryPngia.png",
+	                    "http://i.imgur.com/iI6Pn8s.png",
+	                    "http://i.imgur.com/LSJexMD.png",
+	                    "http://i.imgur.com/6sMLUu6.png",
+	                    "http://i.imgur.com/XzhEyUE.jpg"
+	                ]
+	            },
+	            {
+	                "name": "Leverkuhn Street",
+	                "address": "823+825 Leverkuhn Street",
+	                "neighborhood": "Rice Military",
+	                "specs": "Two units",
+	                "path": "/projects/current_projects/leverkuhn_street",
+	                "images": [
+	                    "http://i.imgur.com/mVM9YQG.png",
+	                    "http://i.imgur.com/JjWC032.png",
+	                    "http://i.imgur.com/T73kPyS.png",
+	                    "http://i.imgur.com/gbuoWPn.jpg"
+	                ]
+	            },
+	            {
+	                "name": "Sheraton",
+	                "address": "Sheraton",
+	                "neighborhood": "Medical Center",
+	                "specs": "Four, Front-load, Three-story Homes.",
+	                "path": "/projects/current_projects/sheraton",
+	                "images": [
+	                    "http://i.imgur.com/gbuoWPn.jpg"
+	                ]
+	            }
+	        ]
+	    },
+	    "/projects/investment_opportunities": {
+	        "name": "Investment Opportunities",
+	        "projects": [
+	            {
+	                "name": "Center Street",
+	                "address": "46 Sixteen Center Street",
+	                "neighborhood": "Washington Corridor",
+	                "specs": "Thirty-six Units.",
+	                "path": "/projects/investment_opportunities/center_street",
+	                "images": [
+	                    "http://i.imgur.com/5F2QvCO.png",
+	                    "http://i.imgur.com/cMZvjTt.png",
+	                    "http://i.imgur.com/cO9lqwR.png",
+	                    "http://i.imgur.com/iuNGDQt.png",
+	                    "http://i.imgur.com/Rbo9f23.png",
+	                    "http://i.imgur.com/22TURQ8.png",
+	                    "http://i.imgur.com/4tCpmSQ.png",
+	                    "http://i.imgur.com/eIMWd8I.png",
+	                    "http://i.imgur.com/ZXkkVit.png",
+	                    "http://i.imgur.com/2zjJRJB.png"
+	                ]
+	            },
+	            {
+	                "name": "West Clay Street",
+	                "address": "1816 West Clay Street",
+	                "neighborhood": "Montrose",
+	                "specs": "Corner Lot; Three, Front-load, Four-story Homes.",
+	                "path": "/projects/investment_opportunities/west_clay_street",
+	                "images": [
+	                    "http://i.imgur.com/2zjJRJB.png"
+	                ]
+	            }
+	        ]
+	    },
+	    "/projects/closed_projects": {
+	        "name": "Closed Projects",
+	        "projects": [
+	            {
+	                "name": "1721 Colquitt Street",
+	                "address": "1721 Colquitt Street",
+	                "neighborhood": "Montrose",
+	                "specs": "Two-story Home",
+	                "path": "/projects/closed_projects/1721_colquitt_street",
+	                "images": [
+	                    "http://i.imgur.com/mBYN0yH.jpg",
+	                    "http://i.imgur.com/Uw6tPyg.jpg",
+	                    "http://i.imgur.com/EVBWixD.jpg",
+	                    "http://i.imgur.com/U3ItsES.jpg",
+	                    "http://i.imgur.com/MdZr5KP.jpg",
+	                    "http://i.imgur.com/KJ1L6lH.jpg",
+	                    "http://i.imgur.com/fUZSs58.jpg",
+	                    "http://i.imgur.com/RQnrSEe.jpg",
+	                    "http://i.imgur.com/zh9zrJ9.jpg"
+	                ]
+	            }
+	        ]
+	    }
+	}
+	]
+
+
+/***/ },
+/* 221 */,
 /* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -29674,6 +29668,13 @@
 	    }
 	
 	    _createClass(Nav, [{
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {
+	            if (nextProps.page) {
+	                _reactRouter.browserHistory.push(nextProps.page);
+	            }
+	        }
+	    }, {
 	        key: 'toggleNav',
 	        value: function toggleNav() {
 	            this.props.toggleNav();
@@ -29681,17 +29682,7 @@
 	    }, {
 	        key: 'selectPage',
 	        value: function selectPage(name) {
-	            console.log('here');
 	            this.props.selectPage(name);
-	            var path = '';
-	            if (name === '/') {
-	                path = name;
-	            } else if (name === 'about_us' || name === 'contact_us') {
-	                path = '/' + name;
-	            } else {
-	                path = '/projects/' + name;
-	            }
-	            _reactRouter.browserHistory.push(path);
 	        }
 	    }, {
 	        key: 'render',
@@ -29719,7 +29710,7 @@
 	                            _react2.default.createElement(
 	                                'a',
 	                                {
-	                                    onClick: selectPage.bind(_this2, 'current_projects')
+	                                    onClick: selectPage.bind(_this2, '/projects/current_projects')
 	                                },
 	                                'CURRENT PROJECTS'
 	                            )
@@ -29730,7 +29721,7 @@
 	                            _react2.default.createElement(
 	                                'a',
 	                                {
-	                                    onClick: selectPage.bind(_this2, 'closed_projects')
+	                                    onClick: selectPage.bind(_this2, 'projects/closed_projects')
 	                                },
 	                                'CLOSED PROJECTS'
 	                            )
@@ -29741,7 +29732,7 @@
 	                            _react2.default.createElement(
 	                                'a',
 	                                {
-	                                    onClick: selectPage.bind(_this2, 'investment_opportunities')
+	                                    onClick: selectPage.bind(_this2, 'projects/investment_opportunities')
 	                                },
 	                                'INVESTMENT OPPORTUNITIES'
 	                            )
@@ -29835,7 +29826,7 @@
 	                                                        null,
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: selectPage.bind(this, 'about_us') },
+	                                                            { onClick: selectPage.bind(this, '/about_us') },
 	                                                            'ABOUT'
 	                                                        )
 	                                                    ),
@@ -29844,7 +29835,7 @@
 	                                                        null,
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: selectPage.bind(this, 'contact_us') },
+	                                                            { onClick: selectPage.bind(this, '/contact_us') },
 	                                                            'CONTACT'
 	                                                        )
 	                                                    )
@@ -29866,7 +29857,9 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
-	        toggled: state.toggled
+	        toggled: state.toggled,
+	        page: state.page
+	
 	    };
 	};
 	
@@ -29994,7 +29987,10 @@
 		function Projects() {
 			_classCallCheck(this, Projects);
 	
-			return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+	
+			_this.selectProject = _this.selectProject.bind(_this);
+			return _this;
 		}
 	
 		_createClass(Projects, [{
@@ -30006,7 +30002,7 @@
 					return _react2.default.createElement(
 						'li',
 						null,
-						_react2.default.createElement('img', { src: project.uri, alt: project.uri }),
+						_react2.default.createElement('img', { src: project.images[0], alt: project.images[0] }),
 						_react2.default.createElement(
 							'h2',
 							null,
@@ -30014,20 +30010,23 @@
 						),
 						_react2.default.createElement(
 							'a',
-							{ onClick: _this2.changePage.bind(_this2, project.name) },
+							{ onClick: _this2.selectProject.bind(_this2, project) },
 							'More Details'
 						)
 					);
 				});
 			}
 		}, {
-			key: 'changePage',
-			value: function changePage(name) {
-				this.props.selectProject(name);
-				var path = name.split(' ').join('_');
-				path = '/projects/' + this.props.page + '/' + path;
-				console.log(name, path);
-				_reactRouter.browserHistory.push('/' + name);
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(nextProps) {
+				if (nextProps.project) {
+					_reactRouter.browserHistory.push(nextProps.project.path);
+				}
+			}
+		}, {
+			key: 'selectProject',
+			value: function selectProject(project) {
+				this.props.selectProject(project);
 			}
 		}, {
 			key: 'render',
@@ -30057,7 +30056,8 @@
 	var mapStateToProps = function mapStateToProps(state) {
 		return {
 			page: state.page,
-			projects: state.projects[state.page]
+			projects: state.projects[state.page],
+			project: state.project
 		};
 	};
 	
@@ -30323,6 +30323,14 @@
 	
 	var _reactRouter = __webpack_require__(223);
 	
+	var _reactRedux = __webpack_require__(178);
+	
+	var _actions = __webpack_require__(285);
+	
+	var actions = _interopRequireWildcard(_actions);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30337,13 +30345,23 @@
 	    function Footer() {
 	        _classCallCheck(this, Footer);
 	
-	        return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+	
+	        _this.selectPage = _this.selectPage.bind(_this);
+	        return _this;
 	    }
 	
 	    _createClass(Footer, [{
-	        key: 'changePage',
-	        value: function changePage(path) {
-	            _reactRouter.browserHistory.push(path);
+	        key: 'componentWillReceiveProps',
+	        value: function componentWillReceiveProps(nextProps) {
+	            if (nextProps.page) {
+	                _reactRouter.browserHistory.push(nextProps.page);
+	            }
+	        }
+	    }, {
+	        key: 'selectPage',
+	        value: function selectPage(name) {
+	            this.props.selectPage(name);
 	        }
 	    }, {
 	        key: 'render',
@@ -30392,7 +30410,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.changePage.bind(this, '/') },
+	                                                                { onClick: this.selectPage.bind(this, '/') },
 	                                                                'HOME'
 	                                                            )
 	                                                        ),
@@ -30401,7 +30419,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.changePage.bind(this, '/projects/current_projects') },
+	                                                                { onClick: this.selectPage.bind(this, '/projects/current_projects') },
 	                                                                'CURRENT PROJECTS'
 	                                                            )
 	                                                        ),
@@ -30410,7 +30428,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.changePage.bind(this, '/projects/closed_projects') },
+	                                                                { onClick: this.selectPage.bind(this, 'projects/closed_projects') },
 	                                                                'CLOSED PROJECTS'
 	                                                            )
 	                                                        ),
@@ -30419,7 +30437,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.changePage.bind(this, '/projects/investment_opportunities') },
+	                                                                { onClick: this.selectPage.bind(this, 'projects/investment_opportunities') },
 	                                                                'INVESTMENT OPPORTUNITIES'
 	                                                            )
 	                                                        ),
@@ -30428,7 +30446,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.changePage.bind(this, '/about_us') },
+	                                                                { onClick: this.selectPage.bind(this, '/about_us') },
 	                                                                'ABOUT'
 	                                                            )
 	                                                        ),
@@ -30437,7 +30455,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.changePage.bind(this, '/contact_us') },
+	                                                                { onClick: this.selectPage.bind(this, '/contact_us') },
 	                                                                'CONTACT'
 	                                                            )
 	                                                        )
@@ -30536,7 +30554,35 @@
 	    return Footer;
 	}(_react.Component);
 	
-	exports.default = Footer;
+	var mapStateToProps = function mapStateToProps(state) {
+	    return {
+	        toggled: state.toggled,
+	        page: state.page
+	
+	    };
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, actions)(Footer);
+
+/***/ },
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _projList = __webpack_require__(220);
+	
+	var _projList2 = _interopRequireDefault(_projList);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function () {
+	  return _projList2.default[1];
+	};
 
 /***/ }
 /******/ ]);

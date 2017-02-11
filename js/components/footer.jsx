@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
+import { connect } from 'react-redux';
+import * as actions from '../redux/actions';
 
 class Footer extends Component {
-    changePage(path) {
-        browserHistory.push(path);
+    constructor() {
+        super();
+        this.selectPage = this.selectPage.bind(this);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.page) {
+            browserHistory.push(nextProps.page);
+        }
+    }
+
+    selectPage(name) {
+        this.props.selectPage(name);
     }
 
 	render() {
@@ -16,22 +29,22 @@ class Footer extends Component {
                 className='inner-col'
             ><ul className='footer-left'>
                 <span className='a'>
-                <li><a onClick={this.changePage.bind(this, '/')}>
+                <li><a onClick={this.selectPage.bind(this, '/')}>
                     HOME
                 </a></li>
-                <li><a onClick={this.changePage.bind(this, '/projects/current_projects')}>
+            <li><a onClick={this.selectPage.bind(this, '/projects/current_projects')}>
                     CURRENT PROJECTS
                 </a></li>
-                <li><a onClick={this.changePage.bind(this, '/projects/closed_projects')}>
+            <li><a onClick={this.selectPage.bind(this, 'projects/closed_projects')}>
                     CLOSED PROJECTS
                 </a></li>
-                <li><a onClick={this.changePage.bind(this, '/projects/investment_opportunities')}>
+            <li><a onClick={this.selectPage.bind(this, 'projects/investment_opportunities')}>
                     INVESTMENT OPPORTUNITIES
                 </a></li>
-                <li><a onClick={this.changePage.bind(this, '/about_us')}>
+            <li><a onClick={this.selectPage.bind(this, '/about_us')}>
                     ABOUT
                 </a></li>
-                <li><a onClick={this.changePage.bind(this, '/contact_us')}>
+            <li><a onClick={this.selectPage.bind(this, '/contact_us')}>
                     CONTACT
                 </a></li>
                 </span>
@@ -62,4 +75,10 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+const mapStateToProps = (state) => ({
+	toggled: state.toggled,
+    page: state.page
+
+});
+
+export default connect(mapStateToProps, actions)(Footer);

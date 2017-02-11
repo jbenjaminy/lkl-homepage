@@ -4,26 +4,33 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 
 class Projects extends Component {
+	constructor() {
+		super();
+		this.selectProject = this.selectProject.bind(this);
+	}
+
 	componentWillMount() {
 		this.projs = this.props.projects.map((project) => (
 			<li>
-				<img src={project.uri} alt={project.uri} />
+				<img src={project.images[0]} alt={project.images[0]} />
 				<h2>
 					{project.name}
 				</h2>
-				<a onClick={this.changePage.bind(this, project.name)}>
+				<a onClick={this.selectProject.bind(this, project)}>
 					More Details
 				</a>
 			</li>
 		));
 	}
 
-    changePage(name) {
-		this.props.selectProject(name);
-		let path = name.split(' ').join('_');
-		path = `/projects/${this.props.page}/${path}`;
-		console.log(name, path);
-        browserHistory.push(`/${name}`);
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.project) {
+			browserHistory.push(nextProps.project.path);
+		}
+	}
+
+    selectProject(project) {
+		this.props.selectProject(project);
     }
 
 	render() {
@@ -44,7 +51,8 @@ class Projects extends Component {
 
 const mapStateToProps = (state) => ({
 	page: state.page,
-	projects: state.projects[state.page]
+	projects: state.projects[state.page],
+	project: state.project
 });
 
 export default connect(mapStateToProps, actions)(Projects);

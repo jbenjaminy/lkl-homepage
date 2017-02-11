@@ -4,11 +4,16 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 
 class Nav extends Component {
-
     constructor() {
         super();
         this.toggleNav = this.toggleNav.bind(this);
         this.selectPage = this.selectPage.bind(this);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.page) {
+            browserHistory.push(nextProps.page);
+        }
     }
 
     toggleNav() {
@@ -16,17 +21,7 @@ class Nav extends Component {
     }
 
     selectPage(name) {
-        console.log('here');
         this.props.selectPage(name);
-        let path = '';
-        if (name === '/') {
-            path = name;
-        } else if (name === 'about_us' || name === 'contact_us') {
-            path = `/${name}`;
-        } else {
-            path = `/projects/${name}`;
-        }
-        browserHistory.push(path);
     }
 
 	render() {
@@ -45,17 +40,17 @@ class Nav extends Component {
         if (toggled) {
             categories = () => (
                 <ul className='categories'><li><a
-                    onClick={selectPage.bind(this, 'current_projects')}
+                    onClick={selectPage.bind(this, '/projects/current_projects')}
                 >
                     CURRENT PROJECTS
                 </a></li>
                 <li><a
-                    onClick={selectPage.bind(this, 'closed_projects')}
+                    onClick={selectPage.bind(this, 'projects/closed_projects')}
                 >
                     CLOSED PROJECTS
                 </a></li>
                 <li><a
-                    onClick={selectPage.bind(this, 'investment_opportunities')}
+                    onClick={selectPage.bind(this, 'projects/investment_opportunities')}
                 >
                     INVESTMENT OPPORTUNITIES
                 </a></li></ul>
@@ -86,10 +81,10 @@ class Nav extends Component {
                     {categories}
                 </li>
                 <li>
-                <a onClick={selectPage.bind(this, 'about_us')}>
+                <a onClick={selectPage.bind(this, '/about_us')}>
                     ABOUT
                 </a></li>
-            <li><a onClick={selectPage.bind(this, 'contact_us')}>
+            <li><a onClick={selectPage.bind(this, '/contact_us')}>
                     CONTACT
                 </a></li>
             </ul></td></tr></table></div></td></tr></table></center></div>
@@ -98,7 +93,9 @@ class Nav extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	toggled: state.toggled
+	toggled: state.toggled,
+    page: state.page
+
 });
 
 export default connect(mapStateToProps, actions)(Nav);
