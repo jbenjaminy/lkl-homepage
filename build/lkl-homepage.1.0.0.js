@@ -29666,7 +29666,11 @@
 	    function Nav() {
 	        _classCallCheck(this, Nav);
 	
-	        return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this));
+	
+	        _this.toggleNav = _this.toggleNav.bind(_this);
+	        _this.selectPage = _this.selectPage.bind(_this);
+	        return _this;
 	    }
 	
 	    _createClass(Nav, [{
@@ -29675,10 +29679,19 @@
 	            this.props.toggleNav();
 	        }
 	    }, {
-	        key: 'changePage',
-	        value: function changePage(name) {
+	        key: 'selectPage',
+	        value: function selectPage(name) {
+	            console.log('here');
 	            this.props.selectPage(name);
-	            _reactRouter.browserHistory.push('/' + name);
+	            var path = '';
+	            if (name === '/') {
+	                path = name;
+	            } else if (name === 'about_us' || name === 'contact_us') {
+	                path = '/' + name;
+	            } else {
+	                path = '/projects/' + name;
+	            }
+	            _reactRouter.browserHistory.push(path);
 	        }
 	    }, {
 	        key: 'render',
@@ -29688,6 +29701,11 @@
 	            var toggled = this.props.toggled;
 	
 	            console.log(toggled);
+	
+	            var selectPage = this.selectPage,
+	                toggleNav = this.toggleNav;
+	
+	
 	            var categories = null;
 	
 	            if (toggled) {
@@ -29701,7 +29719,7 @@
 	                            _react2.default.createElement(
 	                                'a',
 	                                {
-	                                    onClick: _this2.changePage.bind(_this2, 'current_projects')
+	                                    onClick: selectPage.bind(_this2, 'current_projects')
 	                                },
 	                                'CURRENT PROJECTS'
 	                            )
@@ -29712,7 +29730,7 @@
 	                            _react2.default.createElement(
 	                                'a',
 	                                {
-	                                    onClick: _this2.changePage.bind(_this2, 'closed_projects')
+	                                    onClick: selectPage.bind(_this2, 'closed_projects')
 	                                },
 	                                'CLOSED PROJECTS'
 	                            )
@@ -29723,7 +29741,7 @@
 	                            _react2.default.createElement(
 	                                'a',
 	                                {
-	                                    onClick: _this2.changePage.bind(_this2, 'investment_opportunities')
+	                                    onClick: selectPage.bind(_this2, 'investment_opportunities')
 	                                },
 	                                'INVESTMENT OPPORTUNITIES'
 	                            )
@@ -29731,6 +29749,7 @@
 	                    );
 	                };
 	            }
+	
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'nav-bar' },
@@ -29767,7 +29786,7 @@
 	                                                    { className: 'nav-left' },
 	                                                    _react2.default.createElement('img', {
 	                                                        src: 'http://i.imgur.com/tyipyMy.png',
-	                                                        onClick: this.changePage.bind(this, '/'),
+	                                                        onClick: selectPage.bind(this, '/'),
 	                                                        alt: 'LKL DEVELOPMENT GROUP'
 	                                                    })
 	                                                )
@@ -29797,7 +29816,7 @@
 	                                                        null,
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: this.changePage.bind(this, '/') },
+	                                                            { onClick: selectPage.bind(this, '/') },
 	                                                            'HOME'
 	                                                        )
 	                                                    ),
@@ -29806,7 +29825,7 @@
 	                                                        null,
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: this.toggleNav },
+	                                                            { onClick: toggleNav },
 	                                                            'PROJECTS'
 	                                                        ),
 	                                                        categories
@@ -29816,7 +29835,7 @@
 	                                                        null,
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: this.changePage.bind(this, '/about_us') },
+	                                                            { onClick: selectPage.bind(this, 'about_us') },
 	                                                            'ABOUT'
 	                                                        )
 	                                                    ),
@@ -29825,7 +29844,7 @@
 	                                                        null,
 	                                                        _react2.default.createElement(
 	                                                            'a',
-	                                                            { onClick: this.changePage.bind(this, '/contact_us') },
+	                                                            { onClick: selectPage.bind(this, 'contact_us') },
 	                                                            'CONTACT'
 	                                                        )
 	                                                    )
@@ -29991,7 +30010,7 @@
 						_react2.default.createElement(
 							'h2',
 							null,
-							project.header
+							project.name
 						),
 						_react2.default.createElement(
 							'a',
@@ -30005,6 +30024,9 @@
 			key: 'changePage',
 			value: function changePage(name) {
 				this.props.selectProject(name);
+				var path = name.split(' ').join('_');
+				path = '/projects/' + this.props.page + '/' + path;
+				console.log(name, path);
 				_reactRouter.browserHistory.push('/' + name);
 			}
 		}, {

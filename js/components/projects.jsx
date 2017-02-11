@@ -6,21 +6,23 @@ import * as actions from '../redux/actions';
 class Projects extends Component {
 	componentWillMount() {
 		this.projs = this.props.projects.map((project) => (
-				<li>
-					<img src={project.uri} alt={project.uri} />
-					<h2>
-						{project.header}
-					</h2>
-					<a onClick={this.changePage.bind(this, project.name)}>
-						More Details
-					</a>
-				</li>
-			)
-		);
+			<li>
+				<img src={project.uri} alt={project.uri} />
+				<h2>
+					{project.name}
+				</h2>
+				<a onClick={this.changePage.bind(this, project.name)}>
+					More Details
+				</a>
+			</li>
+		));
 	}
 
     changePage(name) {
 		this.props.selectProject(name);
+		let path = name.split(' ').join('_');
+		path = `/projects/${this.props.page}/${path}`;
+		console.log(name, path);
         browserHistory.push(`/${name}`);
     }
 
