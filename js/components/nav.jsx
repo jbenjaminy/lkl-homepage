@@ -28,7 +28,6 @@ class Nav extends Component {
         const {
             toggled
         } = this.props;
-        console.log(toggled);
 
         const {
             selectPage,

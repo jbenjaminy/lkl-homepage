@@ -9,20 +9,6 @@ class Projects extends Component {
 		this.selectProject = this.selectProject.bind(this);
 	}
 
-	componentWillMount() {
-		this.projs = this.props.projects.map((project) => (
-			<li>
-				<img src={project.images[0]} alt={project.images[0]} />
-				<h2>
-					{project.name}
-				</h2>
-				<a onClick={this.selectProject.bind(this, project)}>
-					More Details
-				</a>
-			</li>
-		));
-	}
-
 	componentWillReceiveProps(nextProps) {
 		if (nextProps.project) {
 			browserHistory.push(nextProps.project.path);
@@ -34,11 +20,23 @@ class Projects extends Component {
     }
 
 	render() {
+		this.projs = this.props.projects[this.props.page].projects.map((project) => (
+			<li key={project.name}>
+				<img className={'proj-image'} src={project.images[0]} alt={project.images[0]} />
+				<h2>
+					{project.name}
+				</h2>
+				<a onClick={this.selectProject.bind(this, project)}>
+					More Details
+				</a>
+			</li>
+		));
+
 		return (
 			<div className='projects sub-page'>
 				<br />
 				<h1 className='page-title'>
-					{this.props.page}
+					{this.props.name}
 				</h1>
 				<ul>
 					{this.projs}
@@ -51,7 +49,7 @@ class Projects extends Component {
 
 const mapStateToProps = (state) => ({
 	page: state.page,
-	projects: state.projects[state.page],
+	projects: state.projects,
 	project: state.project
 });
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Project extends Component {
 	componentWillMount() {
-		this.project = this.props.projects[this.props.page].forEach((project) => {
+		this.project = this.props.projects.forEach((project) => {
 			if (project.name === this.props.project) {
 				return project;
 			}
@@ -37,7 +37,7 @@ class Project extends Component {
 
 const mapStateToProps = (state) => ({
 		page: state.page,
-		projects: state.projects[state.page],
+		projects: state.projects[0][state.page],
 		project: state.project
 	});
 

@@ -10,7 +10,8 @@ class Footer extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.page) {
+         if (nextProps.projects && nextProps.page) {
+            //  const page = nextProps.page;
             browserHistory.push(nextProps.page);
         }
     }
@@ -20,6 +21,7 @@ class Footer extends Component {
     }
 
 	render() {
+        // console.log('state', this.props.state);
 		return (
             <footer><center
                 className='wrapper footer-wrapper'
@@ -35,10 +37,10 @@ class Footer extends Component {
             <li><a onClick={this.selectPage.bind(this, '/projects/current_projects')}>
                     CURRENT PROJECTS
                 </a></li>
-            <li><a onClick={this.selectPage.bind(this, 'projects/closed_projects')}>
+            <li><a onClick={this.selectPage.bind(this, '/projects/closed_projects')}>
                     CLOSED PROJECTS
                 </a></li>
-            <li><a onClick={this.selectPage.bind(this, 'projects/investment_opportunities')}>
+            <li><a onClick={this.selectPage.bind(this, '/projects/investment_opportunities')}>
                     INVESTMENT OPPORTUNITIES
                 </a></li>
             <li><a onClick={this.selectPage.bind(this, '/about_us')}>
@@ -77,7 +79,8 @@ class Footer extends Component {
 
 const mapStateToProps = (state) => ({
 	toggled: state.toggled,
-    page: state.page
+    page: state.page,
+    state
 
 });
 
