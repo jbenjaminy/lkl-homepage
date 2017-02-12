@@ -11,7 +11,6 @@ class Footer extends Component {
 
     componentWillReceiveProps(nextProps) {
          if (nextProps.projects && nextProps.page) {
-            //  const page = nextProps.page;
             browserHistory.push(nextProps.page);
         }
     }

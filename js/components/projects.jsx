@@ -20,15 +20,28 @@ class Projects extends Component {
     }
 
 	render() {
-		this.projs = this.props.projects[this.props.page].projects.map((project) => (
+		const {
+			projects,
+			name
+		} = this.props;
+
+		this.projs = projects.map((project) => (
 			<li key={project.name}>
-				<img className={'proj-image'} src={project.images[0]} alt={project.images[0]} />
-				<h2>
-					{project.name}
-				</h2>
-				<a onClick={this.selectProject.bind(this, project)}>
-					More Details
-				</a>
+				<div className='proj-image'>
+					<a onClick={this.selectProject.bind(this, project)}><img
+						className='image'
+						src={project.images[0]}
+						alt={project.images[0]}
+					/></a>
+				</div>
+				<div className='caption'>
+					<a onClick={this.selectProject.bind(this, project)}><h2>
+						{project.name}
+					</h2></a>
+					<a onClick={this.selectProject.bind(this, project)}>
+						More Details
+					</a>
+				</div>
 			</li>
 		));
 
@@ -36,9 +49,9 @@ class Projects extends Component {
 			<div className='projects sub-page'>
 				<br />
 				<h1 className='page-title'>
-					{this.props.name}
+					{name}
 				</h1>
-				<ul>
+				<ul className='projs-ul'>
 					{this.projs}
 				</ul>
 				<br />
@@ -49,8 +62,9 @@ class Projects extends Component {
 
 const mapStateToProps = (state) => ({
 	page: state.page,
-	projects: state.projects,
-	project: state.project
+	projects: state.projects[state.page].projects,
+	project: state.project,
+	name: state.projects[state.page].name
 });
 
 export default connect(mapStateToProps, actions)(Projects);

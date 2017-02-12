@@ -276,7 +276,6 @@ footer .footer-wrapper .column .footer-right .footer-name {
 }
 .sub-page {
   width: 92%;
-  height: 400px;
 }
 .sub-page .page-title {
   color: #F5F5F5;
@@ -293,6 +292,27 @@ footer .footer-wrapper .column .footer-right .footer-name {
   width: 92%;
   padding-top: 10px;
   font-style: italic;
+}
+.projs-ul {
+  padding-left: 0;
+}
+.proj-image {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.image {
+  width: 1200px;
+  height: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.caption {
+  width: 70%;
+  margin: 0 auto;
 }
 .contact {
   min-height: 600px;

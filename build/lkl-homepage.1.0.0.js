@@ -29879,20 +29879,45 @@
 			value: function render() {
 				var _this2 = this;
 	
-				this.projs = this.props.projects[this.props.page].projects.map(function (project) {
+				var _props = this.props,
+				    projects = _props.projects,
+				    name = _props.name;
+	
+	
+				this.projs = projects.map(function (project) {
 					return _react2.default.createElement(
 						'li',
 						{ key: project.name },
-						_react2.default.createElement('img', { className: 'proj-image', src: project.images[0], alt: project.images[0] }),
 						_react2.default.createElement(
-							'h2',
-							null,
-							project.name
+							'div',
+							{ className: 'proj-image' },
+							_react2.default.createElement(
+								'a',
+								{ onClick: _this2.selectProject.bind(_this2, project) },
+								_react2.default.createElement('img', {
+									className: 'image',
+									src: project.images[0],
+									alt: project.images[0]
+								})
+							)
 						),
 						_react2.default.createElement(
-							'a',
-							{ onClick: _this2.selectProject.bind(_this2, project) },
-							'More Details'
+							'div',
+							{ className: 'caption' },
+							_react2.default.createElement(
+								'a',
+								{ onClick: _this2.selectProject.bind(_this2, project) },
+								_react2.default.createElement(
+									'h2',
+									null,
+									project.name
+								)
+							),
+							_react2.default.createElement(
+								'a',
+								{ onClick: _this2.selectProject.bind(_this2, project) },
+								'More Details'
+							)
 						)
 					);
 				});
@@ -29904,11 +29929,11 @@
 					_react2.default.createElement(
 						'h1',
 						{ className: 'page-title' },
-						this.props.name
+						name
 					),
 					_react2.default.createElement(
 						'ul',
-						null,
+						{ className: 'projs-ul' },
 						this.projs
 					),
 					_react2.default.createElement('br', null)
@@ -29922,8 +29947,9 @@
 	var mapStateToProps = function mapStateToProps(state) {
 		return {
 			page: state.page,
-			projects: state.projects,
-			project: state.project
+			projects: state.projects[state.page].projects,
+			project: state.project,
+			name: state.projects[state.page].name
 		};
 	};
 	
@@ -30221,7 +30247,6 @@
 	        key: 'componentWillReceiveProps',
 	        value: function componentWillReceiveProps(nextProps) {
 	            if (nextProps.projects && nextProps.page) {
-	                //  const page = nextProps.page;
 	                _reactRouter.browserHistory.push(nextProps.page);
 	            }
 	        }
