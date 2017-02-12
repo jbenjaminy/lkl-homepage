@@ -1,7 +1,7 @@
 const INITIAL_STATE =
 {
     '/projects/current_projects': {
-        name: 'Current Projects',
+        name: 'CURRENT PROJECTS',
         projects: [
             {
                 name: 'North Braeswood Boulevard',
@@ -51,19 +51,19 @@ const INITIAL_STATE =
                 ]
             },
             {
-                name: 'Sheraton',
-                address: 'Sheraton',
+                name: 'Sheridan Street',
+                address: 'Sheridan Street',
                 neighborhood: 'Medical Center',
                 specs: 'Four, Front-load, Three-story Homes.',
                 path: '/projects/current_projects/sheraton',
                 images: [
-                    'http://i.imgur.com/gbuoWPn.jpg'
+                    'http://i.imgur.com/4VosEEB.png'
                 ]
             }
         ]
     },
     '/projects/investment_opportunities': {
-        name: 'Investment Opportunities',
+        name: 'INVESTMENT OPPORTUNITIES',
         projects: [
             {
                 name: 'Center Street',
@@ -91,13 +91,13 @@ const INITIAL_STATE =
                 specs: 'Corner Lot; Three, Front-load, Four-story Homes.',
                 path: '/projects/investment_opportunities/west_clay_street',
                 images: [
-                    'http://i.imgur.com/2zjJRJB.png'
+                    'http://i.imgur.com/4VosEEB.png'
                 ]
             }
         ]
     },
     '/projects/closed_projects': {
-        name: 'Closed Projects',
+        name: 'CLOSED PROJECTS',
         projects: [
             {
                 name: '1721 Colquitt Street',

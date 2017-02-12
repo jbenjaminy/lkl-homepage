@@ -23862,7 +23862,7 @@
 	});
 	var INITIAL_STATE = {
 	    '/projects/current_projects': {
-	        name: 'Current Projects',
+	        name: 'CURRENT PROJECTS',
 	        projects: [{
 	            name: 'North Braeswood Boulevard',
 	            address: '3839 North Braeswood Boulevard',
@@ -23885,16 +23885,16 @@
 	            path: '/projects/current_projects/leverkuhn_street',
 	            images: ['http://i.imgur.com/mVM9YQG.png', 'http://i.imgur.com/JjWC032.png', 'http://i.imgur.com/T73kPyS.png', 'http://i.imgur.com/gbuoWPn.jpg']
 	        }, {
-	            name: 'Sheraton',
-	            address: 'Sheraton',
+	            name: 'Sheridan Street',
+	            address: 'Sheridan Street',
 	            neighborhood: 'Medical Center',
 	            specs: 'Four, Front-load, Three-story Homes.',
 	            path: '/projects/current_projects/sheraton',
-	            images: ['http://i.imgur.com/gbuoWPn.jpg']
+	            images: ['http://i.imgur.com/4VosEEB.png']
 	        }]
 	    },
 	    '/projects/investment_opportunities': {
-	        name: 'Investment Opportunities',
+	        name: 'INVESTMENT OPPORTUNITIES',
 	        projects: [{
 	            name: 'Center Street',
 	            address: '46 Sixteen Center Street',
@@ -23908,11 +23908,11 @@
 	            neighborhood: 'Montrose',
 	            specs: 'Corner Lot; Three, Front-load, Four-story Homes.',
 	            path: '/projects/investment_opportunities/west_clay_street',
-	            images: ['http://i.imgur.com/2zjJRJB.png']
+	            images: ['http://i.imgur.com/4VosEEB.png']
 	        }]
 	    },
 	    '/projects/closed_projects': {
-	        name: 'Closed Projects',
+	        name: 'CLOSED PROJECTS',
 	        projects: [{
 	            name: '1721 Colquitt Street',
 	            address: '1721 Colquitt Street',
