@@ -29897,7 +29897,7 @@
 								_react2.default.createElement('img', {
 									className: 'image',
 									src: project.images[0],
-									alt: project.images[0]
+									alt: project.name
 								})
 							)
 						),

@@ -31,7 +31,7 @@ class Projects extends Component {
 					<a onClick={this.selectProject.bind(this, project)}><img
 						className='image'
 						src={project.images[0]}
-						alt={project.images[0]}
+						alt={project.name}
 					/></a>
 				</div>
 				<div className='caption'>

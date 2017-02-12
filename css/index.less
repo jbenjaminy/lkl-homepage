@@ -256,7 +256,7 @@ body {
         font-size: 40px;
         letter-spacing: 1px;
         width: 92%;
-        padding-top: 30px;
+        padding-top: 2%;
     }
     .coming-soon {
         font-family: 'Libre Franklin';
@@ -264,7 +264,7 @@ body {
         color: @dkGrey;
         font-size: 25px;
         width: 92%;
-        padding-top: 10px;
+        padding-top: 1%;
         font-style: italic;
     }
 }
@@ -276,8 +276,8 @@ body {
 .proj-image {
     position: relative;
     margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 4%;
+    padding-bottom: 2%;
     width: 100%;
     text-align: center;
 }
@@ -289,9 +289,19 @@ body {
     margin: 0 auto;
 }
 
+.image:hover {
+    opacity: .7;
+}
+
 .caption {
-    width: 70%;
-    margin: 0 auto;
+    font-family: 'Libre Franklin';
+    font-weight: 200;
+    color: @dkGrey;
+    text-align: center;
+}
+
+.caption:hover {
+    color: @offWhite;
 }
 
 .contact {
@@ -366,7 +376,7 @@ body {
         height: 450px;
     }
     .sub-page {
-        height: 300px;
+        min-height: 300px;
     }
     .landing, .sub-page {
         .company-name, .page-title {
@@ -396,7 +406,7 @@ body {
         height: 350px;
     }
     .sub-page {
-        height: 200px;
+        min-height: 200px;
     }
     .landing, .sub-page {
         .company-name, .page-title {
@@ -427,6 +437,16 @@ body {
                         li {
                             font-size: 14px;
                             margin-top: 0px;
+                            a {
+                                padding-left: 7px;
+                                padding-right: 7px;
+                            }
+                            a:hover {
+                                border-left: 2px solid @red;
+                                border-right: 2px solid @red;
+                                padding-left: 7px;
+                                padding-right: 5px;
+                            }
                         }
                     }
                 }
@@ -467,8 +487,8 @@ body {
                         width: 460px;
                     }
                     .address:hover {
-                        border-left: 2px solid red;
-                        border-right: 2px solid red;
+                        border-left: 2px solid @red;
+                        border-right: 2px solid @red;
                         padding-left: 5px;
                         padding-right: 5px;
                     }
@@ -489,7 +509,7 @@ body {
         height: 350px;
     }
     .sub-page {
-        height: 200px;
+        min-height: 200px;
     }
     .landing, .sub-page {
         .company-name, .page-title {
@@ -541,6 +561,12 @@ body {
                 }
         	}
         }
+        .caption {
+            font-size: 8px;
+            h2 {
+                font-size: 12px;
+            }
+        }
     }
     footer {
         .footer-wrapper {
@@ -559,7 +585,7 @@ body {
         height: 350px;
     }
     .sub-page {
-        height: 200px;
+        min-height: 200px;
     }
     .landing, .sub-page {
         .company-name, .page-title {
