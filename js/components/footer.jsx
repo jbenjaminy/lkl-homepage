@@ -20,7 +20,6 @@ class Footer extends Component {
     }
 
 	render() {
-        // console.log('state', this.props.state);
 		return (
             <footer><center
                 className='wrapper footer-wrapper'
@@ -77,7 +76,8 @@ class Footer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	toggled: state.toggled,
+	toggled: state.toggled.toggled,
+    projects: state.projects,
     page: state.page,
     state
 

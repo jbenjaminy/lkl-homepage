@@ -29632,14 +29632,9 @@
 	    _createClass(Nav, [{
 	        key: 'componentWillReceiveProps',
 	        value: function componentWillReceiveProps(nextProps) {
-	            if (nextProps.page) {
+	            if (nextProps.projects && nextProps.page) {
 	                _reactRouter.browserHistory.push(nextProps.page);
 	            }
-	        }
-	    }, {
-	        key: 'toggleNav',
-	        value: function toggleNav() {
-	            this.props.toggleNav();
 	        }
 	    }, {
 	        key: 'selectPage',
@@ -29647,58 +29642,109 @@
 	            this.props.selectPage(name);
 	        }
 	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-	
-	            console.log(this.props.state);
-	            var toggled = this.props.toggled;
-	            var selectPage = this.selectPage,
-	                toggleNav = this.toggleNav;
-	
-	
-	            if (toggled) {
-	                this.categories = function () {
-	                    return _react2.default.createElement(
-	                        'ul',
-	                        { className: 'categories' },
+	        key: 'toggleNav',
+	        value: function toggleNav() {
+	            this.props.toggleNav();
+	        }
+	    }, {
+	        key: 'renderOptions',
+	        value: function renderOptions() {
+	            if (this.props.toggled) {
+	                return _react2.default.createElement(
+	                    'ul',
+	                    { className: 'nav-right proj-options', width: '115px' },
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
 	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                {
-	                                    onClick: selectPage.bind(_this2, '/projects/current_projects')
-	                                },
-	                                'CURRENT PROJECTS'
-	                            )
-	                        ),
+	                            'a',
+	                            {
+	                                onClick: this.props.selectPage.bind(this, '/projects/current_projects')
+	                            },
+	                            'CURRENT PROJECTS'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
 	                        _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                                'a',
-	                                {
-	                                    onClick: selectPage.bind(_this2, 'projects/closed_projects')
-	                                },
-	                                'CLOSED PROJECTS'
-	                            )
-	                        ),
+	                            'a',
+	                            {
+	                                onClick: this.props.selectPage.bind(this, '/projects/closed_projects')
+	                            },
+	                            'CLOSED PROJECTS'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
 	                        _react2.default.createElement(
-	                            'li',
-	                            null,
+	                            'a',
+	                            {
+	                                onClick: this.props.selectPage.bind(this, '/projects/investment_opportunities')
+	                            },
+	                            'INVESTMENT OPPORTUNITIES'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { className: 'back-arrow fa fa-long-arrow-left', onClick: this.toggleNav },
 	                            _react2.default.createElement(
-	                                'a',
-	                                {
-	                                    onClick: selectPage.bind(_this2, 'projects/investment_opportunities')
-	                                },
-	                                'INVESTMENT OPPORTUNITIES'
+	                                'span',
+	                                { className: 'back' },
+	                                '\xA0\xA0BACK'
 	                            )
 	                        )
-	                    );
-	                };
+	                    )
+	                );
 	            }
-	
+	            return _react2.default.createElement(
+	                'ul',
+	                { className: 'nav-right', width: '115px' },
+	                _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                        'a',
+	                        { onClick: this.props.selectPage.bind(this, '/') },
+	                        'HOME'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                        'a',
+	                        { onClick: this.toggleNav },
+	                        'PROJECTS'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                        'a',
+	                        { onClick: this.props.selectPage.bind(this, '/about_us') },
+	                        'ABOUT'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                        'a',
+	                        { onClick: this.props.selectPage.bind(this, '/contact_us') },
+	                        'CONTACT'
+	                    )
+	                )
+	            );
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'nav-bar' },
@@ -29735,7 +29781,7 @@
 	                                                    { className: 'nav-left' },
 	                                                    _react2.default.createElement('img', {
 	                                                        src: 'http://i.imgur.com/tyipyMy.png',
-	                                                        onClick: selectPage.bind(this, '/'),
+	                                                        onClick: this.props.selectPage.bind(this, '/'),
 	                                                        alt: 'LKL DEVELOPMENT GROUP'
 	                                                    })
 	                                                )
@@ -29757,47 +29803,7 @@
 	                                                {
 	                                                    className: 'inner-col'
 	                                                },
-	                                                _react2.default.createElement(
-	                                                    'ul',
-	                                                    { className: 'nav-right' },
-	                                                    _react2.default.createElement(
-	                                                        'li',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'a',
-	                                                            { onClick: selectPage.bind(this, '/') },
-	                                                            'HOME'
-	                                                        )
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'li',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'a',
-	                                                            { onClick: toggleNav },
-	                                                            'PROJECTS'
-	                                                        ),
-	                                                        this.categories
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'li',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'a',
-	                                                            { onClick: selectPage.bind(this, '/about_us') },
-	                                                            'ABOUT'
-	                                                        )
-	                                                    ),
-	                                                    _react2.default.createElement(
-	                                                        'li',
-	                                                        null,
-	                                                        _react2.default.createElement(
-	                                                            'a',
-	                                                            { onClick: selectPage.bind(this, '/contact_us') },
-	                                                            'CONTACT'
-	                                                        )
-	                                                    )
-	                                                )
+	                                                this.renderOptions()
 	                                            )
 	                                        )
 	                                    )
@@ -29815,7 +29821,8 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
-	        toggled: state.toggled,
+	        toggled: state.toggled.toggled,
+	        projects: state.projects,
 	        page: state.page,
 	        state: state
 	
@@ -30348,7 +30355,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            // console.log('state', this.props.state);
 	            return _react2.default.createElement(
 	                'footer',
 	                null,
@@ -30539,7 +30545,8 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
-	        toggled: state.toggled,
+	        toggled: state.toggled.toggled,
+	        projects: state.projects,
 	        page: state.page,
 	        state: state
 	

@@ -11,50 +11,62 @@ class Nav extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.page) {
+         if (nextProps.projects && nextProps.page) {
             browserHistory.push(nextProps.page);
         }
-    }
-
-    toggleNav() {
-        this.props.toggleNav();
     }
 
     selectPage(name) {
         this.props.selectPage(name);
     }
 
-	render() {
-        console.log(this.props.state);
-        const {
-            toggled
-        } = this.props;
+    toggleNav() {
+        this.props.toggleNav();
+    }
 
-        const {
-            selectPage,
-            toggleNav
-        } = this;
-
-        if (toggled) {
-            this.categories = () => (
-                <ul className='categories'><li><a
-                    onClick={selectPage.bind(this, '/projects/current_projects')}
+    renderOptions() {
+        if (this.props.toggled) {
+            return (
+                <ul className='nav-right proj-options' width='115px'><li><a
+                    onClick={this.props.selectPage.bind(this, '/projects/current_projects')}
                 >
                     CURRENT PROJECTS
                 </a></li>
                 <li><a
-                    onClick={selectPage.bind(this, 'projects/closed_projects')}
+                    onClick={this.props.selectPage.bind(this, '/projects/closed_projects')}
                 >
                     CLOSED PROJECTS
                 </a></li>
                 <li><a
-                    onClick={selectPage.bind(this, 'projects/investment_opportunities')}
+                    onClick={this.props.selectPage.bind(this, '/projects/investment_opportunities')}
                 >
                     INVESTMENT OPPORTUNITIES
-                </a></li></ul>
+                </a></li>
+                <li><a className='back-arrow fa fa-long-arrow-left'onClick={this.toggleNav}>
+                <span className='back'>&nbsp;&nbsp;BACK</span>
+                </a></li>
+                </ul>
             );
         }
+        return (
+            <ul className='nav-right' width='115px'>
+                <li><a onClick={this.props.selectPage.bind(this, '/')}>
+                    HOME
+                </a></li>
+                <li><a onClick={this.toggleNav}>
+                    PROJECTS
+                </a></li>
+                <li><a onClick={this.props.selectPage.bind(this, '/about_us')}>
+                    ABOUT
+                </a></li>
+                <li><a onClick={this.props.selectPage.bind(this, '/contact_us')}>
+                    CONTACT
+                </a></li>
+            </ul>
+        );
+    }
 
+	render() {
 		return (
             <div className="nav-bar"><center className="wrapper nav-wrapper"><table
                 className="outer"
@@ -63,35 +75,22 @@ class Nav extends Component {
             ><tr><td className="inner-col"><div className="nav-left">
                 <img
                     src='http://i.imgur.com/tyipyMy.png'
-                    onClick={selectPage.bind(this, '/')}
+                    onClick={this.props.selectPage.bind(this, '/')}
                     alt='LKL DEVELOPMENT GROUP'
                 />
             </div></td></tr></table></div>
             <div className="column right-column"><table className="inner"><tr><td
                 className="inner-col"
-            ><ul className='nav-right'>
-                <li><a onClick={selectPage.bind(this, '/')}>
-                    HOME
-                </a></li>
-                <li><a onClick={toggleNav}>
-                    PROJECTS
-                </a>
-                    {this.categories}
-                </li>
-                <li>
-                <a onClick={selectPage.bind(this, '/about_us')}>
-                    ABOUT
-                </a></li>
-            <li><a onClick={selectPage.bind(this, '/contact_us')}>
-                    CONTACT
-                </a></li>
-            </ul></td></tr></table></div></td></tr></table></center></div>
+            >
+                {this.renderOptions()}
+            </td></tr></table></div></td></tr></table></center></div>
         );
     }
 }
 
 const mapStateToProps = (state) => ({
-	toggled: state.toggled,
+	toggled: state.toggled.toggled,
+    projects: state.projects,
     page: state.page,
     state
 
