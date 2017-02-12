@@ -25,6 +25,7 @@ class Nav extends Component {
     }
 
 	render() {
+        console.log(this.props.state);
         const {
             toggled
         } = this.props;
@@ -34,10 +35,8 @@ class Nav extends Component {
             toggleNav
         } = this;
 
-        let categories = null;
-
         if (toggled) {
-            categories = () => (
+            this.categories = () => (
                 <ul className='categories'><li><a
                     onClick={selectPage.bind(this, '/projects/current_projects')}
                 >
@@ -77,7 +76,7 @@ class Nav extends Component {
                 <li><a onClick={toggleNav}>
                     PROJECTS
                 </a>
-                    {categories}
+                    {this.categories}
                 </li>
                 <li>
                 <a onClick={selectPage.bind(this, '/about_us')}>
@@ -93,7 +92,8 @@ class Nav extends Component {
 
 const mapStateToProps = (state) => ({
 	toggled: state.toggled,
-    page: state.page
+    page: state.page,
+    state
 
 });
 

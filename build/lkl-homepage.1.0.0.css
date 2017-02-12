@@ -327,9 +327,15 @@ footer .footer-wrapper .column .footer-right .footer-name {
 }
 .outer-contact {
   max-width: 700px;
+  margin: 0 auto;
   position: relative;
   padding-bottom: 50px;
   padding-top: 50px;
+}
+.outer-contact .contact-image {
+  max-width: 700px;
+  width: 700px;
+  height: auto;
 }
 .outer-contact h4 {
   width: 50%;
