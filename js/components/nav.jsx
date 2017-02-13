@@ -18,6 +18,7 @@ class Nav extends Component {
 
     selectPage(name) {
         this.props.selectPage(name);
+        this.props.toggleNav();
     }
 
     toggleNav() {
