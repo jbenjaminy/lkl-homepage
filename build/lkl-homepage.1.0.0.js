@@ -23797,8 +23797,9 @@
 	                if (state.toggled === false) {
 	                    bool = true;
 	                }
+	                var newState = action.data || bool;
 	                return Object.assign({}, state, {
-	                    toggled: bool
+	                    toggled: newState
 	                });
 	            }
 	
@@ -23888,7 +23889,7 @@
 	            name: 'Sheridan Street',
 	            address: 'Sheridan Street',
 	            neighborhood: 'Medical Center',
-	            specs: 'Four, Front-load, Three-story Homes.',
+	            specs: 'Four, front-load, three-story homes',
 	            path: '/projects/current_projects/sheraton',
 	            images: ['http://i.imgur.com/4VosEEB.png']
 	        }]
@@ -23899,14 +23900,14 @@
 	            name: 'Center Street',
 	            address: '46 Sixteen Center Street',
 	            neighborhood: 'Washington Corridor',
-	            specs: 'Thirty-six Units.',
+	            specs: 'Thirty-six units',
 	            path: '/projects/investment_opportunities/center_street',
 	            images: ['http://i.imgur.com/5F2QvCO.png', 'http://i.imgur.com/cMZvjTt.png', 'http://i.imgur.com/cO9lqwR.png', 'http://i.imgur.com/iuNGDQt.png', 'http://i.imgur.com/Rbo9f23.png', 'http://i.imgur.com/22TURQ8.png', 'http://i.imgur.com/4tCpmSQ.png', 'http://i.imgur.com/eIMWd8I.png', 'http://i.imgur.com/ZXkkVit.png', 'http://i.imgur.com/2zjJRJB.png']
 	        }, {
 	            name: 'West Clay Street',
 	            address: '1816 West Clay Street',
 	            neighborhood: 'Montrose',
-	            specs: 'Corner Lot; Three, Front-load, Four-story Homes.',
+	            specs: 'Corner lot with three, front-load, four-story homes',
 	            path: '/projects/investment_opportunities/west_clay_street',
 	            images: ['http://i.imgur.com/4VosEEB.png']
 	        }]
@@ -23917,7 +23918,7 @@
 	            name: '1721 Colquitt Street',
 	            address: '1721 Colquitt Street',
 	            neighborhood: 'Montrose',
-	            specs: 'Two-story Home',
+	            specs: 'Two-story home',
 	            path: '/projects/closed_projects/1721_colquitt_street',
 	            images: ['http://i.imgur.com/mBYN0yH.jpg', 'http://i.imgur.com/Uw6tPyg.jpg', 'http://i.imgur.com/EVBWixD.jpg', 'http://i.imgur.com/U3ItsES.jpg', 'http://i.imgur.com/MdZr5KP.jpg', 'http://i.imgur.com/KJ1L6lH.jpg', 'http://i.imgur.com/fUZSs58.jpg', 'http://i.imgur.com/RQnrSEe.jpg', 'http://i.imgur.com/zh9zrJ9.jpg']
 	        }]
@@ -29639,6 +29640,7 @@
 	    }, {
 	        key: 'selectPage',
 	        value: function selectPage(name) {
+	            this.props.selectProject(null);
 	            this.props.selectPage(name);
 	        }
 	    }, {
@@ -29652,7 +29654,7 @@
 	            if (this.props.toggled) {
 	                return _react2.default.createElement(
 	                    'ul',
-	                    { className: 'nav-right proj-options', width: '115px' },
+	                    { className: 'nav-right proj-options' },
 	                    _react2.default.createElement(
 	                        'li',
 	                        null,
@@ -29703,7 +29705,7 @@
 	            }
 	            return _react2.default.createElement(
 	                'ul',
-	                { className: 'nav-right', width: '115px' },
+	                { className: 'nav-right' },
 	                _react2.default.createElement(
 	                    'li',
 	                    null,
@@ -29960,6 +29962,12 @@
 		}
 	
 		_createClass(Projects, [{
+			key: 'componentWillMount',
+			value: function componentWillMount() {
+				this.props.selectProject(null);
+				this.props.toggleNav(false);
+			}
+		}, {
 			key: 'componentWillReceiveProps',
 			value: function componentWillReceiveProps(nextProps) {
 				if (nextProps.project) {
@@ -29969,6 +29977,7 @@
 		}, {
 			key: 'selectProject',
 			value: function selectProject(project) {
+				console.log(project);
 				this.props.selectProject(project);
 			}
 		}, {
@@ -30088,24 +30097,18 @@
 		}
 	
 		_createClass(Project, [{
-			key: 'componentWillMount',
-			value: function componentWillMount() {
-				var _this2 = this;
-	
-				this.project = this.props.projects.forEach(function (project) {
-					if (project.name === _this2.props.project) {
-						return project;
-					}
-				});
-			}
-		}, {
 			key: 'render',
 			value: function render() {
-				var images = this.project.images.map(function (uri) {
+				console.log(this.props.project);
+				this.images = this.props.project.images.map(function (uri) {
 					return _react2.default.createElement(
 						'li',
-						null,
-						_react2.default.createElement('image', { src: uri })
+						{ key: uri },
+						_react2.default.createElement(
+							'div',
+							{ className: 'proj-image' },
+							_react2.default.createElement('img', { src: uri, alt: uri, className: 'image no-hover' })
+						)
 					);
 				});
 				return _react2.default.createElement(
@@ -30115,22 +30118,22 @@
 					_react2.default.createElement(
 						'h1',
 						{ className: 'page-title' },
-						this.project.header
+						this.props.project.name
 					),
 					_react2.default.createElement(
 						'h2',
 						{ className: 'specs' },
-						this.project.specs
+						this.props.project.neighborhood
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'description' },
-						this.project.description
+						this.props.project.specs
 					),
 					_react2.default.createElement(
 						'ul',
 						null,
-						images
+						this.images
 					),
 					_react2.default.createElement('br', null)
 				);
@@ -30142,8 +30145,6 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 		return {
-			page: state.page,
-			projects: state.projects[0][state.page],
 			project: state.project
 		};
 	};
@@ -30350,6 +30351,7 @@
 	    }, {
 	        key: 'selectPage',
 	        value: function selectPage(name) {
+	            this.props.selectProject(null);
 	            this.props.selectPage(name);
 	        }
 	    }, {

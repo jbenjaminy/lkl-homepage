@@ -7,11 +7,12 @@ export default (state = INITIAL_STATE, action) => {
             if (state.toggled === false) {
                 bool = true;
             }
+            const newState = action.data || bool;
             return Object.assign({}, state, {
-                toggled: bool
+                toggled: newState
             });
         }
-        
+
         default:
             return state;
     }

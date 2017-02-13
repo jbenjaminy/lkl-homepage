@@ -17,8 +17,8 @@ class Nav extends Component {
     }
 
     selectPage(name) {
+        this.props.selectProject(null);
         this.props.selectPage(name);
-        this.props.toggleNav();
     }
 
     toggleNav() {
@@ -28,7 +28,7 @@ class Nav extends Component {
     renderOptions() {
         if (this.props.toggled) {
             return (
-                <ul className='nav-right proj-options' width='115px'><li><a
+                <ul className='nav-right proj-options'><li><a
                     onClick={this.props.selectPage.bind(this, '/projects/current_projects')}
                 >
                     CURRENT PROJECTS
@@ -50,7 +50,7 @@ class Nav extends Component {
             );
         }
         return (
-            <ul className='nav-right' width='115px'>
+            <ul className='nav-right'>
                 <li><a onClick={this.props.selectPage.bind(this, '/')}>
                     HOME
                 </a></li>

@@ -2,33 +2,28 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Project extends Component {
-	componentWillMount() {
-		this.project = this.props.projects.forEach((project) => {
-			if (project.name === this.props.project) {
-				return project;
-			}
-		});
-	}
-
 	render() {
-		const images = this.project.images.map((uri) => (
-			<li>
-				<image src={uri} />
+		console.log(this.props.project);
+		this.images = this.props.project.images.map((uri) => (
+			<li key={uri}>
+				<div className='proj-image'>
+					<img src={uri} alt={uri} className='image no-hover' />
+				</div>
 			</li>
 		));
 		return (
 			<div className='projects sub-page'><br />
 				<h1 className='page-title'>
-					{this.project.header}
+					{this.props.project.name}
 				</h1>
 				<h2 className='specs'>
-					{this.project.specs}
+					{this.props.project.neighborhood}
 				</h2>
 				<p className='description'>
-					{this.project.description}
+					{this.props.project.specs}
 				</p>
 				<ul>
-					{images}
+					{this.images}
 				</ul>
 			<br /></div>
 		);
@@ -36,9 +31,7 @@ class Project extends Component {
 }
 
 const mapStateToProps = (state) => ({
-		page: state.page,
-		projects: state.projects[0][state.page],
-		project: state.project
-	});
+	project: state.project
+});
 
 export default connect(mapStateToProps)(Project);

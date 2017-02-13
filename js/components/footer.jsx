@@ -16,8 +16,8 @@ class Footer extends Component {
     }
 
     selectPage(name) {
+        this.props.selectProject(null);
         this.props.selectPage(name);
-        this.props.toggleNav();
     }
 
 	render() {

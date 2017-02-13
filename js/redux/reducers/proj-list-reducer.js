@@ -54,7 +54,7 @@ const INITIAL_STATE =
                 name: 'Sheridan Street',
                 address: 'Sheridan Street',
                 neighborhood: 'Medical Center',
-                specs: 'Four, Front-load, Three-story Homes.',
+                specs: 'Four, front-load, three-story homes',
                 path: '/projects/current_projects/sheraton',
                 images: [
                     'http://i.imgur.com/4VosEEB.png'
@@ -69,7 +69,7 @@ const INITIAL_STATE =
                 name: 'Center Street',
                 address: '46 Sixteen Center Street',
                 neighborhood: 'Washington Corridor',
-                specs: 'Thirty-six Units.',
+                specs: 'Thirty-six units',
                 path: '/projects/investment_opportunities/center_street',
                 images: [
                     'http://i.imgur.com/5F2QvCO.png',
@@ -88,7 +88,7 @@ const INITIAL_STATE =
                 name: 'West Clay Street',
                 address: '1816 West Clay Street',
                 neighborhood: 'Montrose',
-                specs: 'Corner Lot; Three, Front-load, Four-story Homes.',
+                specs: 'Corner lot with three, front-load, four-story homes',
                 path: '/projects/investment_opportunities/west_clay_street',
                 images: [
                     'http://i.imgur.com/4VosEEB.png'
@@ -103,7 +103,7 @@ const INITIAL_STATE =
                 name: '1721 Colquitt Street',
                 address: '1721 Colquitt Street',
                 neighborhood: 'Montrose',
-                specs: 'Two-story Home',
+                specs: 'Two-story home',
                 path: '/projects/closed_projects/1721_colquitt_street',
                 images: [
                     'http://i.imgur.com/mBYN0yH.jpg',

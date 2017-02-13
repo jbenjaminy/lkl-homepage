@@ -9,6 +9,11 @@ class Projects extends Component {
 		this.selectProject = this.selectProject.bind(this);
 	}
 
+	componentWillMount() {
+		this.props.selectProject(null);
+		this.props.toggleNav(false);
+	}
+
 	componentWillReceiveProps(nextProps) {
 		if (nextProps.project) {
 			browserHistory.push(nextProps.project.path);
@@ -16,6 +21,7 @@ class Projects extends Component {
 	}
 
     selectProject(project) {
+		console.log(project);
 		this.props.selectProject(project);
     }
 

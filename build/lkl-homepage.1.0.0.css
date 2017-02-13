@@ -341,6 +341,21 @@ footer .footer-wrapper .column .footer-right .footer-name {
 .caption:hover {
   color: #F5F5F5;
 }
+.specs,
+.description {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 1%;
+  font-family: 'Libre Franklin';
+  color: #383e43;
+}
+.description {
+  font-style: italic;
+}
+.no-hover:hover {
+  cursor: default;
+  opacity: 1;
+}
 .contact {
   min-height: 600px;
 }
