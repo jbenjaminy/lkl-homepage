@@ -22,7 +22,7 @@ class Project extends Component {
 				<p className='description'>
 					{this.props.project.specs}
 				</p>
-				<ul>
+				<ul className='projs-ul'>
 					{this.images}
 				</ul>
 			<br /></div>

@@ -30132,7 +30132,7 @@
 					),
 					_react2.default.createElement(
 						'ul',
-						null,
+						{ className: 'projs-ul' },
 						this.images
 					),
 					_react2.default.createElement('br', null)
