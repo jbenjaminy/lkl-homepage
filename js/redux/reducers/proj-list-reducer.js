@@ -76,6 +76,8 @@ const INITIAL_STATE =
                 specs: 'Thirty-six units',
                 path: '/projects/investment_opportunities/center_street',
                 images: [
+                    'http://i.imgur.com/zbLTvAS.png?1',
+                    'http://i.imgur.com/YHsplXZ.png',
                     'http://i.imgur.com/5F2QvCO.png',
                     'http://i.imgur.com/cMZvjTt.png',
                     'http://i.imgur.com/cO9lqwR.png',
