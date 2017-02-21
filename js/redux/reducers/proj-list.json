@@ -116,6 +116,16 @@
                         "http://i.imgur.com/RQnrSEe.jpg",
                         "http://i.imgur.com/zh9zrJ9.jpg"
                     ]
+                },
+                {
+                    "name": "1705 Dunlavy Street",
+                    "address": "1705 Dunlavy Street",
+                    "neighborhood": "Montrose",
+                    "specs": "Land was replatted into three lots and sold to a builder.",
+                    "path": "/projects/closed_projects/1705_dunlavy_street",
+                    "images": [
+                        "http://i.imgur.com/mBYN0yH.jpg"
+                    ]
                 }
             ]
         }
