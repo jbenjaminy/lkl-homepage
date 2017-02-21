@@ -52,12 +52,16 @@ const INITIAL_STATE =
             },
             {
                 name: 'Sheridan Street',
-                address: 'Sheridan Street',
+                address: '2435+2503 Sheridan Street',
                 neighborhood: 'Medical Center',
-                specs: 'Four, front-load, three-story homes',
-                path: '/projects/current_projects/sheraton',
+                specs: 'Two lots, each divided into three, for a total of six freestanding homes.',
+                path: '/projects/current_projects/sheridan_street',
                 images: [
-                    'http://i.imgur.com/4VosEEB.png'
+                    'http://i.imgur.com/BGcnGoU.png',
+                    'http://i.imgur.com/HbT2GTp.png',
+                    'http://i.imgur.com/xR54clF.png',
+                    'http://i.imgur.com/c9Ayie5.png',
+                    'http://i.imgur.com/llKqEIo.png'
                 ]
             }
         ]
