@@ -16,25 +16,14 @@ const INITIAL_STATE =
                 ]
             },
             {
-                name: 'Eigel Street',
-                address: '4123 Eigel Street',
-                neighborhood: 'Rice Military',
-                specs: 'Two Units',
-                path: '/projects/current_projects/eigel_street',
+                name: 'Center Street',
+                address: 'Center Street',
+                neighborhood: 'Washington Corridor',
+                specs: 'Fourplex',
+                path: '/projects/current_projects/center_street',
                 images: [
-                    'http://i.imgur.com/OABvzCB.png',
-                    'http://i.imgur.com/vLLFvDR.png',
-                    'http://i.imgur.com/KM1Jay5.png',
-                    'http://i.imgur.com/bhTFofV.png',
-                    'http://i.imgur.com/Rkch0n6.jpg',
-                    'http://i.imgur.com/q3NKe27.jpg',
-                    'http://i.imgur.com/gTsqaNV.png',
-                    'http://i.imgur.com/tTeaNXx.png',
-                    'http://i.imgur.com/ryPngia.png',
-                    'http://i.imgur.com/iI6Pn8s.png',
-                    'http://i.imgur.com/LSJexMD.png',
-                    'http://i.imgur.com/6sMLUu6.png',
-                    'http://i.imgur.com/XzhEyUE.jpg'
+                    'http://i.imgur.com/zbLTvAS.png?1',
+                    'http://i.imgur.com/YHsplXZ.png'
                 ]
             },
             {
@@ -76,8 +65,6 @@ const INITIAL_STATE =
                 specs: 'Thirty-six units',
                 path: '/projects/investment_opportunities/center_street',
                 images: [
-                    'http://i.imgur.com/zbLTvAS.png?1',
-                    'http://i.imgur.com/YHsplXZ.png',
                     'http://i.imgur.com/5F2QvCO.png',
                     'http://i.imgur.com/cMZvjTt.png',
                     'http://i.imgur.com/cO9lqwR.png',
@@ -121,6 +108,28 @@ const INITIAL_STATE =
                     'http://i.imgur.com/fUZSs58.jpg',
                     'http://i.imgur.com/RQnrSEe.jpg',
                     'http://i.imgur.com/zh9zrJ9.jpg'
+                ]
+            },
+            {
+                name: 'Eigel Street',
+                address: '4123 Eigel Street',
+                neighborhood: 'Rice Military',
+                specs: 'Two Units',
+                path: '/projects/closed_projects/eigel_street',
+                images: [
+                    'http://i.imgur.com/OABvzCB.png',
+                    'http://i.imgur.com/vLLFvDR.png',
+                    'http://i.imgur.com/KM1Jay5.png',
+                    'http://i.imgur.com/bhTFofV.png',
+                    'http://i.imgur.com/Rkch0n6.jpg',
+                    'http://i.imgur.com/q3NKe27.jpg',
+                    'http://i.imgur.com/gTsqaNV.png',
+                    'http://i.imgur.com/tTeaNXx.png',
+                    'http://i.imgur.com/ryPngia.png',
+                    'http://i.imgur.com/iI6Pn8s.png',
+                    'http://i.imgur.com/LSJexMD.png',
+                    'http://i.imgur.com/6sMLUu6.png',
+                    'http://i.imgur.com/XzhEyUE.jpg'
                 ]
             },
             {
