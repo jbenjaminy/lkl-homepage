@@ -54,10 +54,14 @@
                     "name": "Sheridan Street",
                     "address": "2435+2503 Sheridan Street",
                     "neighborhood": "Medical Center",
-                    "specs": "Four, Front-load, Three-story Homes.",
+                    "specs": "Two lots, each divided into three, for a total of six freestanding homes.",
                     "path": "/projects/current_projects/sheraton",
                     "images": [
-                        "http://i.imgur.com/gbuoWPn.jpg"
+                        "http://i.imgur.com/BGcnGoU.png",
+                        "http://i.imgur.com/HbT2GTp.png",
+                        "http://i.imgur.com/xR54clF.png",
+                        "http://i.imgur.com/c9Ayie5.png",
+                        "http://i.imgur.com/llKqEIo.png"
                     ]
                 }
             ]
@@ -72,6 +76,8 @@
                     "specs": "Thirty-six Units.",
                     "path": "/projects/investment_opportunities/center_street",
                     "images": [
+                        "http://i.imgur.com/zbLTvAS.png?1",
+                        "http://i.imgur.com/YHsplXZ.png",
                         "http://i.imgur.com/5F2QvCO.png",
                         "http://i.imgur.com/cMZvjTt.png",
                         "http://i.imgur.com/cO9lqwR.png",
