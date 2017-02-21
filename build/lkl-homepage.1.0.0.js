@@ -23887,11 +23887,11 @@
 	            images: ['http://i.imgur.com/mVM9YQG.png', 'http://i.imgur.com/JjWC032.png', 'http://i.imgur.com/T73kPyS.png', 'http://i.imgur.com/gbuoWPn.jpg']
 	        }, {
 	            name: 'Sheridan Street',
-	            address: 'Sheridan Street',
+	            address: '2435+2503 Sheridan Street',
 	            neighborhood: 'Medical Center',
-	            specs: 'Four, front-load, three-story homes',
-	            path: '/projects/current_projects/sheraton',
-	            images: ['http://i.imgur.com/4VosEEB.png']
+	            specs: 'Two lots, each divided into three, for a total of six freestanding homes.',
+	            path: '/projects/current_projects/sheridan_street',
+	            images: ['http://i.imgur.com/BGcnGoU.png', 'http://i.imgur.com/HbT2GTp.png', 'http://i.imgur.com/xR54clF.png', 'http://i.imgur.com/c9Ayie5.png', 'http://i.imgur.com/llKqEIo.png']
 	        }]
 	    },
 	    '/projects/investment_opportunities': {
@@ -23902,7 +23902,7 @@
 	            neighborhood: 'Washington Corridor',
 	            specs: 'Thirty-six units',
 	            path: '/projects/investment_opportunities/center_street',
-	            images: ['http://i.imgur.com/5F2QvCO.png', 'http://i.imgur.com/cMZvjTt.png', 'http://i.imgur.com/cO9lqwR.png', 'http://i.imgur.com/iuNGDQt.png', 'http://i.imgur.com/Rbo9f23.png', 'http://i.imgur.com/22TURQ8.png', 'http://i.imgur.com/4tCpmSQ.png', 'http://i.imgur.com/eIMWd8I.png', 'http://i.imgur.com/ZXkkVit.png', 'http://i.imgur.com/2zjJRJB.png']
+	            images: ['http://i.imgur.com/zbLTvAS.png?1', 'http://i.imgur.com/YHsplXZ.png', 'http://i.imgur.com/5F2QvCO.png', 'http://i.imgur.com/cMZvjTt.png', 'http://i.imgur.com/cO9lqwR.png', 'http://i.imgur.com/iuNGDQt.png', 'http://i.imgur.com/Rbo9f23.png', 'http://i.imgur.com/22TURQ8.png', 'http://i.imgur.com/4tCpmSQ.png', 'http://i.imgur.com/eIMWd8I.png', 'http://i.imgur.com/ZXkkVit.png', 'http://i.imgur.com/2zjJRJB.png']
 	        }, {
 	            name: 'West Clay Street',
 	            address: '1816 West Clay Street',
@@ -23921,6 +23921,13 @@
 	            specs: 'Two-story home',
 	            path: '/projects/closed_projects/1721_colquitt_street',
 	            images: ['http://i.imgur.com/mBYN0yH.jpg', 'http://i.imgur.com/Uw6tPyg.jpg', 'http://i.imgur.com/EVBWixD.jpg', 'http://i.imgur.com/U3ItsES.jpg', 'http://i.imgur.com/MdZr5KP.jpg', 'http://i.imgur.com/KJ1L6lH.jpg', 'http://i.imgur.com/fUZSs58.jpg', 'http://i.imgur.com/RQnrSEe.jpg', 'http://i.imgur.com/zh9zrJ9.jpg']
+	        }, {
+	            name: '1705 Dunlavy Street',
+	            address: '1705 Dunlavy Street',
+	            neighborhood: 'Montrose',
+	            specs: 'Land was replatted into three lots and sold to a builder.',
+	            path: '/projects/closed_projects/1705_dunlavy_street',
+	            images: ['http://imgur.com/4px7IbS']
 	        }]
 	    }
 	};
