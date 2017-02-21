@@ -23927,7 +23927,7 @@
 	            neighborhood: 'Montrose',
 	            specs: 'Land was replatted into three lots and sold to a builder.',
 	            path: '/projects/closed_projects/1705_dunlavy_street',
-	            images: ['http://imgur.com/4px7IbS']
+	            images: ['http://i.imgur.com/4px7IbS.png']
 	        }]
 	    }
 	};
