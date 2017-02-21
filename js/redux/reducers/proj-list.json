@@ -51,8 +51,8 @@
                     ]
                 },
                 {
-                    "name": "Sheraton",
-                    "address": "Sheraton",
+                    "name": "Sheridan Street",
+                    "address": "2435+2503 Sheridan Street",
                     "neighborhood": "Medical Center",
                     "specs": "Four, Front-load, Three-story Homes.",
                     "path": "/projects/current_projects/sheraton",
