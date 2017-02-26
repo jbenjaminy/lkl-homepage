@@ -30,7 +30,7 @@ const INITIAL_STATE =
                 name: 'Leverkuhn Street',
                 address: '823+825 Leverkuhn Street',
                 neighborhood: 'Rice Military',
-                specs: 'Two units',
+                specs: 'Two three-story, single-family homes.',
                 path: '/projects/current_projects/leverkuhn_street',
                 images: [
                     'http://i.imgur.com/upoUK4u.png',
