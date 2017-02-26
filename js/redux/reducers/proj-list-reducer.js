@@ -33,6 +33,7 @@ const INITIAL_STATE =
                 specs: 'Two units',
                 path: '/projects/current_projects/leverkuhn_street',
                 images: [
+                    'http://i.imgur.com/upoUK4u.png',
                     'http://i.imgur.com/mVM9YQG.png',
                     'http://i.imgur.com/JjWC032.png',
                     'http://i.imgur.com/T73kPyS.png',

@@ -23884,7 +23884,7 @@
 	            neighborhood: 'Rice Military',
 	            specs: 'Two units',
 	            path: '/projects/current_projects/leverkuhn_street',
-	            images: ['http://i.imgur.com/mVM9YQG.png', 'http://i.imgur.com/JjWC032.png', 'http://i.imgur.com/T73kPyS.png', 'http://i.imgur.com/gbuoWPn.jpg']
+	            images: ['http://i.imgur.com/upoUK4u.png', 'http://i.imgur.com/mVM9YQG.png', 'http://i.imgur.com/JjWC032.png', 'http://i.imgur.com/T73kPyS.png', 'http://i.imgur.com/gbuoWPn.jpg']
 	        }, {
 	            name: 'Sheridan Street',
 	            address: '2435+2503 Sheridan Street',
