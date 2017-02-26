@@ -23817,9 +23817,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	var INITIAL_STATE = {};
 	
 	exports.default = function () {
-	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : INITIAL_STATE;
 	    var action = arguments[1];
 	
 	    switch (action.type) {
@@ -23839,9 +23840,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	var INITIAL_STATE = {};
 	
 	exports.default = function () {
-	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : INITIAL_STATE;
 	    var action = arguments[1];
 	
 	    switch (action.type) {
@@ -23882,7 +23884,7 @@
 	            name: 'Leverkuhn Street',
 	            address: '823+825 Leverkuhn Street',
 	            neighborhood: 'Rice Military',
-	            specs: 'Two units',
+	            specs: 'Two three-story, single-family homes.',
 	            path: '/projects/current_projects/leverkuhn_street',
 	            images: ['http://i.imgur.com/upoUK4u.png', 'http://i.imgur.com/mVM9YQG.png', 'http://i.imgur.com/JjWC032.png', 'http://i.imgur.com/T73kPyS.png', 'http://i.imgur.com/gbuoWPn.jpg']
 	        }, {
@@ -29654,13 +29656,14 @@
 	    }, {
 	        key: 'selectPage',
 	        value: function selectPage(name) {
+	            this.props.toggleNav(false);
 	            this.props.selectProject(null);
 	            this.props.selectPage(name);
 	        }
 	    }, {
 	        key: 'toggleNav',
 	        value: function toggleNav() {
-	            this.props.toggleNav();
+	            this.props.toggleNav({});
 	        }
 	    }, {
 	        key: 'renderOptions',
@@ -29854,26 +29857,32 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	        value: true
+	    value: true
 	});
-	var toggleNav = exports.toggleNav = function toggleNav() {
+	var toggleNav = exports.toggleNav = function toggleNav(data) {
+	    if (data === {}) {
 	        return {
-	                type: 'toggle_nav'
+	            type: 'toggle_nav'
 	        };
+	    }
+	    return {
+	        type: 'toggle_nav',
+	        data: data
+	    };
 	};
 	
 	var selectPage = exports.selectPage = function selectPage(page) {
-	        return {
-	                type: 'select_page',
-	                data: page
-	        };
+	    return {
+	        type: 'select_page',
+	        data: page
+	    };
 	};
 	
 	var selectProject = exports.selectProject = function selectProject(project) {
-	        return {
-	                type: 'select_project',
-	                data: project
-	        };
+	    return {
+	        type: 'select_project',
+	        data: project
+	    };
 	};
 
 /***/ },
@@ -30017,7 +30026,7 @@
 								_react2.default.createElement('img', {
 									className: 'image',
 									src: project.images[0],
-									alt: project.name
+									alt: name
 								})
 							)
 						),
@@ -30065,11 +30074,20 @@
 	}(_react.Component);
 	
 	var mapStateToProps = function mapStateToProps(state) {
+		var page = state.page;
+		var projectList = state.projects;
+		var projects = [];
+		var name = '';
+		var project = state.project || null;
+		if (page !== {}) {
+			projects = projectList[page].projects;
+			name = projectList[page].name;
+		}
+	
 		return {
-			page: state.page,
-			projects: state.projects[state.page].projects,
-			project: state.project,
-			name: state.projects[state.page].name
+			projects: projects,
+			name: name,
+			project: project
 		};
 	};
 	
@@ -30365,6 +30383,7 @@
 	    }, {
 	        key: 'selectPage',
 	        value: function selectPage(name) {
+	            this.props.toggleNav(false);
 	            this.props.selectProject(null);
 	            this.props.selectPage(name);
 	        }

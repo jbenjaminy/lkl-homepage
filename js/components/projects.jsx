@@ -37,7 +37,7 @@ class Projects extends Component {
 					<a onClick={this.selectProject.bind(this, project)}><img
 						className='image'
 						src={project.images[0]}
-						alt={project.name}
+						alt={name}
 					/></a>
 				</div>
 				<div className='caption'>
@@ -66,11 +66,22 @@ class Projects extends Component {
 	}
 }
 
-const mapStateToProps = (state) => ({
-	page: state.page,
-	projects: state.projects[state.page].projects,
-	project: state.project,
-	name: state.projects[state.page].name
-});
+const mapStateToProps = (state) => {
+	const page = state.page;
+	const projectList = state.projects;
+	let projects = [];
+	let name = '';
+	const project = state.project || null;
+	if (page !== {}) {
+		projects = projectList[page].projects;
+		name = projectList[page].name;
+	}
+
+	return ({
+		projects,
+		name,
+		project
+	});
+};
 
 export default connect(mapStateToProps, actions)(Projects);

@@ -1,6 +1,14 @@
-export const toggleNav = () => ({
-        type: 'toggle_nav'
-});
+export const toggleNav = (data) => {
+    if (data === {}) {
+        return ({
+            type: 'toggle_nav'
+        });
+    }
+    return ({
+        type: 'toggle_nav',
+        data
+    });
+};
 
 export const selectPage = (page) => ({
         type: 'select_page',
