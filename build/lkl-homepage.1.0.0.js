@@ -30060,6 +30060,12 @@
 	
 	var _reactRedux = __webpack_require__(178);
 	
+	var _actions = __webpack_require__(284);
+	
+	var actions = _interopRequireWildcard(_actions);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30078,10 +30084,17 @@
 		}
 	
 		_createClass(Project, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.props.resetFlag();
+			}
+		}, {
 			key: 'render',
 			value: function render() {
-				console.log(this.props.project);
-				this.images = this.props.project.images.map(function (uri) {
+				var project = this.props.project;
+	
+				console.log(project);
+				this.images = project.images.map(function (uri) {
 					return _react2.default.createElement(
 						'li',
 						{ key: uri },
@@ -30099,17 +30112,17 @@
 					_react2.default.createElement(
 						'h1',
 						{ className: 'page-title' },
-						this.props.project.name
+						project.name
 					),
 					_react2.default.createElement(
 						'h2',
 						{ className: 'specs' },
-						this.props.project.neighborhood
+						project.neighborhood
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: 'description' },
-						this.props.project.specs
+						project.specs
 					),
 					_react2.default.createElement(
 						'ul',
@@ -30130,7 +30143,7 @@
 		};
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Project);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, actions)(Project);
 
 /***/ },
 /* 288 */

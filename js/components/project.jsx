@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../redux/actions';
 
 class Project extends Component {
+	componentDidMount() {
+		this.props.resetFlag();
+	}
+
 	render() {
-		console.log(this.props.project);
-		this.images = this.props.project.images.map((uri) => (
+		const { project } = this.props;
+		console.log(project);
+		this.images = project.images.map((uri) => (
 			<li key={uri}>
 				<div className='proj-image'>
 					<img src={uri} alt={uri} className='image no-hover' />
@@ -14,13 +20,13 @@ class Project extends Component {
 		return (
 			<div className='projects sub-page'><br />
 				<h1 className='page-title'>
-					{this.props.project.name}
+					{project.name}
 				</h1>
 				<h2 className='specs'>
-					{this.props.project.neighborhood}
+					{project.neighborhood}
 				</h2>
 				<p className='description'>
-					{this.props.project.specs}
+					{project.specs}
 				</p>
 				<ul className='projs-ul'>
 					{this.images}
@@ -34,4 +40,4 @@ const mapStateToProps = (state) => ({
 	project: state.project
 });
 
-export default connect(mapStateToProps)(Project);
+export default connect(mapStateToProps, actions)(Project);
