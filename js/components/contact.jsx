@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 
 class Contact extends Component {
+	constructor() {
+		super();
+		this.changePage = this.selectPage.bind(this);
+	}
+
 	changePage(path) {
 		this.props.resetState();
 		browserHistory.push(path);

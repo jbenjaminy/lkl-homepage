@@ -30208,7 +30208,10 @@
 		function Contact() {
 			_classCallCheck(this, Contact);
 	
-			return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
+	
+			_this.changePage = _this.selectPage.bind(_this);
+			return _this;
 		}
 	
 		_createClass(Contact, [{
