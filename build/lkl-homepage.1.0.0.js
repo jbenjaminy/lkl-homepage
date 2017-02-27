@@ -30569,6 +30569,7 @@
 	var TOGGLE_NAV = exports.TOGGLE_NAV = 'TOGGLE_NAV';
 	var RESET_NAV = exports.RESET_NAV = 'RESET_NAV';
 	
+	var RESET_FLAG = exports.RESET_FLAG = 'RESET_FLAG';
 	var RESET_STATE = exports.RESET_STATE = 'RESET_STATE';
 
 /***/ }

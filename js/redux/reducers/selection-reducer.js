@@ -3,6 +3,7 @@ import {
     SELECT_PROJECT,
     TOGGLE_NAV,
     RESET_NAV,
+    RESET_FLAG,
     RESET_STATE
 } from '../actions/types';
 
@@ -23,6 +24,8 @@ export default (state = INITIAL_STATE, action) => {
            return { ...state, toggled: true };
        case RESET_NAV:
             return { ...state, toggled: false };
+       case RESET_FLAG:
+            return { ...state, showDetails: false };
        case RESET_STATE:
            return INITIAL_STATE;
        default:
