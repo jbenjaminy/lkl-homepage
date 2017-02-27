@@ -6,45 +6,56 @@ import * as actions from '../redux/actions';
 class Nav extends Component {
     constructor() {
         super();
-        this.toggleNav = this.toggleNav.bind(this);
+        this.changePage = this.selectPage.bind(this);
         this.selectPage = this.selectPage.bind(this);
+        this.toggleNav = this.toggleNav.bind(this);
+        this.resetNav = this.resetNav.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
-         if (nextProps.projects !== {}) {
-            browserHistory.push(nextProps.page);
+         if (nextProps.projects.path) {
+            browserHistory.push(nextProps.projects.path);
         }
     }
 
+    changePage(name) {
+        browserHistory.push(name);
+    }
+
     selectPage(name) {
-        this.props.toggleNav(false);
-        this.props.selectProject({});
-        this.props.selectPage(name);
+        const { projectList, selectPage } = this.props;
+        const projects = projectList[name];
+        selectPage(projects);
     }
 
     toggleNav() {
-        this.props.toggleNav({});
+        this.props.toggleNav();
+    }
+
+    resetNav() {
+        this.props.resetNav();
     }
 
     renderOptions() {
-        if (this.props.toggled) {
+        const { toggled } = this.props;
+        if (toggled) {
             return (
                 <ul className='nav-right proj-options'><li><a
-                    onClick={this.props.selectPage.bind(this, 'current')}
+                    onClick={this.selectPage.bind(this, 'current')}
                 >
                     CURRENT PROJECTS
                 </a></li>
                 <li><a
-                    onClick={this.props.selectPage.bind(this, 'closed')}
+                    onClick={this.selectPage.bind(this, 'closed')}
                 >
                     CLOSED PROJECTS
                 </a></li>
                 <li><a
-                    onClick={this.props.selectPage.bind(this, '/projects/investment_opportunities')}
+                    onClick={this.selectPage.bind(this, 'investment')}
                 >
                     INVESTMENT OPPORTUNITIES
                 </a></li>
-                <li><a className='back-arrow fa fa-long-arrow-left'onClick={this.toggleNav}>
+                <li><a className='back-arrow fa fa-long-arrow-left'onClick={this.resetNav}>
                 <span className='back'>&nbsp;&nbsp;BACK</span>
                 </a></li>
                 </ul>
@@ -52,16 +63,16 @@ class Nav extends Component {
         }
         return (
             <ul className='nav-right'>
-                <li><a onClick={this.props.selectPage.bind(this, '/')}>
+                <li><a onClick={this.changePage.bind(this, '/')}>
                     HOME
                 </a></li>
                 <li><a onClick={this.toggleNav}>
                     PROJECTS
                 </a></li>
-                <li><a onClick={this.props.selectPage.bind(this, '/about_us')}>
+                <li><a onClick={this.changePage.bind(this, '/about_us')}>
                     ABOUT
                 </a></li>
-                <li><a onClick={this.props.selectPage.bind(this, '/contact_us')}>
+                <li><a onClick={this.changePage.bind(this, '/contact_us')}>
                     CONTACT
                 </a></li>
             </ul>
@@ -69,6 +80,8 @@ class Nav extends Component {
     }
 
 	render() {
+        const { changePage } = this.props;
+
 		return (
             <div className="nav-bar"><center className="wrapper nav-wrapper"><table
                 className="outer"
@@ -77,7 +90,7 @@ class Nav extends Component {
             ><tr><td className="inner-col"><div className="nav-left">
                 <img
                     src='http://i.imgur.com/tyipyMy.png'
-                    onClick={this.props.selectPage.bind(this, '/')}
+                    onClick={changePage.bind(this, '/')}
                     alt='LKL DEVELOPMENT GROUP'
                 />
             </div></td></tr></table></div>
@@ -91,9 +104,10 @@ class Nav extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	toggled: state.toggled.toggled,
+    projectList: state.projectList,
     projects: state.projects,
-    page: state.page,
+    project: state.project,
+    toggled: state.toggled,
     state
 
 });

@@ -29568,34 +29568,51 @@
 	
 	        var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this));
 	
-	        _this.toggleNav = _this.toggleNav.bind(_this);
+	        _this.changePage = _this.selectPage.bind(_this);
 	        _this.selectPage = _this.selectPage.bind(_this);
+	        _this.toggleNav = _this.toggleNav.bind(_this);
+	        _this.resetNav = _this.resetNav.bind(_this);
 	        return _this;
 	    }
 	
 	    _createClass(Nav, [{
 	        key: 'componentWillReceiveProps',
 	        value: function componentWillReceiveProps(nextProps) {
-	            if (nextProps.projects !== {}) {
-	                _reactRouter.browserHistory.push(nextProps.page);
+	            if (nextProps.projects.path) {
+	                _reactRouter.browserHistory.push(nextProps.projects.path);
 	            }
+	        }
+	    }, {
+	        key: 'changePage',
+	        value: function changePage(name) {
+	            _reactRouter.browserHistory.push(name);
 	        }
 	    }, {
 	        key: 'selectPage',
 	        value: function selectPage(name) {
-	            this.props.toggleNav(false);
-	            this.props.selectProject({});
-	            this.props.selectPage(name);
+	            var _props = this.props,
+	                projectList = _props.projectList,
+	                selectPage = _props.selectPage;
+	
+	            var projects = projectList[name];
+	            selectPage(projects);
 	        }
 	    }, {
 	        key: 'toggleNav',
 	        value: function toggleNav() {
-	            this.props.toggleNav({});
+	            this.props.toggleNav();
+	        }
+	    }, {
+	        key: 'resetNav',
+	        value: function resetNav() {
+	            this.props.resetNav();
 	        }
 	    }, {
 	        key: 'renderOptions',
 	        value: function renderOptions() {
-	            if (this.props.toggled) {
+	            var toggled = this.props.toggled;
+	
+	            if (toggled) {
 	                return _react2.default.createElement(
 	                    'ul',
 	                    { className: 'nav-right proj-options' },
@@ -29605,7 +29622,7 @@
 	                        _react2.default.createElement(
 	                            'a',
 	                            {
-	                                onClick: this.props.selectPage.bind(this, 'current')
+	                                onClick: this.selectPage.bind(this, 'current')
 	                            },
 	                            'CURRENT PROJECTS'
 	                        )
@@ -29616,7 +29633,7 @@
 	                        _react2.default.createElement(
 	                            'a',
 	                            {
-	                                onClick: this.props.selectPage.bind(this, 'closed')
+	                                onClick: this.selectPage.bind(this, 'closed')
 	                            },
 	                            'CLOSED PROJECTS'
 	                        )
@@ -29627,7 +29644,7 @@
 	                        _react2.default.createElement(
 	                            'a',
 	                            {
-	                                onClick: this.props.selectPage.bind(this, '/projects/investment_opportunities')
+	                                onClick: this.selectPage.bind(this, 'investment')
 	                            },
 	                            'INVESTMENT OPPORTUNITIES'
 	                        )
@@ -29637,7 +29654,7 @@
 	                        null,
 	                        _react2.default.createElement(
 	                            'a',
-	                            { className: 'back-arrow fa fa-long-arrow-left', onClick: this.toggleNav },
+	                            { className: 'back-arrow fa fa-long-arrow-left', onClick: this.resetNav },
 	                            _react2.default.createElement(
 	                                'span',
 	                                { className: 'back' },
@@ -29655,7 +29672,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        { onClick: this.props.selectPage.bind(this, '/') },
+	                        { onClick: this.changePage.bind(this, '/') },
 	                        'HOME'
 	                    )
 	                ),
@@ -29673,7 +29690,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        { onClick: this.props.selectPage.bind(this, '/about_us') },
+	                        { onClick: this.changePage.bind(this, '/about_us') },
 	                        'ABOUT'
 	                    )
 	                ),
@@ -29682,7 +29699,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        'a',
-	                        { onClick: this.props.selectPage.bind(this, '/contact_us') },
+	                        { onClick: this.changePage.bind(this, '/contact_us') },
 	                        'CONTACT'
 	                    )
 	                )
@@ -29691,6 +29708,9 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var changePage = this.props.changePage;
+	
+	
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'nav-bar' },
@@ -29727,7 +29747,7 @@
 	                                                    { className: 'nav-left' },
 	                                                    _react2.default.createElement('img', {
 	                                                        src: 'http://i.imgur.com/tyipyMy.png',
-	                                                        onClick: this.props.selectPage.bind(this, '/'),
+	                                                        onClick: changePage.bind(this, '/'),
 	                                                        alt: 'LKL DEVELOPMENT GROUP'
 	                                                    })
 	                                                )
@@ -29767,9 +29787,10 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
-	        toggled: state.toggled.toggled,
+	        projectList: state.projectList,
 	        projects: state.projects,
-	        page: state.page,
+	        project: state.project,
+	        toggled: state.toggled,
 	        state: state
 	
 	    };
