@@ -84,7 +84,6 @@ class Nav extends Component {
 
 	render() {
         console.log(this.props.state);
-        const { changePage } = this.props;
 
 		return (
             <div className="nav-bar"><center className="wrapper nav-wrapper"><table
@@ -94,7 +93,7 @@ class Nav extends Component {
             ><tr><td className="inner-col"><div className="nav-left">
                 <img
                     src='http://i.imgur.com/tyipyMy.png'
-                    onClick={changePage.bind(this, '/')}
+                    onClick={this.changePage.bind(this, '/')}
                     alt='LKL DEVELOPMENT GROUP'
                 />
             </div></td></tr></table></div>

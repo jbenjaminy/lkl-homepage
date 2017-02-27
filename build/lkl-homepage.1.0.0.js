@@ -29703,8 +29703,6 @@
 	        key: 'render',
 	        value: function render() {
 	            console.log(this.props.state);
-	            var changePage = this.props.changePage;
-	
 	
 	            return _react2.default.createElement(
 	                'div',
@@ -29742,7 +29740,7 @@
 	                                                    { className: 'nav-left' },
 	                                                    _react2.default.createElement('img', {
 	                                                        src: 'http://i.imgur.com/tyipyMy.png',
-	                                                        onClick: changePage.bind(this, '/'),
+	                                                        onClick: this.changePage.bind(this, '/'),
 	                                                        alt: 'LKL DEVELOPMENT GROUP'
 	                                                    })
 	                                                )
