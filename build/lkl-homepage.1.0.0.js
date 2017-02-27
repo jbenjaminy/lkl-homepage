@@ -30325,6 +30325,7 @@
 	
 	        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
 	
+	        _this.changePage = _this.selectPage.bind(_this);
 	        _this.selectPage = _this.selectPage.bind(_this);
 	        return _this;
 	    }
@@ -30332,16 +30333,27 @@
 	    _createClass(Footer, [{
 	        key: 'componentWillReceiveProps',
 	        value: function componentWillReceiveProps(nextProps) {
-	            if (nextProps.projects && nextProps.page) {
-	                _reactRouter.browserHistory.push(nextProps.page);
+	            if (nextProps.projects.path) {
+	                _reactRouter.browserHistory.push(nextProps.projects.path);
 	            }
+	        }
+	    }, {
+	        key: 'changePage',
+	        value: function changePage(name) {
+	            this.props.resetState();
+	            _reactRouter.browserHistory.push(name);
 	        }
 	    }, {
 	        key: 'selectPage',
 	        value: function selectPage(name) {
-	            this.props.toggleNav(false);
-	            this.props.selectProject({});
-	            this.props.selectPage(name);
+	            var _props = this.props,
+	                projectList = _props.projectList,
+	                resetNav = _props.resetNav,
+	                selectPage = _props.selectPage;
+	
+	            var projects = projectList[name];
+	            resetNav();
+	            selectPage(projects);
 	        }
 	    }, {
 	        key: 'render',
@@ -30390,7 +30402,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.selectPage.bind(this, '/') },
+	                                                                { onClick: this.changePage.bind(this, '/') },
 	                                                                'HOME'
 	                                                            )
 	                                                        ),
@@ -30399,7 +30411,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.selectPage.bind(this, '/projects/current_projects') },
+	                                                                { onClick: this.selectPage.bind(this, 'current') },
 	                                                                'CURRENT PROJECTS'
 	                                                            )
 	                                                        ),
@@ -30408,7 +30420,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.selectPage.bind(this, '/projects/closed_projects') },
+	                                                                { onClick: this.selectPage.bind(this, 'closed') },
 	                                                                'CLOSED PROJECTS'
 	                                                            )
 	                                                        ),
@@ -30417,7 +30429,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.selectPage.bind(this, '/projects/investment_opportunities') },
+	                                                                { onClick: this.selectPage.bind(this, 'investment') },
 	                                                                'INVESTMENT OPPORTUNITIES'
 	                                                            )
 	                                                        ),
@@ -30426,7 +30438,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.selectPage.bind(this, '/about_us') },
+	                                                                { onClick: this.changePage.bind(this, '/about_us') },
 	                                                                'ABOUT'
 	                                                            )
 	                                                        ),
@@ -30435,7 +30447,7 @@
 	                                                            null,
 	                                                            _react2.default.createElement(
 	                                                                'a',
-	                                                                { onClick: this.selectPage.bind(this, '/contact_us') },
+	                                                                { onClick: this.changePage.bind(this, '/contact_us') },
 	                                                                'CONTACT'
 	                                                            )
 	                                                        )
