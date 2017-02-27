@@ -23750,29 +23750,22 @@
 	
 	var _redux = __webpack_require__(189);
 	
-	var _toggleReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./toggle-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	
-	var _toggleReducer2 = _interopRequireDefault(_toggleReducer);
-	
-	var _pageReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./page-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	
-	var _pageReducer2 = _interopRequireDefault(_pageReducer);
-	
-	var _projReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./proj-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	
-	var _projReducer2 = _interopRequireDefault(_projReducer);
-	
 	var _projListReducer = __webpack_require__(220);
 	
 	var _projListReducer2 = _interopRequireDefault(_projListReducer);
 	
+	var _selectionReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./selection-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	
+	var _selectionReducer2 = _interopRequireDefault(_selectionReducer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = (0, _redux.combineReducers)({
-	    toggled: _toggleReducer2.default,
-	    page: _pageReducer2.default,
-	    projects: _projListReducer2.default,
-	    project: _projReducer2.default
+	    projectList: _projListReducer2.default,
+	    projects: _selectionReducer2.default.projects,
+	    project: _selectionReducer2.default.project,
+	    showDetails: _selectionReducer2.default.showDetails,
+	    toggled: _selectionReducer2.default.toggled
 	});
 
 /***/ },

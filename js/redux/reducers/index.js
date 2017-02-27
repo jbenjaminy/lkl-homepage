@@ -1,12 +1,11 @@
 import { combineReducers } from 'redux';
-import ToggleReducer from './toggle-reducer';
-import PageReducer from './page-reducer';
-import ProjReducer from './proj-reducer';
 import ProjListReducer from './proj-list-reducer';
+import SelectionReducer from './selection-reducer';
 
 export default combineReducers({
-    toggled: ToggleReducer,
-    page: PageReducer,
-    projects: ProjListReducer,
-    project: ProjReducer,
+    projectList: ProjListReducer,
+    projects: SelectionReducer.projects,
+    project: SelectionReducer.project,
+    showDetails: SelectionReducer.showDetails,
+    toggled: SelectionReducer.toggled
 });
