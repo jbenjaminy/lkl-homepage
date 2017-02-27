@@ -60,9 +60,9 @@ class Projects extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    projects: state.projects,
-    project: state.project,
-	showDetails: state.showDetails
+    projects: state.app.projects,
+    project: state.app.project,
+	showDetails: state.app.showDetails
 });
 
 export default connect(mapStateToProps, actions)(Projects);

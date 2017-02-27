@@ -37,7 +37,7 @@ class Project extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	project: state.project
+	project: state.app.project
 });
 
 export default connect(mapStateToProps, actions)(Project);

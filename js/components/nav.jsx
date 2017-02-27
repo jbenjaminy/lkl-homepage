@@ -6,7 +6,7 @@ import * as actions from '../redux/actions';
 class Nav extends Component {
     constructor() {
         super();
-        this.changePage = this.selectPage.bind(this);
+        this.changePage = this.changePage.bind(this);
         this.selectPage = this.selectPage.bind(this);
         this.toggleNav = this.toggleNav.bind(this);
         this.resetNav = this.resetNav.bind(this);
@@ -109,9 +109,9 @@ class Nav extends Component {
 
 const mapStateToProps = (state) => ({
     projectList: state.projectList,
-    projects: state.projects,
-    project: state.project,
-    toggled: state.toggled,
+    projects: state.app.projects,
+    project: state.app.project,
+    toggled: state.app.toggled,
     state
 });
 

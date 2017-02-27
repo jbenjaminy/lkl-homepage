@@ -23762,10 +23762,7 @@
 	
 	exports.default = (0, _redux.combineReducers)({
 	    projectList: _projListReducer2.default,
-	    projects: _selectionReducer2.default.projects,
-	    project: _selectionReducer2.default.project,
-	    showDetails: _selectionReducer2.default.showDetails,
-	    toggled: _selectionReducer2.default.toggled
+	    app: _selectionReducer2.default
 	});
 
 /***/ },
@@ -29561,7 +29558,7 @@
 	
 	        var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this));
 	
-	        _this.changePage = _this.selectPage.bind(_this);
+	        _this.changePage = _this.changePage.bind(_this);
 	        _this.selectPage = _this.selectPage.bind(_this);
 	        _this.toggleNav = _this.toggleNav.bind(_this);
 	        _this.resetNav = _this.resetNav.bind(_this);
@@ -29786,9 +29783,9 @@
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
 	        projectList: state.projectList,
-	        projects: state.projects,
-	        project: state.project,
-	        toggled: state.toggled,
+	        projects: state.app.projects,
+	        project: state.app.project,
+	        toggled: state.app.toggled,
 	        state: state
 	    };
 	};
@@ -30034,9 +30031,9 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 		return {
-			projects: state.projects,
-			project: state.project,
-			showDetails: state.showDetails
+			projects: state.app.projects,
+			project: state.app.project,
+			showDetails: state.app.showDetails
 		};
 	};
 	
@@ -30139,7 +30136,7 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 		return {
-			project: state.project
+			project: state.app.project
 		};
 	};
 	
@@ -30200,6 +30197,8 @@
 	
 	var _reactRouter = __webpack_require__(222);
 	
+	var _actions = __webpack_require__(284);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30216,14 +30215,14 @@
 	
 			var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this));
 	
-			_this.changePage = _this.selectPage.bind(_this);
+			_this.changePage = _this.changePage.bind(_this);
 			return _this;
 		}
 	
 		_createClass(Contact, [{
 			key: 'changePage',
 			value: function changePage(path) {
-				this.props.resetState();
+				(0, _actions.resetState)();
 				_reactRouter.browserHistory.push(path);
 			}
 		}, {
@@ -30335,7 +30334,7 @@
 	
 	        var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
 	
-	        _this.changePage = _this.selectPage.bind(_this);
+	        _this.changePage = _this.changePage.bind(_this);
 	        _this.selectPage = _this.selectPage.bind(_this);
 	        return _this;
 	    }
@@ -30559,9 +30558,9 @@
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
 	        projectList: state.projectList,
-	        projects: state.projects,
-	        project: state.project,
-	        toggled: state.toggled
+	        projects: state.app.projects,
+	        project: state.app.project,
+	        toggled: state.app.toggled
 	    };
 	};
 	

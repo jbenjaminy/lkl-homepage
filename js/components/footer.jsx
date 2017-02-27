@@ -6,7 +6,7 @@ import * as actions from '../redux/actions';
 class Footer extends Component {
     constructor() {
         super();
-        this.changePage = this.selectPage.bind(this);
+        this.changePage = this.changePage.bind(this);
         this.selectPage = this.selectPage.bind(this);
     }
 
@@ -86,9 +86,9 @@ class Footer extends Component {
 
 const mapStateToProps = (state) => ({
     projectList: state.projectList,
-    projects: state.projects,
-    project: state.project,
-    toggled: state.toggled
+    projects: state.app.projects,
+    project: state.app.project,
+    toggled: state.app.toggled
 });
 
 export default connect(mapStateToProps, actions)(Footer);

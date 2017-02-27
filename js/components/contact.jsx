@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
+import { resetState } from '../redux/actions';
 
 class Contact extends Component {
 	constructor() {
 		super();
-		this.changePage = this.selectPage.bind(this);
+		this.changePage = this.changePage.bind(this);
 	}
 
 	changePage(path) {
-		this.props.resetState();
+		resetState();
 		browserHistory.push(path);
 	}
 
