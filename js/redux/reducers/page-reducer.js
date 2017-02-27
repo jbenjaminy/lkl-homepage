@@ -1,6 +1,8 @@
 import {
-    MED_UPDATE,
-    CLEAR_MED_FORM
+    SELECT_PAGE,
+    SELECT_PROJECT,
+    VIEW_DETAILS,
+    TOGGLE_NAV
 } from '../actions/types';
 
 const INITIAL_STATE = {

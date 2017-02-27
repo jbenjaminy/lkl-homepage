@@ -29843,10 +29843,10 @@
 	
 	var _types = __webpack_require__(291);
 	
-	var selectPage = exports.selectPage = function selectPage(data) {
+	var selectPage = exports.selectPage = function selectPage(page) {
 	    return {
 	        type: _types.SELECT_PAGE,
-	        data: data.path
+	        data: page
 	    };
 	};
 	

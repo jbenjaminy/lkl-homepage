@@ -5,9 +5,9 @@ import {
     TOGGLE_NAV
 } from './types';
 
-export const selectPage = (data) => ({
+export const selectPage = (page) => ({
     type: SELECT_PAGE,
-    data: data.path
+    data: page
 });
 
 export const selectProject = (project) => ({
