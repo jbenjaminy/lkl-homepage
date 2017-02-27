@@ -1,14 +1,26 @@
-export const toggleNav = (bool) => ({
-    type: 'toggle_nav',
-    data: bool
-});
+import {
+    SELECT_PAGE,
+    SELECT_PROJECT,
+    VIEW_DETAILS,
+    TOGGLE_NAV
+} from './types';
 
-export const selectPage = (page) => ({
-        type: 'select_page',
-        data: page
+export const selectPage = (data) => ({
+    type: SELECT_PAGE,
+    data: data.path
 });
 
 export const selectProject = (project) => ({
-        type: 'select_project',
-        data: project
+    type: SELECT_PROJECT,
+    data: project
+});
+
+export const viewDetails = (data) => ({
+    type: VIEW_DETAILS,
+    data: data.bool
+});
+
+export const toggleNav = (data) => ({
+    type: TOGGLE_NAV,
+    data: data.bool
 });

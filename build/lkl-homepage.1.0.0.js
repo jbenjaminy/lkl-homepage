@@ -29832,32 +29832,43 @@
 
 /***/ },
 /* 284 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	        value: true
+	    value: true
 	});
-	var toggleNav = exports.toggleNav = function toggleNav(bool) {
-	        return {
-	                type: 'toggle_nav',
-	                data: bool
-	        };
-	};
+	exports.toggleNav = exports.viewDetails = exports.selectProject = exports.selectPage = undefined;
 	
-	var selectPage = exports.selectPage = function selectPage(page) {
-	        return {
-	                type: 'select_page',
-	                data: page
-	        };
+	var _types = __webpack_require__(291);
+	
+	var selectPage = exports.selectPage = function selectPage(data) {
+	    return {
+	        type: _types.SELECT_PAGE,
+	        data: data.path
+	    };
 	};
 	
 	var selectProject = exports.selectProject = function selectProject(project) {
-	        return {
-	                type: 'select_project',
-	                data: project
-	        };
+	    return {
+	        type: _types.SELECT_PROJECT,
+	        data: project
+	    };
+	};
+	
+	var viewDetails = exports.viewDetails = function viewDetails(data) {
+	    return {
+	        type: _types.VIEW_DETAILS,
+	        data: data.bool
+	    };
+	};
+	
+	var toggleNav = exports.toggleNav = function toggleNav(data) {
+	    return {
+	        type: _types.TOGGLE_NAV,
+	        data: data.bool
+	    };
 	};
 
 /***/ },
@@ -30565,6 +30576,22 @@
 	};
 	
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, actions)(Footer);
+
+/***/ },
+/* 291 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SELECT_PAGE = exports.SELECT_PAGE = 'SELECT_PAGE';
+	var SELECT_PROJECT = exports.SELECT_PROJECT = 'SELECT_PROJECT';
+	
+	var VIEW_DETAILS = exports.VIEW_DETAILS = 'VIEW_DETAILS';
+	
+	var TOGGLE_NAV = exports.TOGGLE_NAV = 'TOGGLE_NAV';
 
 /***/ }
 /******/ ]);
