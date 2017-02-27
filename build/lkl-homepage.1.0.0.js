@@ -23754,7 +23754,7 @@
 	
 	var _projListReducer2 = _interopRequireDefault(_projListReducer);
 	
-	var _selectionReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./selection-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _selectionReducer = __webpack_require__(292);
 	
 	var _selectionReducer2 = _interopRequireDefault(_selectionReducer);
 	
@@ -30584,6 +30584,68 @@
 	
 	var RESET_FLAG = exports.RESET_FLAG = 'RESET_FLAG';
 	var RESET_STATE = exports.RESET_STATE = 'RESET_STATE';
+
+/***/ },
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _types = __webpack_require__(291);
+	
+	var INITIAL_STATE = {
+	    projects: {},
+	    project: {},
+	    showDetails: false,
+	    toggled: false
+	};
+	
+	exports.default = function () {
+	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : INITIAL_STATE;
+	    var action = arguments[1];
+	
+	    switch (action.type) {
+	        case _types.SELECT_PAGE:
+	            {
+	                return Object.assign({}, state, {
+	                    projects: action.data
+	                });
+	            }
+	        case _types.SELECT_PROJECT:
+	            {
+	                return Object.assign({}, state, {
+	                    project: action.data,
+	                    showDetails: true
+	                });
+	            }
+	        case _types.TOGGLE_NAV:
+	            {
+	                return Object.assign({}, state, {
+	                    toggled: true
+	                });
+	            }
+	        case _types.RESET_NAV:
+	            {
+	                return Object.assign({}, state, {
+	                    toggled: false
+	                });
+	            }
+	        case _types.RESET_FLAG:
+	            {
+	                return Object.assign({}, state, {
+	                    showDetails: false
+	                });
+	            }
+	        case _types.RESET_STATE:
+	            return INITIAL_STATE;
+	        default:
+	            return state;
+	    }
+	};
 
 /***/ }
 /******/ ]);
