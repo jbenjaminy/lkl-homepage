@@ -10,7 +10,7 @@ const INITIAL_STATE = {
     projects: {},
     project: {},
     showDetails: false,
-    toggleNav: false
+    toggled: false
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -20,9 +20,9 @@ export default (state = INITIAL_STATE, action) => {
        case SELECT_PROJECT:
            return { ...state, project: action.data, showDetails: true };
        case TOGGLE_NAV:
-           return { ...state, toggleNav: true };
+           return { ...state, toggled: true };
        case RESET_NAV:
-            return { ...state, toggleNav: false };
+            return { ...state, toggled: false };
        case RESET_STATE:
            return INITIAL_STATE;
        default:
