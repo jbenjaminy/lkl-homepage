@@ -29565,6 +29565,7 @@
 	        _this.selectPage = _this.selectPage.bind(_this);
 	        _this.toggleNav = _this.toggleNav.bind(_this);
 	        _this.resetNav = _this.resetNav.bind(_this);
+	        _this.renderOptions = _this.renderOptions.bind(_this);
 	        return _this;
 	    }
 	
@@ -29586,9 +29587,11 @@
 	        value: function selectPage(name) {
 	            var _props = this.props,
 	                projectList = _props.projectList,
+	                resetNav = _props.resetNav,
 	                selectPage = _props.selectPage;
 	
 	            var projects = projectList[name];
+	            resetNav();
 	            selectPage(projects);
 	        }
 	    }, {
@@ -29702,6 +29705,7 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            console.log(this.props.state);
 	            var changePage = this.props.changePage;
 	
 	
@@ -30342,7 +30346,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            console.log(this.props.state);
 	            return _react2.default.createElement(
 	                'footer',
 	                null,
@@ -30533,11 +30536,10 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
-	        toggled: state.toggled.toggled,
+	        projectList: state.projectList,
 	        projects: state.projects,
-	        page: state.page,
-	        state: state
-	
+	        project: state.project,
+	        toggled: state.toggled
 	    };
 	};
 	

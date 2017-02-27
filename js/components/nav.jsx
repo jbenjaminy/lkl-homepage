@@ -10,6 +10,7 @@ class Nav extends Component {
         this.selectPage = this.selectPage.bind(this);
         this.toggleNav = this.toggleNav.bind(this);
         this.resetNav = this.resetNav.bind(this);
+        this.renderOptions = this.renderOptions.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -24,8 +25,9 @@ class Nav extends Component {
     }
 
     selectPage(name) {
-        const { projectList, selectPage } = this.props;
+        const { projectList, resetNav, selectPage } = this.props;
         const projects = projectList[name];
+        resetNav();
         selectPage(projects);
     }
 
@@ -81,6 +83,7 @@ class Nav extends Component {
     }
 
 	render() {
+        console.log(this.props.state);
         const { changePage } = this.props;
 
 		return (
