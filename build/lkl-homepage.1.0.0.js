@@ -30214,6 +30214,7 @@
 		_createClass(Contact, [{
 			key: 'changePage',
 			value: function changePage(path) {
+				this.props.resetState();
 				_reactRouter.browserHistory.push(path);
 			}
 		}, {

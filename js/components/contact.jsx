@@ -3,6 +3,7 @@ import { browserHistory } from 'react-router';
 
 class Contact extends Component {
 	changePage(path) {
+		this.props.resetState();
 		browserHistory.push(path);
 	}
 
