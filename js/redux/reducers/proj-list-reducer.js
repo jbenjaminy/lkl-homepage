@@ -1,7 +1,8 @@
 const INITIAL_STATE =
 {
-    '/projects/current_projects': {
+    current: {
         name: 'CURRENT PROJECTS',
+        path: '/projects/current_projects',
         projects: [
             {
                 name: 'North Braeswood Boulevard',
@@ -56,8 +57,9 @@ const INITIAL_STATE =
             }
         ]
     },
-    '/projects/investment_opportunities': {
+    investment: {
         name: 'INVESTMENT OPPORTUNITIES',
+        path: '/projects/investment_opportunities',
         projects: [
             {
                 name: 'Center Street',
@@ -90,8 +92,9 @@ const INITIAL_STATE =
             }
         ]
     },
-    '/projects/closed_projects': {
+    closed: {
         name: 'CLOSED PROJECTS',
+        path: '/projects/closed_projects',
         projects: [
             {
                 name: '1721 Colquitt Street',

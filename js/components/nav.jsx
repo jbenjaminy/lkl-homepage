@@ -11,7 +11,7 @@ class Nav extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-         if (nextProps.projects && nextProps.page) {
+         if (nextProps.projects !== {}) {
             browserHistory.push(nextProps.page);
         }
     }
@@ -30,12 +30,12 @@ class Nav extends Component {
         if (this.props.toggled) {
             return (
                 <ul className='nav-right proj-options'><li><a
-                    onClick={this.props.selectPage.bind(this, '/projects/current_projects')}
+                    onClick={this.props.selectPage.bind(this, 'current')}
                 >
                     CURRENT PROJECTS
                 </a></li>
                 <li><a
-                    onClick={this.props.selectPage.bind(this, '/projects/closed_projects')}
+                    onClick={this.props.selectPage.bind(this, 'closed')}
                 >
                     CLOSED PROJECTS
                 </a></li>

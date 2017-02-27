@@ -23750,7 +23750,7 @@
 	
 	var _redux = __webpack_require__(189);
 	
-	var _toggleReducer = __webpack_require__(217);
+	var _toggleReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./toggle-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _toggleReducer2 = _interopRequireDefault(_toggleReducer);
 	
@@ -23758,7 +23758,7 @@
 	
 	var _pageReducer2 = _interopRequireDefault(_pageReducer);
 	
-	var _projReducer = __webpack_require__(219);
+	var _projReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./proj-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _projReducer2 = _interopRequireDefault(_projReducer);
 	
@@ -23776,65 +23776,9 @@
 	});
 
 /***/ },
-/* 217 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var INITIAL_STATE = { toggled: false };
-	
-	exports.default = function () {
-	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : INITIAL_STATE;
-	    var action = arguments[1];
-	
-	    switch (action.type) {
-	        case 'toggle_nav':
-	            {
-	                var bool = false;
-	                if (state.toggled === false) {
-	                    bool = true;
-	                }
-	                if (action.data !== {}) {
-	                    bool = action.data;
-	                }
-	                return Object.assign({}, state, {
-	                    toggled: bool
-	                });
-	            }
-	
-	        default:
-	            return state;
-	    }
-	};
-
-/***/ },
+/* 217 */,
 /* 218 */,
-/* 219 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var INITIAL_STATE = {};
-	
-	exports.default = function () {
-	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : INITIAL_STATE;
-	    var action = arguments[1];
-	
-	    switch (action.type) {
-	        case 'select_project':
-	            return action.data;
-	        default:
-	            return state;
-	    }
-	};
-
-/***/ },
+/* 219 */,
 /* 220 */
 /***/ function(module, exports) {
 
@@ -23844,8 +23788,9 @@
 	    value: true
 	});
 	var INITIAL_STATE = {
-	    '/projects/current_projects': {
+	    current: {
 	        name: 'CURRENT PROJECTS',
+	        path: '/projects/current_projects',
 	        projects: [{
 	            name: 'North Braeswood Boulevard',
 	            address: '3839 North Braeswood Boulevard',
@@ -23876,8 +23821,9 @@
 	            images: ['http://i.imgur.com/BGcnGoU.png', 'http://i.imgur.com/HbT2GTp.png', 'http://i.imgur.com/xR54clF.png', 'http://i.imgur.com/c9Ayie5.png', 'http://i.imgur.com/llKqEIo.png']
 	        }]
 	    },
-	    '/projects/investment_opportunities': {
+	    investment: {
 	        name: 'INVESTMENT OPPORTUNITIES',
+	        path: '/projects/investment_opportunities',
 	        projects: [{
 	            name: 'Center Street',
 	            address: '46 Sixteen Center Street',
@@ -23894,8 +23840,9 @@
 	            images: ['http://i.imgur.com/4VosEEB.png']
 	        }]
 	    },
-	    '/projects/closed_projects': {
+	    closed: {
 	        name: 'CLOSED PROJECTS',
+	        path: '/projects/closed_projects',
 	        projects: [{
 	            name: '1721 Colquitt Street',
 	            address: '1721 Colquitt Street',
@@ -29629,7 +29576,7 @@
 	    _createClass(Nav, [{
 	        key: 'componentWillReceiveProps',
 	        value: function componentWillReceiveProps(nextProps) {
-	            if (nextProps.projects && nextProps.page) {
+	            if (nextProps.projects !== {}) {
 	                _reactRouter.browserHistory.push(nextProps.page);
 	            }
 	        }
@@ -29658,7 +29605,7 @@
 	                        _react2.default.createElement(
 	                            'a',
 	                            {
-	                                onClick: this.props.selectPage.bind(this, '/projects/current_projects')
+	                                onClick: this.props.selectPage.bind(this, 'current')
 	                            },
 	                            'CURRENT PROJECTS'
 	                        )
@@ -29669,7 +29616,7 @@
 	                        _react2.default.createElement(
 	                            'a',
 	                            {
-	                                onClick: this.props.selectPage.bind(this, '/projects/closed_projects')
+	                                onClick: this.props.selectPage.bind(this, 'closed')
 	                            },
 	                            'CLOSED PROJECTS'
 	                        )
