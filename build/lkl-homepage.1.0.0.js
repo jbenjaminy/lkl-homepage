@@ -29839,7 +29839,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.resetState = exports.resetNav = exports.toggleNav = exports.viewDetails = exports.selectProject = exports.selectPage = undefined;
+	exports.resetState = exports.resetNav = exports.toggleNav = exports.selectProject = exports.selectPage = undefined;
 	
 	var _types = __webpack_require__(291);
 	
@@ -29854,13 +29854,6 @@
 	    return {
 	        type: _types.SELECT_PROJECT,
 	        data: project
-	    };
-	};
-	
-	var viewDetails = exports.viewDetails = function viewDetails(data) {
-	    return {
-	        type: _types.VIEW_DETAILS,
-	        data: data.bool
 	    };
 	};
 	
@@ -30599,8 +30592,6 @@
 	});
 	var SELECT_PAGE = exports.SELECT_PAGE = 'SELECT_PAGE';
 	var SELECT_PROJECT = exports.SELECT_PROJECT = 'SELECT_PROJECT';
-	
-	var VIEW_DETAILS = exports.VIEW_DETAILS = 'VIEW_DETAILS';
 	
 	var TOGGLE_NAV = exports.TOGGLE_NAV = 'TOGGLE_NAV';
 	var RESET_NAV = exports.RESET_NAV = 'RESET_NAV';

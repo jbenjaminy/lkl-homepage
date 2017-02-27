@@ -1,7 +1,6 @@
 import {
     SELECT_PAGE,
     SELECT_PROJECT,
-    VIEW_DETAILS,
     TOGGLE_NAV,
     RESET_NAV,
     RESET_STATE

@@ -1,7 +1,6 @@
 import {
     SELECT_PAGE,
     SELECT_PROJECT,
-    VIEW_DETAILS,
     TOGGLE_NAV,
     RESET_NAV,
     RESET_STATE
@@ -16,11 +15,6 @@ export const selectPage = (page) => ({
 export const selectProject = (project) => ({
     type: SELECT_PROJECT,
     data: project
-});
-
-export const viewDetails = (data) => ({
-    type: VIEW_DETAILS,
-    data: data.bool
 });
 
 export const toggleNav = () => ({
