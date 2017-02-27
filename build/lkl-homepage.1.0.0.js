@@ -29578,6 +29578,7 @@
 	    }, {
 	        key: 'changePage',
 	        value: function changePage(name) {
+	            this.props.resetState();
 	            _reactRouter.browserHistory.push(name);
 	        }
 	    }, {

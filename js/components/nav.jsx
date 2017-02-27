@@ -19,6 +19,7 @@ class Nav extends Component {
     }
 
     changePage(name) {
+        this.props.resetState();
         browserHistory.push(name);
     }
 
