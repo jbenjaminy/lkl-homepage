@@ -29790,7 +29790,6 @@
 	        project: state.project,
 	        toggled: state.toggled,
 	        state: state
-	
 	    };
 	};
 	
@@ -29805,7 +29804,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.resetState = exports.resetNav = exports.toggleNav = exports.selectProject = exports.selectPage = undefined;
+	exports.resetState = exports.resetFlag = exports.resetNav = exports.toggleNav = exports.selectProject = exports.selectPage = undefined;
 	
 	var _types = __webpack_require__(291);
 	
@@ -29832,6 +29831,12 @@
 	var resetNav = exports.resetNav = function resetNav() {
 	    return {
 	        type: _types.RESET_NAV
+	    };
+	};
+	
+	var resetFlag = exports.resetFlag = function resetFlag() {
+	    return {
+	        type: _types.RESET_FLAG
 	    };
 	};
 	
@@ -29941,32 +29946,30 @@
 		}
 	
 		_createClass(Projects, [{
-			key: 'componentWillMount',
-			value: function componentWillMount() {
-				this.props.toggleNav(false);
-				this.props.selectProject({});
-			}
-		}, {
 			key: 'componentWillReceiveProps',
 			value: function componentWillReceiveProps(nextProps) {
-				if (nextProps.project) {
+				if (nextProps.showDetails) {
 					_reactRouter.browserHistory.push(nextProps.project.path);
 				}
 			}
 		}, {
 			key: 'selectProject',
 			value: function selectProject(project) {
-				console.log(project);
-				this.props.selectProject(project);
+				var _props = this.props,
+				    resetNav = _props.resetNav,
+				    selectProject = _props.selectProject;
+	
+				resetNav();
+				selectProject(project);
 			}
 		}, {
 			key: 'render',
 			value: function render() {
 				var _this2 = this;
 	
-				var _props = this.props,
-				    projects = _props.projects,
-				    name = _props.name;
+				var _props2 = this.props,
+				    projects = _props2.projects,
+				    name = _props2.name;
 	
 	
 				this.projs = projects.map(function (project) {
@@ -30030,20 +30033,10 @@
 	}(_react.Component);
 	
 	var mapStateToProps = function mapStateToProps(state) {
-		var page = state.page;
-		var projectList = state.projects;
-		var projects = [];
-		var name = '';
-		var project = state.project || null;
-		if (page !== {}) {
-			projects = projectList[page].projects;
-			name = projectList[page].name;
-		}
-	
 		return {
-			projects: projects,
-			name: name,
-			project: project
+			projects: state.projects,
+			project: state.project,
+			showDetails: state.showDetails
 		};
 	};
 	

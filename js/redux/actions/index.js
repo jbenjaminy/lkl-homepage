@@ -3,6 +3,7 @@ import {
     SELECT_PROJECT,
     TOGGLE_NAV,
     RESET_NAV,
+    RESET_FLAG,
     RESET_STATE
 
 } from './types';
@@ -23,6 +24,10 @@ export const toggleNav = () => ({
 
 export const resetNav = () => ({
     type: RESET_NAV
+});
+
+export const resetFlag = () => ({
+    type: RESET_FLAG
 });
 
 export const resetState = () => ({

@@ -9,27 +9,20 @@ class Projects extends Component {
 		this.selectProject = this.selectProject.bind(this);
 	}
 
-	componentWillMount() {
-		this.props.toggleNav(false);
-		this.props.selectProject({});
-	}
-
 	componentWillReceiveProps(nextProps) {
-		if (nextProps.project) {
+		if (nextProps.showDetails) {
 			browserHistory.push(nextProps.project.path);
 		}
 	}
 
-    selectProject(project) {
-		console.log(project);
-		this.props.selectProject(project);
-    }
+	selectProject(project) {
+		const { resetNav, selectProject } = this.props;
+		resetNav();
+		selectProject(project);
+	}
 
 	render() {
-		const {
-			projects,
-			name
-		} = this.props;
+		const { projects, name } = this.props;
 
 		this.projs = projects.map((project) => (
 			<li key={project.name}>
@@ -66,22 +59,10 @@ class Projects extends Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	const page = state.page;
-	const projectList = state.projects;
-	let projects = [];
-	let name = '';
-	const project = state.project || null;
-	if (page !== {}) {
-		projects = projectList[page].projects;
-		name = projectList[page].name;
-	}
-
-	return ({
-		projects,
-		name,
-		project
-	});
-};
+const mapStateToProps = (state) => ({
+    projects: state.projects,
+    project: state.project,
+	showDetails: state.showDetails
+});
 
 export default connect(mapStateToProps, actions)(Projects);

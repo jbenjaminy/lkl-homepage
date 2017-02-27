@@ -113,7 +113,6 @@ const mapStateToProps = (state) => ({
     project: state.project,
     toggled: state.toggled,
     state
-
 });
 
 export default connect(mapStateToProps, actions)(Nav);
