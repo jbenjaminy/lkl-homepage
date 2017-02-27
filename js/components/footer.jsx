@@ -22,8 +22,9 @@ class Footer extends Component {
     }
 
     selectPage(name) {
-        const { projectList, resetNav, selectPage } = this.props;
+        const { projectList, resetFlag, resetNav, selectPage } = this.props;
         const projects = projectList[name];
+        resetFlag();
         resetNav();
         selectPage(projects);
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
-import { resetState } from '../redux/actions';
+import { connect } from 'react-redux';
+import * as actions from '../redux/actions';
 
 class Contact extends Component {
 	constructor() {
@@ -9,7 +10,7 @@ class Contact extends Component {
 	}
 
 	changePage(path) {
-		resetState();
+		this.props.resetState();
 		browserHistory.push(path);
 	}
 
@@ -46,4 +47,8 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+const mapStateToProps = (state) => ({
+    state
+});
+
+export default connect(mapStateToProps, actions)(Contact);

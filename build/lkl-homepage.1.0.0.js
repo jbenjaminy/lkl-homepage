@@ -29584,10 +29584,12 @@
 	        value: function selectPage(name) {
 	            var _props = this.props,
 	                projectList = _props.projectList,
+	                resetFlag = _props.resetFlag,
 	                resetNav = _props.resetNav,
 	                selectPage = _props.selectPage;
 	
 	            var projects = projectList[name];
+	            resetFlag();
 	            resetNav();
 	            selectPage(projects);
 	        }
@@ -29962,12 +29964,10 @@
 			value: function render() {
 				var _this2 = this;
 	
-				var _props2 = this.props,
-				    projects = _props2.projects,
-				    name = _props2.name;
+				var projects = this.props.projects;
 	
 	
-				this.projs = projects.map(function (project) {
+				this.projs = projects.projects.map(function (project) {
 					return _react2.default.createElement(
 						'li',
 						{ key: project.name },
@@ -29980,7 +29980,7 @@
 								_react2.default.createElement('img', {
 									className: 'image',
 									src: project.images[0],
-									alt: name
+									alt: project.name
 								})
 							)
 						),
@@ -30012,7 +30012,7 @@
 					_react2.default.createElement(
 						'h1',
 						{ className: 'page-title' },
-						name
+						projects.name
 					),
 					_react2.default.createElement(
 						'ul',
@@ -30081,7 +30081,7 @@
 		_createClass(Project, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				this.props.resetFlag();
+				this.props.selectPage({});
 			}
 		}, {
 			key: 'render',
@@ -30195,7 +30195,13 @@
 	
 	var _reactRouter = __webpack_require__(222);
 	
+	var _reactRedux = __webpack_require__(178);
+	
 	var _actions = __webpack_require__(284);
+	
+	var actions = _interopRequireWildcard(_actions);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -30220,7 +30226,7 @@
 		_createClass(Contact, [{
 			key: 'changePage',
 			value: function changePage(path) {
-				(0, _actions.resetState)();
+				this.props.resetState();
 				_reactRouter.browserHistory.push(path);
 			}
 		}, {
@@ -30288,7 +30294,13 @@
 		return Contact;
 	}(_react.Component);
 	
-	exports.default = Contact;
+	var mapStateToProps = function mapStateToProps(state) {
+		return {
+			state: state
+		};
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, actions)(Contact);
 
 /***/ },
 /* 290 */
@@ -30355,10 +30367,12 @@
 	        value: function selectPage(name) {
 	            var _props = this.props,
 	                projectList = _props.projectList,
+	                resetFlag = _props.resetFlag,
 	                resetNav = _props.resetNav,
 	                selectPage = _props.selectPage;
 	
 	            var projects = projectList[name];
+	            resetFlag();
 	            resetNav();
 	            selectPage(projects);
 	        }

@@ -22,15 +22,15 @@ class Projects extends Component {
 	}
 
 	render() {
-		const { projects, name } = this.props;
+		const { projects } = this.props;
 
-		this.projs = projects.map((project) => (
+		this.projs = projects.projects.map((project) => (
 			<li key={project.name}>
 				<div className='proj-image'>
 					<a onClick={this.selectProject.bind(this, project)}><img
 						className='image'
 						src={project.images[0]}
-						alt={name}
+						alt={project.name}
 					/></a>
 				</div>
 				<div className='caption'>
@@ -48,7 +48,7 @@ class Projects extends Component {
 			<div className='projects sub-page'>
 				<br />
 				<h1 className='page-title'>
-					{name}
+					{projects.name}
 				</h1>
 				<ul className='projs-ul'>
 					{this.projs}

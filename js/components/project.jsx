@@ -4,9 +4,8 @@ import * as actions from '../redux/actions';
 
 class Project extends Component {
 	componentDidMount() {
-		this.props.resetFlag();
+		this.props.selectPage({});
 	}
-
 	render() {
 		const { project } = this.props;
 		console.log(project);
