@@ -1,14 +1,7 @@
-export const toggleNav = (data) => {
-    if (data === {}) {
-        return ({
-            type: 'toggle_nav'
-        });
-    }
-    return ({
-        type: 'toggle_nav',
-        data
-    });
-};
+export const toggleNav = (bool) => ({
+    type: 'toggle_nav',
+    data: bool
+});
 
 export const selectPage = (page) => ({
         type: 'select_page',

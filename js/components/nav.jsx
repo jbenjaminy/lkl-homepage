@@ -18,7 +18,7 @@ class Nav extends Component {
 
     selectPage(name) {
         this.props.toggleNav(false);
-        this.props.selectProject(null);
+        this.props.selectProject({});
         this.props.selectPage(name);
     }
 

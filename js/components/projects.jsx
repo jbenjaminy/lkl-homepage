@@ -10,8 +10,8 @@ class Projects extends Component {
 	}
 
 	componentWillMount() {
-		this.props.selectProject(null);
 		this.props.toggleNav(false);
+		this.props.selectProject({});
 	}
 
 	componentWillReceiveProps(nextProps) {

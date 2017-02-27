@@ -17,11 +17,12 @@ class Footer extends Component {
 
     selectPage(name) {
         this.props.toggleNav(false);
-        this.props.selectProject(null);
+        this.props.selectProject({});
         this.props.selectPage(name);
     }
 
 	render() {
+        console.log(this.props.state);
 		return (
             <footer><center
                 className='wrapper footer-wrapper'

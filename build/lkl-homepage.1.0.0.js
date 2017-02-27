@@ -23754,7 +23754,7 @@
 	
 	var _toggleReducer2 = _interopRequireDefault(_toggleReducer);
 	
-	var _pageReducer = __webpack_require__(218);
+	var _pageReducer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./page-reducer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _pageReducer2 = _interopRequireDefault(_pageReducer);
 	
@@ -23797,9 +23797,11 @@
 	                if (state.toggled === false) {
 	                    bool = true;
 	                }
-	                var newState = action.data || bool;
+	                if (action.data !== {}) {
+	                    bool = action.data;
+	                }
 	                return Object.assign({}, state, {
-	                    toggled: newState
+	                    toggled: bool
 	                });
 	            }
 	
@@ -23809,29 +23811,7 @@
 	};
 
 /***/ },
-/* 218 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var INITIAL_STATE = {};
-	
-	exports.default = function () {
-	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : INITIAL_STATE;
-	    var action = arguments[1];
-	
-	    switch (action.type) {
-	        case 'select_page':
-	            return action.data;
-	        default:
-	            return state;
-	    }
-	};
-
-/***/ },
+/* 218 */,
 /* 219 */
 /***/ function(module, exports) {
 
@@ -29657,7 +29637,7 @@
 	        key: 'selectPage',
 	        value: function selectPage(name) {
 	            this.props.toggleNav(false);
-	            this.props.selectProject(null);
+	            this.props.selectProject({});
 	            this.props.selectPage(name);
 	        }
 	    }, {
@@ -29857,32 +29837,27 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	        value: true
 	});
-	var toggleNav = exports.toggleNav = function toggleNav(data) {
-	    if (data === {}) {
+	var toggleNav = exports.toggleNav = function toggleNav(bool) {
 	        return {
-	            type: 'toggle_nav'
+	                type: 'toggle_nav',
+	                data: bool
 	        };
-	    }
-	    return {
-	        type: 'toggle_nav',
-	        data: data
-	    };
 	};
 	
 	var selectPage = exports.selectPage = function selectPage(page) {
-	    return {
-	        type: 'select_page',
-	        data: page
-	    };
+	        return {
+	                type: 'select_page',
+	                data: page
+	        };
 	};
 	
 	var selectProject = exports.selectProject = function selectProject(project) {
-	    return {
-	        type: 'select_project',
-	        data: project
-	    };
+	        return {
+	                type: 'select_project',
+	                data: project
+	        };
 	};
 
 /***/ },
@@ -29987,8 +29962,8 @@
 		_createClass(Projects, [{
 			key: 'componentWillMount',
 			value: function componentWillMount() {
-				this.props.selectProject(null);
 				this.props.toggleNav(false);
+				this.props.selectProject({});
 			}
 		}, {
 			key: 'componentWillReceiveProps',
@@ -30384,12 +30359,13 @@
 	        key: 'selectPage',
 	        value: function selectPage(name) {
 	            this.props.toggleNav(false);
-	            this.props.selectProject(null);
+	            this.props.selectProject({});
 	            this.props.selectPage(name);
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            console.log(this.props.state);
 	            return _react2.default.createElement(
 	                'footer',
 	                null,
