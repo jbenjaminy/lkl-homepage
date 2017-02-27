@@ -29839,7 +29839,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.toggleNav = exports.viewDetails = exports.selectProject = exports.selectPage = undefined;
+	exports.resetState = exports.resetNav = exports.toggleNav = exports.viewDetails = exports.selectProject = exports.selectPage = undefined;
 	
 	var _types = __webpack_require__(291);
 	
@@ -29864,10 +29864,21 @@
 	    };
 	};
 	
-	var toggleNav = exports.toggleNav = function toggleNav(data) {
+	var toggleNav = exports.toggleNav = function toggleNav() {
 	    return {
-	        type: _types.TOGGLE_NAV,
-	        data: data.bool
+	        type: _types.TOGGLE_NAV
+	    };
+	};
+	
+	var resetNav = exports.resetNav = function resetNav() {
+	    return {
+	        type: _types.RESET_NAV
+	    };
+	};
+	
+	var resetState = exports.resetState = function resetState() {
+	    return {
+	        type: _types.RESET_STATE
 	    };
 	};
 
@@ -30592,6 +30603,9 @@
 	var VIEW_DETAILS = exports.VIEW_DETAILS = 'VIEW_DETAILS';
 	
 	var TOGGLE_NAV = exports.TOGGLE_NAV = 'TOGGLE_NAV';
+	var RESET_NAV = exports.RESET_NAV = 'RESET_NAV';
+	
+	var RESET_STATE = exports.RESET_STATE = 'RESET_STATE';
 
 /***/ }
 /******/ ]);

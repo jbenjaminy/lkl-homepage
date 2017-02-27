@@ -2,7 +2,10 @@ import {
     SELECT_PAGE,
     SELECT_PROJECT,
     VIEW_DETAILS,
-    TOGGLE_NAV
+    TOGGLE_NAV,
+    RESET_NAV,
+    RESET_STATE
+
 } from './types';
 
 export const selectPage = (page) => ({
@@ -20,7 +23,14 @@ export const viewDetails = (data) => ({
     data: data.bool
 });
 
-export const toggleNav = (data) => ({
-    type: TOGGLE_NAV,
-    data: data.bool
+export const toggleNav = () => ({
+    type: TOGGLE_NAV
+});
+
+export const resetNav = () => ({
+    type: RESET_NAV
+});
+
+export const resetState = () => ({
+    type: RESET_STATE,
 });

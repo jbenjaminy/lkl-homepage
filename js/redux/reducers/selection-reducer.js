@@ -2,19 +2,21 @@ import {
     SELECT_PAGE,
     SELECT_PROJECT,
     VIEW_DETAILS,
-    TOGGLE_NAV
+    TOGGLE_NAV,
+    RESET_NAV,
+    RESET_STATE
 } from '../actions/types';
 
 const INITIAL_STATE = {
-    toggleNav: false,
-    showDetails: false,
     projects: {},
-    project: {}
+    project: {},
+    showDetails: false,
+    toggleNav: false
 };
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case 'select_page':
+        case 'SELECT_PAGE':
             return action.data;
         default:
             return state;
