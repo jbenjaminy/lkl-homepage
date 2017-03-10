@@ -79,16 +79,6 @@ const INITIAL_STATE =
                     'http://i.imgur.com/ZXkkVit.png',
                     'http://i.imgur.com/2zjJRJB.png'
                 ]
-            },
-            {
-                name: 'West Clay Street',
-                address: '1816 West Clay Street',
-                neighborhood: 'Montrose',
-                specs: 'Corner lot with three, front-load, four-story homes',
-                path: '/projects/investment_opportunities/west_clay_street',
-                images: [
-                    'http://i.imgur.com/4VosEEB.png'
-                ]
             }
         ]
     },
@@ -121,7 +111,7 @@ const INITIAL_STATE =
                 specs: 'Two Units',
                 path: '/projects/closed_projects/eigel_street',
                 images: [
-                	'http://i.imgur.com/b40M8VW.jpg',
+                    'http://i.imgur.com/b40M8VW.jpg',
                     'http://i.imgur.com/OABvzCB.png',
                     'http://i.imgur.com/vLLFvDR.png',
                     'http://i.imgur.com/KM1Jay5.png',
@@ -144,7 +134,7 @@ const INITIAL_STATE =
                 specs: 'Land was replatted into three lots and sold to a builder.',
                 path: '/projects/closed_projects/1705_dunlavy_street',
                 images: [
-                	'http://i.imgur.com/lQgJBBO.png?1',
+                    'http://i.imgur.com/lQgJBBO.png?1',
                     'http://i.imgur.com/4px7IbS.png'
                 ]
             }

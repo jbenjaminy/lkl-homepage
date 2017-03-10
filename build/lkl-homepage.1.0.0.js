@@ -23818,13 +23818,6 @@
 	            specs: 'Thirty-six units',
 	            path: '/projects/investment_opportunities/center_street',
 	            images: ['http://i.imgur.com/5F2QvCO.png', 'http://i.imgur.com/cMZvjTt.png', 'http://i.imgur.com/cO9lqwR.png', 'http://i.imgur.com/iuNGDQt.png', 'http://i.imgur.com/Rbo9f23.png', 'http://i.imgur.com/22TURQ8.png', 'http://i.imgur.com/4tCpmSQ.png', 'http://i.imgur.com/eIMWd8I.png', 'http://i.imgur.com/ZXkkVit.png', 'http://i.imgur.com/2zjJRJB.png']
-	        }, {
-	            name: 'West Clay Street',
-	            address: '1816 West Clay Street',
-	            neighborhood: 'Montrose',
-	            specs: 'Corner lot with three, front-load, four-story homes',
-	            path: '/projects/investment_opportunities/west_clay_street',
-	            images: ['http://i.imgur.com/4VosEEB.png']
 	        }]
 	    },
 	    closed: {
