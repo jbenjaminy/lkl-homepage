@@ -40,20 +40,6 @@ const INITIAL_STATE =
                     'http://i.imgur.com/T73kPyS.png',
                     'http://i.imgur.com/gbuoWPn.jpg'
                 ]
-            },
-            {
-                name: 'Sheridan Street',
-                address: '2435+2503 Sheridan Street',
-                neighborhood: 'Medical Center',
-                specs: 'Two lots, each divided into three, for a total of six freestanding homes.',
-                path: '/projects/current_projects/sheridan_street',
-                images: [
-                    'http://i.imgur.com/BGcnGoU.png',
-                    'http://i.imgur.com/HbT2GTp.png',
-                    'http://i.imgur.com/xR54clF.png',
-                    'http://i.imgur.com/c9Ayie5.png',
-                    'http://i.imgur.com/llKqEIo.png'
-                ]
             }
         ]
     },

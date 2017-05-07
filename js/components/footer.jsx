@@ -78,7 +78,7 @@ class Footer extends Component {
                 <li className='address'><a href='https://goo.gl/maps/H5Y7KN5JKMQ2'>
                     4545 BISSONNET STREET, SUITE 285
                 <br />
-                    HOUSTON, TEXAS 77401
+                    BELLAIRE, TEXAS 77401
                 </a></li>
             </ul></div></td></tr></table></div></td></tr></table></center></footer>
         );
